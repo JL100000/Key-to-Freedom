@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://1b2h2i3e64l"]
+
+[ext_resource type="Script" uid="uid://dvns26kbc7afy" path="res://Scripts/player.gd" id="1_5wxv7"]
+[ext_resource type="Texture2D" uid="uid://18rdlj6dqvh8" path="res://Aesthetics/Ghost.png" id="2_5wxv7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5hcb"]
+atlas = ExtResource("2_5wxv7")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nftw"]
+atlas = ExtResource("2_5wxv7")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knrd4"]
+atlas = ExtResource("2_5wxv7")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hck1p"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5hcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nftw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knrd4")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wxv7"]
+
+[node name="player" type="CharacterBody2D" unique_id=788515543]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_5wxv7")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=564797116]
+position = Vector2(0, 4)
+scale = Vector2(0.06, 0.06)
+sprite_frames = SubResource("SpriteFrames_hck1p")
+animation = &"move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1935644021]
+shape = SubResource("CircleShape2D_5wxv7")

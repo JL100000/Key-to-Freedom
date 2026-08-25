@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bmsb6thf5dxly"]
+
+[ext_resource type="Script" uid="uid://dqrxxtmuroh77" path="res://Minigames/Pack Bros folder/Scripts/pack_bro_arcade_machine.gd" id="1_knjt7"]
+[ext_resource type="Texture2D" uid="uid://wvlwis8g7d8" path="res://Minigames/Pack Bros folder/Aesthetics/PakBro Arcade Machine (1).png" id="2_mp3nn"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_yxeoy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsgvv"]
+atlas = ExtResource("2_mp3nn")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eex8v"]
+atlas = ExtResource("2_mp3nn")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4748"]
+atlas = ExtResource("2_mp3nn")
+region = Rect2(0, 960, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i4748"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsgvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eex8v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4748")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_eex8v"]
+script/source = "extends AnimatedSprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $\".\"
+
+
+
+func _on_pack_bro_area_entered(area: Area2D) -> void:
+	animated_sprite_2d.play(\"interact\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu1j4"]
+size = Vector2(168, 177)
+
+[node name="Pack_Bro_arcade_machine" type="Area2D" unique_id=1921932739]
+script = ExtResource("1_knjt7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1342312158]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_i4748")
+animation = &"interact"
+autoplay = "idle"
+script = SubResource("GDScript_eex8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2133614843]
+position = Vector2(-4, -0.5)
+shape = SubResource("RectangleShape2D_iu1j4")
+
+[node name="Label" type="Label" parent="." unique_id=401247970]
+offset_left = -35.0
+offset_top = -110.0
+offset_right = 35.0
+offset_bottom = -91.0
+theme_override_fonts/font = ExtResource("3_yxeoy")
+theme_override_font_sizes/font_size = 15
+text = "Pack Bros"
+
+[node name="Label2" type="Label" parent="." unique_id=1784583620]
+offset_left = -59.0
+offset_top = 56.0
+offset_right = 59.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_yxeoy")
+theme_override_font_sizes/font_size = 15
+text = "Press E to enter"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

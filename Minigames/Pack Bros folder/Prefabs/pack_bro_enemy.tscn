@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bses428tw7xcc"]
+
+[ext_resource type="Script" uid="uid://w1gn7lvhbgcw" path="res://Minigames/Pack Bros folder/Scripts/Pack_bro_enemy.gd" id="1_g7ngk"]
+[ext_resource type="Texture2D" uid="uid://codnykjwfu1fj" path="res://Minigames/Pack Bros folder/Aesthetics/pac man v2/PackBro.png" id="2_so16w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4g6b"]
+atlas = ExtResource("2_so16w")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30yes"]
+atlas = ExtResource("2_so16w")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7q57"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4g6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30yes")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgw76"]
+radius = 69.99999
+
+[node name="Pack_bro_enemy" type="CharacterBody2D" unique_id=977642155]
+scale = Vector2(0.1, 0.1)
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_g7ngk")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=445264242]
+target_desired_distance = 15.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1261515219]
+wait_time = 0.1
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=929280751]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_n7q57")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1382129446]
+position = Vector2(0, -19.999998)
+shape = SubResource("CircleShape2D_lgw76")
+
+[connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

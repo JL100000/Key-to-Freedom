@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bn1q5fh2tvbp0"
+path="res://.godot/imported/prize-wheel.obj-ca4d41c4031c44870cce4c2616ffcfea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/prize-wheel.obj-ca4d41c4031c44870cce4c2616ffcfea.mesh"]
+
+source_file="res://General/Aesthetics/Resource packs (Kenney)/kenney_mini-arcade/Models/OBJ format/prize-wheel.obj"
+dest_files=["res://.godot/imported/prize-wheel.obj-ca4d41c4031c44870cce4c2616ffcfea.mesh", "res://.godot/imported/prize-wheel.obj-ca4d41c4031c44870cce4c2616ffcfea.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

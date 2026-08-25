@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dnebn42nonh3f"]
+
+[ext_resource type="Texture2D" uid="uid://wvlwis8g7d8" path="res://Minigames/Pack Bros folder/Aesthetics/PakBro Arcade Machine (1).png" id="1_5yqrg"]
+[ext_resource type="Script" uid="uid://b53jxch20isgu" path="res://Minigames/Slime Quest/Scripts/slime_quest_arcade_machine.gd" id="1_bppbw"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_cnbyn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnbyn"]
+atlas = ExtResource("1_5yqrg")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bppbw"]
+atlas = ExtResource("1_5yqrg")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7kfb"]
+atlas = ExtResource("1_5yqrg")
+region = Rect2(0, 960, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r7fhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnbyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bppbw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7kfb")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ej00e"]
+size = Vector2(160, 177)
+
+[node name="Slime_quest_arcade_machine" type="Area2D" unique_id=1671749115]
+script = ExtResource("1_bppbw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=221489366]
+position = Vector2(-2.2737368e-13, 0)
+scale = Vector2(0.24999999, 0.2525)
+sprite_frames = SubResource("SpriteFrames_r7fhb")
+animation = &"interact"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1840178684]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ej00e")
+
+[node name="Label" type="Label" parent="." unique_id=1940603550]
+offset_left = -42.0
+offset_top = -110.0
+offset_right = 42.0
+offset_bottom = -87.0
+theme_override_fonts/font = ExtResource("2_cnbyn")
+theme_override_font_sizes/font_size = 15
+text = "Slime Quest"
+
+[node name="Label2" type="Label" parent="." unique_id=340519415]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = 56.0
+offset_right = 56.000008
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_cnbyn")
+theme_override_font_sizes/font_size = 15
+text = "Press E to enter"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c1lhqnvmr27yt"]
+
+[ext_resource type="Script" uid="uid://b456apq4f2kbo" path="res://General/Scripts/arcade_player.gd" id="1_cwl6u"]
+[ext_resource type="Texture2D" uid="uid://cgxiy1bvby473" path="res://icon.svg" id="1_qqt26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwl6u"]
+size = Vector2(128, 128)
+
+[node name="Arcade_player" type="Area2D" unique_id=1908138782]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_cwl6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1254321528]
+shape = SubResource("RectangleShape2D_cwl6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1820270215]
+texture = ExtResource("1_qqt26")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=181536592]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0

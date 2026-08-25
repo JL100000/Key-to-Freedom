@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cvmmgew68c6p8"]
+
+[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/1.jpg" id="1_ka2pi"]
+[ext_resource type="Script" uid="uid://e7odoxqkqlq4" path="res://General/Scripts/tutorial.gd" id="1_omtrn"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_feyax"]
+
+[node name="Tutorial" type="Node2D" unique_id=182609540]
+script = ExtResource("1_omtrn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=237216502]
+z_index = -1
+position = Vector2(576, 324)
+scale = Vector2(1.210084, 1.7999998)
+texture = ExtResource("1_ka2pi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=660776167]
+offset_left = 424.0
+offset_right = 728.0
+offset_bottom = 139.0
+theme_override_fonts/normal_font = ExtResource("2_feyax")
+theme_override_font_sizes/normal_font_size = 80
+text = "Tutorial"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1786514880]
+offset_left = 416.0
+offset_top = 104.0
+offset_right = 736.0
+offset_bottom = 160.0
+theme_override_fonts/normal_font = ExtResource("2_feyax")
+theme_override_font_sizes/normal_font_size = 40
+text = "Aim of the game:"
+
+[node name="Button" type="Button" parent="." unique_id=2006680911]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("2_feyax")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

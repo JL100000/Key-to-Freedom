@@ -1,0 +1,244 @@
+[gd_scene format=3 uid="uid://751vq7vtqhfd"]
+
+[ext_resource type="Script" uid="uid://bd8tkirdauadq" path="res://General/Scripts/arcade.gd" id="1_3h0sf"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_i82s6"]
+[ext_resource type="Script" uid="uid://hj3loe5c7nup" path="res://General/Scripts/intro_label.gd" id="3_i82s6"]
+[ext_resource type="PackedScene" uid="uid://bmsb6thf5dxly" path="res://Minigames/Pack Bros folder/Prefabs/pack_bro_arcade_machine.tscn" id="5_nw1ri"]
+[ext_resource type="PackedScene" uid="uid://c1lhqnvmr27yt" path="res://General/Prefabs/arcade_player.tscn" id="6_nw1ri"]
+[ext_resource type="Texture2D" uid="uid://bb1ijuh3gkqvn" path="res://General/Aesthetics/images.jpg" id="6_ovbp2"]
+[ext_resource type="Texture2D" uid="uid://dbefg0u6oivpb" path="res://General/Aesthetics/Arcade_wall_glow.png" id="7_r7i0d"]
+[ext_resource type="Texture2D" uid="uid://0k8d31vv268k" path="res://General/Aesthetics/Arcade_walls_plain.png" id="8_yfyhc"]
+[ext_resource type="Texture2D" uid="uid://cs8m4wxo8rhcj" path="res://Minigames/Pack Bros folder/Aesthetics/Arcade_wall_glow (1).png" id="9_lvvd5"]
+[ext_resource type="Texture2D" uid="uid://wvlwis8g7d8" path="res://Minigames/Pack Bros folder/Aesthetics/PakBro Arcade Machine (1).png" id="9_uruph"]
+[ext_resource type="PackedScene" uid="uid://dnebn42nonh3f" path="res://Minigames/Slime Quest/Prefabs/slime_quest_arcade_machine.tscn" id="11_6bv4j"]
+
+[sub_resource type="Animation" id="Animation_3h0sf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i82s6"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o2jrl"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o2jrl"]
+_data = {
+&"RESET": SubResource("Animation_3h0sf"),
+&"fade_in": SubResource("Animation_i82s6"),
+&"fade_out": SubResource("Animation_o2jrl")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvvd5"]
+atlas = ExtResource("9_uruph")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bv4j"]
+atlas = ExtResource("9_uruph")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wv2cy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvvd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bv4j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Arcade" type="Node2D" unique_id=499539473]
+script = ExtResource("1_3h0sf")
+
+[node name="Button" type="Button" parent="." unique_id=874282753]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("2_i82s6")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=21803818]
+
+[node name="Token_label" type="Label" parent="CanvasLayer2" unique_id=114226480]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_right = 68.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i82s6")
+theme_override_font_sizes/font_size = 35
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=402682230]
+
+[node name="Intro_label" type="RichTextLabel" parent="CanvasLayer3" unique_id=1205318922]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -59.0
+offset_right = 200.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_i82s6")
+theme_override_font_sizes/normal_font_size = 75
+text = "The Arcade"
+script = ExtResource("3_i82s6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer3/Intro_label" unique_id=1124303779]
+libraries/ = SubResource("AnimationLibrary_o2jrl")
+
+[node name="Pack_Bro" parent="." unique_id=1921932739 instance=ExtResource("5_nw1ri")]
+z_index = -1
+position = Vector2(1095, 119)
+
+[node name="Arcade_player" parent="." unique_id=1908138782 instance=ExtResource("6_nw1ri")]
+position = Vector2(576, 324)
+
+[node name="Temp_background" type="Sprite2D" parent="." unique_id=1546600738]
+z_index = -1
+position = Vector2(305, 411.02325)
+scale = Vector2(1.234, 0.7658264)
+texture = ExtResource("6_ovbp2")
+
+[node name="Temp_background3" type="Sprite2D" parent="Temp_background" unique_id=1079213436]
+z_index = -1
+position = Vector2(786.8721, -84.906006)
+scale = Vector2(0.41797867, 0.46840665)
+texture = ExtResource("6_ovbp2")
+
+[node name="Temp_background4" type="Sprite2D" parent="Temp_background" unique_id=500425102]
+z_index = -1
+position = Vector2(1283.4689, -90.79718)
+scale = Vector2(1.5885915, 1.3775511)
+texture = ExtResource("6_ovbp2")
+
+[node name="Temp_background2" type="Sprite2D" parent="Temp_background" unique_id=2131160441]
+z_index = -1
+position = Vector2(466.528, -3.9173584)
+scale = Vector2(0.8901125, 1.0126572)
+texture = ExtResource("6_ovbp2")
+
+[node name="Walls" type="Sprite2D" parent="." unique_id=524781663]
+z_index = -2
+position = Vector2(1095, 92)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("7_r7i0d")
+
+[node name="Clear" type="Sprite2D" parent="Walls" unique_id=98738461]
+z_index = -1
+position = Vector2(-333.62744, 43.13726)
+scale = Vector2(0.4732434, 1)
+texture = ExtResource("8_yfyhc")
+
+[node name="Clear_1" type="Sprite2D" parent="Walls" unique_id=1030910789]
+z_index = -1
+position = Vector2(-1027.4509, 43.13726)
+scale = Vector2(0.4732434, 1)
+texture = ExtResource("8_yfyhc")
+
+[node name="Clear_2" type="Sprite2D" parent="Walls" unique_id=1657777064]
+z_index = -1
+position = Vector2(-1721.5686, 43.137238)
+scale = Vector2(0.4732434, 1)
+texture = ExtResource("8_yfyhc")
+
+[node name="Clear_3" type="Sprite2D" parent="Walls" unique_id=314822795]
+z_index = -1
+position = Vector2(-2415.6863, 43.137268)
+scale = Vector2(0.4732434, 1)
+texture = ExtResource("8_yfyhc")
+
+[node name="Clear_4" type="Sprite2D" parent="Walls" unique_id=307215734]
+z_index = -1
+position = Vector2(-3109.804, 45.25)
+scale = Vector2(0.4732434, 1)
+texture = ExtResource("8_yfyhc")
+
+[node name="Glow_1" type="Sprite2D" parent="Walls" unique_id=1720398480]
+z_index = 1
+position = Vector2(-674.51, -1.99)
+scale = Vector2(0.45955878, 0.46913305)
+texture = ExtResource("9_lvvd5")
+
+[node name="Glow_2" type="Sprite2D" parent="Walls" unique_id=2051169834]
+z_index = 1
+position = Vector2(-1368.627, -1.99)
+scale = Vector2(0.45955878, 0.46913305)
+texture = ExtResource("9_lvvd5")
+
+[node name="Glow_3" type="Sprite2D" parent="Walls" unique_id=739780921]
+z_index = 1
+position = Vector2(-2062.745, -1.99)
+scale = Vector2(0.45955878, 0.46913305)
+texture = ExtResource("9_lvvd5")
+
+[node name="Glow_4" type="Sprite2D" parent="Walls" unique_id=1664622525]
+z_index = 1
+position = Vector2(-2756.8628, -1.4543533e-05)
+scale = Vector2(0.45955878, 0.46913305)
+texture = ExtResource("9_lvvd5")
+
+[node name="Example_arcade_machines" type="AnimatedSprite2D" parent="." unique_id=1860296366]
+visible = false
+position = Vector2(763.00006, 122.00001)
+scale = Vector2(0.25312504, 0.24999999)
+sprite_frames = SubResource("SpriteFrames_wv2cy")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Example_arcade_machines2" type="AnimatedSprite2D" parent="Example_arcade_machines" unique_id=1710858677]
+position = Vector2(-2295.3086, 428.00003)
+sprite_frames = SubResource("SpriteFrames_wv2cy")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Slime_quest_arcade_machine" parent="." unique_id=1671749115 instance=ExtResource("11_6bv4j")]
+z_index = -1
+position = Vector2(922, 119)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
