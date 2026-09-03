@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="3_exrw6"]
 [ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="4_iu1sk"]
 [ext_resource type="PackedScene" uid="uid://0nprtemqx03n" path="res://Minigames/Slime Quest/Prefabs/Spike.tscn" id="6_8oww7"]
+[ext_resource type="PackedScene" uid="uid://slka5b1uppg2" path="res://General/Scenes/win_screen_2.tscn" id="6_ws036"]
+[ext_resource type="PackedScene" uid="uid://dgmtfp02b4k2f" path="res://Minigames/Slime Quest/Prefabs/portal.tscn" id="7_o2xjr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cv8kw"]
 texture = ExtResource("2_0v5fw")
@@ -416,11 +418,10 @@ tile_set = SubResource("TileSet_exrw6")
 [node name="WinScreen_1" parent="." unique_id=1584049398 instance=ExtResource("3_exrw6")]
 visible = false
 
-[node name="WinScreen_2" parent="." unique_id=895069888 instance=ExtResource("3_exrw6")]
-visible = false
-
 [node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("4_iu1sk")]
 visible = false
+
+[node name="WinScreen_3" parent="." unique_id=608599632 instance=ExtResource("6_ws036")]
 
 [node name="Spike" parent="." unique_id=406308420 instance=ExtResource("6_8oww7")]
 position = Vector2(612, 288)
@@ -436,3 +437,6 @@ position = Vector2(640, 288)
 
 [node name="Spike5" parent="." unique_id=1020340929 instance=ExtResource("6_8oww7")]
 position = Vector2(668, 289)
+
+[node name="portal" parent="." unique_id=769148750 instance=ExtResource("7_o2xjr")]
+position = Vector2(864, -224)

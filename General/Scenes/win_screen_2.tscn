@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://dq0o0qnwrbpc1"]
+[gd_scene format=3 uid="uid://slka5b1uppg2"]
 
-[ext_resource type="Script" uid="uid://b46ms2p0r1ind" path="res://General/Scripts/win_screen.gd" id="1_a00f1"]
-[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="1_l5sol"]
+[ext_resource type="Script" uid="uid://b46ms2p0r1ind" path="res://General/Scripts/win_screen.gd" id="1_qla1c"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_nxhio"]
 
-[node name="WinScreen" type="CanvasLayer" unique_id=1584049398]
+[node name="WinScreen_2" type="CanvasLayer" unique_id=1584049398]
 process_mode = 3
-script = ExtResource("1_a00f1")
+script = ExtResource("1_qla1c")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=608841137]
 anchors_preset = 15
@@ -29,26 +29,26 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1200953972]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_l5sol")
+theme_override_fonts/font = ExtResource("2_nxhio")
 theme_override_font_sizes/font_size = 70
 text = "YOU WON!!"
 
 [node name="Label2" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=356776846]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_l5sol")
+theme_override_fonts/font = ExtResource("2_nxhio")
 theme_override_font_sizes/font_size = 25
 text = "You gained 1 token!"
 horizontal_alignment = 1
 
 [node name="Win_button" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=535421120]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_l5sol")
+theme_override_fonts/font = ExtResource("2_nxhio")
 theme_override_font_sizes/font_size = 30
 text = "Back to arcade"
 
 [node name="Play_again" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1173934669]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_l5sol")
+theme_override_fonts/font = ExtResource("2_nxhio")
 theme_override_font_sizes/font_size = 30
 text = "Play again"
 

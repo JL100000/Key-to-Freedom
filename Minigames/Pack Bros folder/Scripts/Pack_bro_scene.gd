@@ -12,13 +12,13 @@ func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://General/Scenes/arcade.tscn")
 
 func _on_win_timer_timeout() -> void:
-	if TokenManager.have_won == true:
+	if TokenManager.pack_bro_won == true:
 		get_tree().paused = true
 		if win_screen_1:
 			win_screen_1.show()
-	if TokenManager.have_won == false:
+	if TokenManager.pack_bro_won == false:
 		get_tree().paused = true
 		TokenManager.add_tokens(1)
-		TokenManager.have_won = true
+		TokenManager.pack_bro_won = true
 		if win_screen:
 			win_screen.show()

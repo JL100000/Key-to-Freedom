@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://do5m7wftaw24i" path="res://Minigames/Slime Quest/Aesthetics/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/spikes.png" id="1_ekogv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_egk3g"]
-size = Vector2(69, 40)
+size = Vector2(64, 34)
 
 [node name="Spike" type="Area2D" unique_id=406308420]
 script = ExtResource("1_egk3g")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2131901709]
-position = Vector2(-0.5, 12)
+position = Vector2(0, 15)
 shape = SubResource("RectangleShape2D_egk3g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=244935752]

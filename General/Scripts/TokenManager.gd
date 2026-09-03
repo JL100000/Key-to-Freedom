@@ -1,6 +1,7 @@
 extends Node
 var tokens: int = 0
-var have_won: bool = false
+var pack_bro_won: bool = false
+var slime_quest_won: bool = false
 signal tokens_changed(new_amount: int)
 
 func add_tokens(amount: int) -> void:
