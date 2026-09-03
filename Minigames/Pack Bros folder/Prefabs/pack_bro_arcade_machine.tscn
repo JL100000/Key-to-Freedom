@@ -49,7 +49,7 @@ func _on_pack_bro_area_entered(area: Area2D) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu1j4"]
-size = Vector2(168, 177)
+size = Vector2(115, 177)
 
 [node name="Pack_Bro_arcade_machine" type="Area2D" unique_id=1921932739]
 script = ExtResource("1_knjt7")
@@ -62,7 +62,7 @@ autoplay = "idle"
 script = SubResource("GDScript_eex8v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2133614843]
-position = Vector2(-4, -0.5)
+position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_iu1j4")
 
 [node name="Label" type="Label" parent="." unique_id=401247970]

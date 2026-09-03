@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 TokenManager="*uid://wolj6auot4p6"
-SignalBus="*uid://dlv6bippkuib5"
 
 [display]
 

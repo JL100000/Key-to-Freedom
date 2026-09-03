@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ej00e"]
-size = Vector2(160, 177)
+size = Vector2(115, 177)
 
 [node name="Slime_quest_arcade_machine" type="Area2D" unique_id=1671749115]
 script = ExtResource("1_bppbw")
@@ -52,7 +52,7 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1840178684]
-position = Vector2(0, -0.5)
+position = Vector2(-1.5, -0.5)
 shape = SubResource("RectangleShape2D_ej00e")
 
 [node name="Label" type="Label" parent="." unique_id=1940603550]

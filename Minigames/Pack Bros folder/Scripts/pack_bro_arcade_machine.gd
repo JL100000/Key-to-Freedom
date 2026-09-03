@@ -17,10 +17,16 @@ func _on_area_entered(area: Area2D) -> void:
 	animation.play("interact")
 	label.visible = true
 	label_2.visible = true
-	
+	TokenManager.in_packbro = true
+	if area_entered and TokenManager.in_slime_quest:
+		is_player_inside = false
+		animation.play("idle")
+		label.visible = false
+		label_2.visible = false
 
 func _on_area_exited(area: Area2D) -> void:
 	is_player_inside = false
 	animation.play("idle")
 	label.visible = false
 	label_2.visible = false
+	TokenManager.in_packbro = false

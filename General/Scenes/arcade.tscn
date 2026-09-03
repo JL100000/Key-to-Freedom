@@ -5,11 +5,10 @@
 [ext_resource type="Script" uid="uid://hj3loe5c7nup" path="res://General/Scripts/intro_label.gd" id="3_i82s6"]
 [ext_resource type="PackedScene" uid="uid://bmsb6thf5dxly" path="res://Minigames/Pack Bros folder/Prefabs/pack_bro_arcade_machine.tscn" id="5_nw1ri"]
 [ext_resource type="PackedScene" uid="uid://c1lhqnvmr27yt" path="res://General/Prefabs/arcade_player.tscn" id="6_nw1ri"]
-[ext_resource type="Texture2D" uid="uid://bb1ijuh3gkqvn" path="res://General/Aesthetics/images.jpg" id="6_ovbp2"]
+[ext_resource type="Texture2D" uid="uid://dpvfcja8ifgpn" path="res://General/Arcade_Flooring_Placeholder.png" id="6_wv2cy"]
 [ext_resource type="Texture2D" uid="uid://dbefg0u6oivpb" path="res://General/Aesthetics/Arcade_wall_glow.png" id="7_r7i0d"]
 [ext_resource type="Texture2D" uid="uid://0k8d31vv268k" path="res://General/Aesthetics/Arcade_walls_plain.png" id="8_yfyhc"]
 [ext_resource type="Texture2D" uid="uid://cs8m4wxo8rhcj" path="res://Minigames/Pack Bros folder/Aesthetics/Arcade_wall_glow (1).png" id="9_lvvd5"]
-[ext_resource type="Texture2D" uid="uid://wvlwis8g7d8" path="res://Minigames/Pack Bros folder/Aesthetics/PakBro Arcade Machine (1).png" id="9_uruph"]
 [ext_resource type="PackedScene" uid="uid://dnebn42nonh3f" path="res://Minigames/Slime Quest/Prefabs/slime_quest_arcade_machine.tscn" id="11_6bv4j"]
 [ext_resource type="Texture2D" uid="uid://cbwf8olq8k8i7" path="res://General/Aesthetics/OutArcade_walls prototype.png" id="12_wv2cy"]
 [ext_resource type="Texture2D" uid="uid://dp0mhwk2g5kk5" path="res://General/Aesthetics/Doors prototype.png" id="13_h5ggk"]
@@ -65,28 +64,6 @@ _data = {
 &"fade_in": SubResource("Animation_i82s6"),
 &"fade_out": SubResource("Animation_o2jrl")
 }
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lvvd5"]
-atlas = ExtResource("9_uruph")
-region = Rect2(0, 0, 960, 960)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6bv4j"]
-atlas = ExtResource("9_uruph")
-region = Rect2(960, 0, 960, 960)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_wv2cy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lvvd5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6bv4j")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1dbqh"]
 atlas = ExtResource("13_h5ggk")
@@ -150,7 +127,6 @@ script = ExtResource("3_i82s6")
 libraries/ = SubResource("AnimationLibrary_o2jrl")
 
 [node name="Pack_Bro" parent="." unique_id=1921932739 instance=ExtResource("5_nw1ri")]
-z_index = -1
 position = Vector2(1095, 119)
 
 [node name="Arcade_player" parent="." unique_id=1908138782 instance=ExtResource("6_nw1ri")]
@@ -158,15 +134,27 @@ position = Vector2(576, 324)
 
 [node name="Temp_background" type="Sprite2D" parent="." unique_id=1546600738]
 z_index = -1
-position = Vector2(305, 411.02325)
-scale = Vector2(1.234, 0.7658264)
-texture = ExtResource("6_ovbp2")
+position = Vector2(284, 305)
+scale = Vector2(1.234, 0.59541327)
+texture = ExtResource("6_wv2cy")
 
-[node name="Temp_background2" type="Sprite2D" parent="Temp_background" unique_id=2131160441]
+[node name="Temp_background4" type="Sprite2D" parent="." unique_id=1453179184]
 z_index = -1
-position = Vector2(466.528, -3.9173584)
-scale = Vector2(0.8901125, 1.0126572)
-texture = ExtResource("6_ovbp2")
+position = Vector2(857, 305)
+scale = Vector2(1.234, 0.59541327)
+texture = ExtResource("6_wv2cy")
+
+[node name="Temp_background5" type="Sprite2D" parent="." unique_id=46809428]
+z_index = -1
+position = Vector2(857, 562)
+scale = Vector2(1.234, 0.59541327)
+texture = ExtResource("6_wv2cy")
+
+[node name="Temp_background3" type="Sprite2D" parent="." unique_id=612404504]
+z_index = -1
+position = Vector2(284, 562)
+scale = Vector2(1.234, 0.59541327)
+texture = ExtResource("6_wv2cy")
 
 [node name="Walls" type="Sprite2D" parent="." unique_id=524781663]
 z_index = -2
@@ -194,13 +182,13 @@ texture = ExtResource("8_yfyhc")
 
 [node name="Clear_3" type="Sprite2D" parent="Walls" unique_id=314822795]
 z_index = -1
-position = Vector2(-2415.6863, 43.137268)
-scale = Vector2(0.4732434, 1)
+position = Vector2(-2415.686, 43.137)
+scale = Vector2(0.473, 1)
 texture = ExtResource("8_yfyhc")
 
 [node name="Clear_4" type="Sprite2D" parent="Walls" unique_id=307215734]
 z_index = -1
-position = Vector2(-3109.804, 45.25)
+position = Vector2(-3109.804, 43.137)
 scale = Vector2(0.4732434, 1)
 texture = ExtResource("8_yfyhc")
 
@@ -224,23 +212,9 @@ texture = ExtResource("9_lvvd5")
 
 [node name="Glow_4" type="Sprite2D" parent="Walls" unique_id=1664622525]
 z_index = 1
-position = Vector2(-2756.8628, -1.4543533e-05)
+position = Vector2(-2756.863, -1.99)
 scale = Vector2(0.45955878, 0.46913305)
 texture = ExtResource("9_lvvd5")
-
-[node name="Example_arcade_machines" type="AnimatedSprite2D" parent="." unique_id=1860296366]
-visible = false
-position = Vector2(763.00006, 122.00001)
-scale = Vector2(0.25312504, 0.24999999)
-sprite_frames = SubResource("SpriteFrames_wv2cy")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="Example_arcade_machines2" type="AnimatedSprite2D" parent="Example_arcade_machines" unique_id=1710858677]
-position = Vector2(-2295.3086, 428.00003)
-sprite_frames = SubResource("SpriteFrames_wv2cy")
-animation = &"idle"
-autoplay = "idle"
 
 [node name="Slime_quest_arcade_machine" parent="." unique_id=1671749115 instance=ExtResource("11_6bv4j")]
 z_index = -1
@@ -296,7 +270,7 @@ texture = ExtResource("12_wv2cy")
 
 [node name="Door" type="AnimatedSprite2D" parent="." unique_id=1869022321]
 z_index = -2
-position = Vector2(140, 92.499985)
+position = Vector2(138, 91)
 scale = Vector2(0.87812495, 0.3859375)
 sprite_frames = SubResource("SpriteFrames_ldskm")
 
