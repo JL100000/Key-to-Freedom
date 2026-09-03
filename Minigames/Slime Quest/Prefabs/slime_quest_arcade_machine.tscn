@@ -1,29 +1,29 @@
 [gd_scene format=3 uid="uid://dnebn42nonh3f"]
 
-[ext_resource type="Texture2D" uid="uid://wvlwis8g7d8" path="res://Minigames/Pack Bros folder/Aesthetics/PakBro Arcade Machine (1).png" id="1_5yqrg"]
 [ext_resource type="Script" uid="uid://b53jxch20isgu" path="res://Minigames/Slime Quest/Scripts/slime_quest_arcade_machine.gd" id="1_bppbw"]
+[ext_resource type="Texture2D" uid="uid://top3pxpi0st0" path="res://Minigames/Slime Quest/Aesthetics/Slime_Quest_Arcade_Machine.png" id="2_bppbw"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_cnbyn"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cnbyn"]
-atlas = ExtResource("1_5yqrg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7kfb"]
+atlas = ExtResource("2_bppbw")
 region = Rect2(0, 0, 960, 960)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bppbw"]
-atlas = ExtResource("1_5yqrg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7fhb"]
+atlas = ExtResource("2_bppbw")
 region = Rect2(960, 0, 960, 960)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h7kfb"]
-atlas = ExtResource("1_5yqrg")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej00e"]
+atlas = ExtResource("2_bppbw")
 region = Rect2(0, 960, 960, 960)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r7fhb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cnbyn")
+"texture": SubResource("AtlasTexture_h7kfb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bppbw")
+"texture": SubResource("AtlasTexture_r7fhb")
 }],
 "loop": true,
 "name": &"idle",
@@ -31,7 +31,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h7kfb")
+"texture": SubResource("AtlasTexture_ej00e")
 }],
 "loop": true,
 "name": &"interact",
@@ -48,7 +48,7 @@ script = ExtResource("1_bppbw")
 position = Vector2(-2.2737368e-13, 0)
 scale = Vector2(0.24999999, 0.2525)
 sprite_frames = SubResource("SpriteFrames_r7fhb")
-animation = &"interact"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1840178684]

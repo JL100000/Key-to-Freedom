@@ -17,7 +17,7 @@ func _on_area_entered(area: Area2D) -> void:
 	animation.play("interact")
 	label.visible = true
 	label_2.visible = true
-	Signals_Script.slime_quest_entered.emit()
+	#signals_script.slime_quest_entered.emit()
 
 func _on_area_exited(area: Area2D) -> void:
 	is_player_inside = false

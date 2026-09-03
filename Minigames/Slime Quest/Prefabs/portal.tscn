@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dgmtfp02b4k2f"]
+
+[ext_resource type="Texture2D" uid="uid://7el7fr2unkvv" path="res://Minigames/Slime Quest/Aesthetics/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/door_open.png" id="1_kiiom"]
+[ext_resource type="Texture2D" uid="uid://blcslf7i3l7fn" path="res://Minigames/Slime Quest/Aesthetics/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/door_open_top.png" id="2_k6uaw"]
+
+[node name="portal" type="Area2D" unique_id=769148750]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1908069978]
+texture = ExtResource("1_kiiom")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1211690096]
+position = Vector2(0, -64)
+texture = ExtResource("2_k6uaw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=951109499]
+polygon = PackedVector2Array(-32, 32, 32, 32, 32, -72, 24, -88, 8, -96, -8, -96, -24, -88, -32, -72)

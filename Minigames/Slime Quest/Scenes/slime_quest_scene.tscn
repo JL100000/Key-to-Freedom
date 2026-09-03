@@ -1,9 +1,11 @@
 [gd_scene format=4 uid="uid://44nmoi1g16p2"]
 
-[ext_resource type="PackedScene" uid="uid://bkiqhomg2w1s0" path="res://Minigames/Slime Quest/Prefabs/Slime_quest_player.tscn" id="1_a000b"]
+[ext_resource type="PackedScene" uid="uid://bkiqhomg2w1s0" path="res://Minigames/Slime Quest/Prefabs/Player.tscn" id="1_a000b"]
+[ext_resource type="Script" uid="uid://do2koysv1bcnt" path="res://Minigames/Slime Quest/Scripts/slime_quest_scene.gd" id="1_iu1sk"]
 [ext_resource type="Texture2D" uid="uid://bqtknnegerimn" path="res://Minigames/Slime Quest/Aesthetics/tilesheet_complete.png" id="2_0v5fw"]
 [ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="3_exrw6"]
 [ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="4_iu1sk"]
+[ext_resource type="PackedScene" uid="uid://0nprtemqx03n" path="res://Minigames/Slime Quest/Prefabs/Spike.tscn" id="6_8oww7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cv8kw"]
 texture = ExtResource("2_0v5fw")
@@ -89,9 +91,9 @@ texture_region_size = Vector2i(64, 64)
 6:2/0 = 0
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 32, 32, 32, 32, -32, -32, -32)
 7:2/0 = 0
-7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 32, 32, 32, 32, -32, -32, -32)
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -8.81543, 1.6528931, -32, -4.9586716)
 8:2/0 = 0
-8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 32, 32, 32, 32, -32, -32, -32)
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, -32, -32, -32, 32, 8.81543, 1.6528931, 32, -4.9586716)
 9:2/0 = 0
 10:2/0 = 0
 11:2/0 = 0
@@ -401,6 +403,7 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_cv8kw")
 
 [node name="Slime_quest_scene" type="Node2D" unique_id=1405333434]
+script = ExtResource("1_iu1sk")
 
 [node name="Water_slime_player" parent="." unique_id=692553899 instance=ExtResource("1_a000b")]
 position = Vector2(610, 624)
@@ -411,7 +414,25 @@ tile_map_data = PackedByteArray("AAAIAAoAAgAHAAEAAAAKAAoAAgAIAAEAAAAJAAoAAgACAAA
 tile_set = SubResource("TileSet_exrw6")
 
 [node name="WinScreen_1" parent="." unique_id=1584049398 instance=ExtResource("3_exrw6")]
+visible = false
 
 [node name="WinScreen_2" parent="." unique_id=895069888 instance=ExtResource("3_exrw6")]
+visible = false
 
 [node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("4_iu1sk")]
+visible = false
+
+[node name="Spike" parent="." unique_id=406308420 instance=ExtResource("6_8oww7")]
+position = Vector2(612, 288)
+
+[node name="Spike2" parent="." unique_id=249064183 instance=ExtResource("6_8oww7")]
+position = Vector2(-96, 672)
+
+[node name="Spike3" parent="." unique_id=718023440 instance=ExtResource("6_8oww7")]
+position = Vector2(-68, 672)
+
+[node name="Spike4" parent="." unique_id=1595659516 instance=ExtResource("6_8oww7")]
+position = Vector2(640, 288)
+
+[node name="Spike5" parent="." unique_id=1020340929 instance=ExtResource("6_8oww7")]
+position = Vector2(668, 289)
