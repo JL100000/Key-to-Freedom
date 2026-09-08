@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://bd8tkirdauadq" path="res://General/Scripts/arcade.gd" id="1_3h0sf"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_i82s6"]
 [ext_resource type="Script" uid="uid://hj3loe5c7nup" path="res://General/Scripts/intro_label.gd" id="3_i82s6"]
-[ext_resource type="PackedScene" uid="uid://bmsb6thf5dxly" path="res://Minigames/Pack Bros folder/Prefabs/pack_bro_arcade_machine.tscn" id="5_nw1ri"]
+[ext_resource type="PackedScene" uid="uid://bmsb6thf5dxly" path="res://Minigames/Pack Bros folder/Prefabs/P.B_arcade_machine.tscn" id="5_nw1ri"]
 [ext_resource type="PackedScene" uid="uid://c1lhqnvmr27yt" path="res://General/Prefabs/arcade_player.tscn" id="6_nw1ri"]
 [ext_resource type="Texture2D" uid="uid://dpvfcja8ifgpn" path="res://General/Arcade_Flooring_Placeholder.png" id="6_wv2cy"]
 [ext_resource type="Texture2D" uid="uid://dbefg0u6oivpb" path="res://General/Aesthetics/Arcade_wall_glow.png" id="7_r7i0d"]
 [ext_resource type="Texture2D" uid="uid://0k8d31vv268k" path="res://General/Aesthetics/Arcade_walls_plain.png" id="8_yfyhc"]
 [ext_resource type="Texture2D" uid="uid://cs8m4wxo8rhcj" path="res://Minigames/Pack Bros folder/Aesthetics/Arcade_wall_glow (1).png" id="9_lvvd5"]
-[ext_resource type="PackedScene" uid="uid://dnebn42nonh3f" path="res://Minigames/Slime Quest/Prefabs/slime_quest_arcade_machine.tscn" id="11_6bv4j"]
+[ext_resource type="PackedScene" uid="uid://dnebn42nonh3f" path="res://Minigames/Slime Quest/Prefabs/S.Q_arcade_machine.tscn" id="11_6bv4j"]
 [ext_resource type="Texture2D" uid="uid://cbwf8olq8k8i7" path="res://General/Aesthetics/OutArcade_walls prototype.png" id="12_wv2cy"]
 [ext_resource type="Texture2D" uid="uid://dp0mhwk2g5kk5" path="res://General/Aesthetics/Doors prototype.png" id="13_h5ggk"]
 
@@ -82,13 +82,6 @@ animations = [{
 
 [node name="Arcade" type="Node2D" unique_id=499539473]
 script = ExtResource("1_3h0sf")
-
-[node name="Button" type="Button" parent="." unique_id=874282753]
-offset_right = 8.0
-offset_bottom = 8.0
-theme_override_fonts/font = ExtResource("2_i82s6")
-theme_override_font_sizes/font_size = 35
-text = "Back"
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=21803818]
 
@@ -270,8 +263,17 @@ texture = ExtResource("12_wv2cy")
 
 [node name="Door" type="AnimatedSprite2D" parent="." unique_id=1869022321]
 z_index = -2
-position = Vector2(138, 91)
-scale = Vector2(0.87812495, 0.3859375)
+position = Vector2(147.5, 91)
+scale = Vector2(0.9078125, 0.3859375)
 sprite_frames = SubResource("SpriteFrames_ldskm")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1027532605]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=874282753]
+offset_right = 87.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("2_i82s6")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

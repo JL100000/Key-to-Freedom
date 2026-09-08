@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnebn42nonh3f"]
 
-[ext_resource type="Script" uid="uid://b53jxch20isgu" path="res://Minigames/Slime Quest/Scripts/slime_quest_arcade_machine.gd" id="1_bppbw"]
+[ext_resource type="Script" uid="uid://b53jxch20isgu" path="res://Minigames/Slime Quest/Scripts/S.Q_arcade_machine.gd" id="1_bppbw"]
 [ext_resource type="Texture2D" uid="uid://top3pxpi0st0" path="res://Minigames/Slime Quest/Aesthetics/Slime_Quest_Arcade_Machine.png" id="2_bppbw"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_cnbyn"]
 

@@ -1,17 +1,17 @@
 [gd_scene format=4 uid="uid://s36xthhcaq4p"]
 
-[ext_resource type="Script" uid="uid://bx6l2nploujtw" path="res://Minigames/Pack Bros folder/Scripts/Pack_bro_scene.gd" id="1_enoba"]
-[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_11mgy"]
-[ext_resource type="Texture2D" uid="uid://bvgklhgvyadlf" path="res://Minigames/Pack Bros folder/Aesthetics/pac man v2/pac man/tiles set.png" id="3_o6yob"]
-[ext_resource type="Texture2D" uid="uid://fttvaa46n8e7" path="res://Minigames/Pack Bros folder/Aesthetics/pac man v2/pac man/New Piskel.png" id="4_5txvl"]
-[ext_resource type="PackedScene" uid="uid://1b2h2i3e64l" path="res://Minigames/Pack Bros folder/Prefabs/pack_bro_player.tscn" id="5_5txvl"]
-[ext_resource type="PackedScene" uid="uid://bses428tw7xcc" path="res://Minigames/Pack Bros folder/Prefabs/pack_bro_enemy.tscn" id="6_0uv5o"]
-[ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="7_ojqsy"]
-[ext_resource type="PackedScene" uid="uid://dq0o0qnwrbpc1" path="res://General/Scenes/win_screen.tscn" id="8_jmcek"]
-[ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="9_ne1wf"]
+[ext_resource type="Script" uid="uid://bx6l2nploujtw" path="res://Minigames/Pack Bros folder/Scripts/P.B_scene.gd" id="1_l7o23"]
+[ext_resource type="Texture2D" uid="uid://bvgklhgvyadlf" path="res://Minigames/Pack Bros folder/Aesthetics/pac man v2/pac man/tiles set.png" id="2_ig0yv"]
+[ext_resource type="Texture2D" uid="uid://fttvaa46n8e7" path="res://Minigames/Pack Bros folder/Aesthetics/pac man v2/pac man/New Piskel.png" id="3_dn4vm"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="4_leepj"]
+[ext_resource type="PackedScene" uid="uid://1b2h2i3e64l" path="res://Minigames/Pack Bros folder/Prefabs/P.B_player.tscn" id="5_umymk"]
+[ext_resource type="PackedScene" uid="uid://bses428tw7xcc" path="res://Minigames/Pack Bros folder/Prefabs/P.B_enemy.tscn" id="6_hpxcg"]
+[ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="7_uq3ki"]
+[ext_resource type="PackedScene" uid="uid://dq0o0qnwrbpc1" path="res://General/Scenes/win_screen.tscn" id="8_yik7y"]
+[ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="9_fyyxn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0uv5o"]
-texture = ExtResource("3_o6yob")
+texture = ExtResource("2_ig0yv")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -226,7 +226,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8
 agent_radius = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ojqsy"]
-texture = ExtResource("4_5txvl")
+texture = ExtResource("3_dn4vm")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -3426,7 +3426,7 @@ sources/0 = SubResource("TileSetAtlasSource_0uv5o")
 sources/1 = SubResource("TileSetAtlasSource_ojqsy")
 
 [node name="Minigame_1" type="Node2D" unique_id=127780166]
-script = ExtResource("1_enoba")
+script = ExtResource("1_l7o23")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=332810951]
 offset_right = 40.0
@@ -3440,7 +3440,7 @@ tile_set = SubResource("TileSet_jmcek")
 z_index = 1
 offset_right = 8.0
 offset_bottom = 8.0
-theme_override_fonts/font = ExtResource("2_11mgy")
+theme_override_fonts/font = ExtResource("4_leepj")
 theme_override_font_sizes/font_size = 35
 text = "Back"
 
@@ -3450,16 +3450,16 @@ offset_left = 376.0
 offset_top = 224.0
 offset_right = 793.0
 offset_bottom = 325.0
-theme_override_fonts/font = ExtResource("2_11mgy")
+theme_override_fonts/font = ExtResource("4_leepj")
 theme_override_font_sizes/font_size = 80
 text = "Minigame 1"
 
-[node name="Player" parent="." unique_id=788515543 instance=ExtResource("5_5txvl")]
+[node name="Player" parent="." unique_id=788515543 instance=ExtResource("5_umymk")]
 position = Vector2(-7, 280)
 collision_layer = 2
 collision_mask = 3
 
-[node name="Enemy" parent="." unique_id=977642155 node_paths=PackedStringArray("player") instance=ExtResource("6_0uv5o")]
+[node name="Enemy" parent="." unique_id=977642155 node_paths=PackedStringArray("player") instance=ExtResource("6_hpxcg")]
 position = Vector2(1144, 280)
 collision_layer = 2
 collision_mask = 3
@@ -3469,11 +3469,11 @@ player = NodePath("../Player")
 wait_time = 60.0
 one_shot = true
 
-[node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("7_ojqsy")]
+[node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("7_uq3ki")]
 
-[node name="WinScreen" parent="." unique_id=1584049398 instance=ExtResource("8_jmcek")]
+[node name="WinScreen" parent="." unique_id=1584049398 instance=ExtResource("8_yik7y")]
 
-[node name="WinScreen_1" parent="." unique_id=1679688062 instance=ExtResource("9_ne1wf")]
+[node name="WinScreen_1" parent="." unique_id=1679688062 instance=ExtResource("9_fyyxn")]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Win_timer" to="." method="_on_win_timer_timeout"]

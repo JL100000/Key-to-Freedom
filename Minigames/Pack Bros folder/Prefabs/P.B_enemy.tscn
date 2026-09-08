@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bses428tw7xcc"]
 
-[ext_resource type="Script" uid="uid://w1gn7lvhbgcw" path="res://Minigames/Pack Bros folder/Scripts/Pack_bro_enemy.gd" id="1_g7ngk"]
+[ext_resource type="Script" uid="uid://w1gn7lvhbgcw" path="res://Minigames/Pack Bros folder/Scripts/P.B_enemy.gd" id="1_g7ngk"]
 [ext_resource type="Texture2D" uid="uid://codnykjwfu1fj" path="res://Minigames/Pack Bros folder/Aesthetics/pac man v2/PackBro.png" id="2_so16w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t4g6b"]

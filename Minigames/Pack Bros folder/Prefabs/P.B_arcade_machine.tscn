@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmsb6thf5dxly"]
 
-[ext_resource type="Script" uid="uid://dqrxxtmuroh77" path="res://Minigames/Pack Bros folder/Scripts/pack_bro_arcade_machine.gd" id="1_knjt7"]
+[ext_resource type="Script" uid="uid://dqrxxtmuroh77" path="res://Minigames/Pack Bros folder/Scripts/P.B_arcade_machine.gd" id="1_knjt7"]
 [ext_resource type="Texture2D" uid="uid://wvlwis8g7d8" path="res://Minigames/Pack Bros folder/Aesthetics/PakBro Arcade Machine (1).png" id="2_mp3nn"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_yxeoy"]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bkiqhomg2w1s0"]
 
 [ext_resource type="Texture2D" uid="uid://bj1h3t3dqfnug" path="res://Minigames/Slime Quest/Aesthetics/WaterSlime (1).png" id="1_0lh25"]
-[ext_resource type="Script" uid="uid://hq7qfnoogjbv" path="res://Minigames/Slime Quest/Scripts/Player.gd" id="1_wtgrw"]
+[ext_resource type="Script" uid="uid://hq7qfnoogjbv" path="res://Minigames/Slime Quest/Scripts/S.Q_player.gd" id="1_wtgrw"]
 [ext_resource type="Texture2D" uid="uid://qk3gjol84uc8" path="res://Minigames/Slime Quest/Aesthetics/SlimeJump (1).png" id="2_td8po"]
 [ext_resource type="Texture2D" uid="uid://crqhqptpe0g11" path="res://Minigames/Slime Quest/Aesthetics/SlimeMove (1).png" id="3_glise"]
 
@@ -156,24 +156,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7xeg"]
-size = Vector2(91.875, 67.5)
-
 [node name="Player" type="CharacterBody2D" unique_id=692553899]
 scale = Vector2(0.6, 0.6)
 script = ExtResource("1_wtgrw")
+metadata/_edit_horizontal_guides_ = [-36.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1498354757]
 sprite_frames = SubResource("SpriteFrames_48k1j")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=495539848]
-position = Vector2(-3.3333333, -9.583333)
-shape = SubResource("RectangleShape2D_x7xeg")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=527996555]
 zoom = Vector2(0.5, 0.5)
 
-[node name="Camera2D2" type="Camera2D" parent="." unique_id=2090719663]
-zoom = Vector2(0.5, 0.5)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1635323932]
+polygon = PackedVector2Array(-35, 25, 30, 25, 41.666664, 11.666666, 41.666664, -11.666666, 36.666664, -23.333332, 23.333332, -36.666664, 5, -41.666664, -11.666666, -41.666664, -30, -36.666664, -41.666664, -23.333332, -48.333332, -11.666666, -48.333332, 11.666666)

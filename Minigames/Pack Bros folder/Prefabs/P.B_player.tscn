@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1b2h2i3e64l"]
 
-[ext_resource type="Script" uid="uid://dvns26kbc7afy" path="res://Minigames/Pack Bros folder/Scripts/Pack_bro_player.gd" id="1_lanen"]
+[ext_resource type="Script" uid="uid://dvns26kbc7afy" path="res://Minigames/Pack Bros folder/Scripts/P.B_player.gd" id="1_lanen"]
 [ext_resource type="Texture2D" uid="uid://18rdlj6dqvh8" path="res://Minigames/Pack Bros folder/Aesthetics/Ghost.png" id="2_jjgpd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y5hcb"]

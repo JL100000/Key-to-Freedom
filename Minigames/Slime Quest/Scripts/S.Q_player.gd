@@ -6,8 +6,8 @@ class_name Player
 @onready var animation : AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sound: AudioStreamPlayer = $jump_sound
 @onready var death_sound: AudioStreamPlayer = $death_sound
-@onready var explosion = preload("res://Minigames/Slime Quest/Prefabs/slime_quest_explosion.tscn")
-@onready var spike_explosion = preload("res://Minigames/Slime Quest/Prefabs/spike_explosion.tscn")
+@onready var explosion = preload("res://Minigames/Slime Quest/Prefabs/S.Q_explosion.tscn")
+@onready var spike_explosion = preload("res://Minigames/Slime Quest/Prefabs/S.Q_spike_explosion.tscn")
 var facing_directon = 1
 #The variable controls what direction you shoot in
 var start_position = Vector2(559,492)
