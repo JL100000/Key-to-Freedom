@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://gurw2sortts4"]
+
+[ext_resource type="Script" uid="uid://h6qg5q7kts0f" path="res://Minigames/Planet Raiders folder/Scripts/P.R_enemy.gd" id="1_jiwlb"]
+[ext_resource type="Texture2D" uid="uid://dyx65vrppjekf" path="res://Minigames/Planet Raiders folder/Aesthetics/Space_Shooter_Enemy (1).png" id="1_kc7gn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiwlb"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(0, 0, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1b42"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(640, 0, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du8hb"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(1280, 0, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82me6"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(0, 620, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awhey"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(640, 620, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5dx0"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(1280, 620, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynjj1"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(0, 1240, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqvys"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(640, 1240, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkxo0"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(1280, 1240, 640, 620)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sswft"]
+atlas = ExtResource("1_kc7gn")
+region = Rect2(0, 1860, 640, 620)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_umoyf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiwlb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1b42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du8hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82me6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awhey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5dx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynjj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqvys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkxo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sswft")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc7gn"]
+size = Vector2(62, 59)
+
+[node name="PR_enemy" type="Area2D" unique_id=1559501524]
+script = ExtResource("1_jiwlb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1745782112]
+rotation = 1.5707964
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_umoyf")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=550392250]
+position = Vector2(10, -0.5)
+shape = SubResource("RectangleShape2D_kc7gn")

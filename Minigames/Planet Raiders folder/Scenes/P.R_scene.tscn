@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dpake0puj31ql"]
+
+[ext_resource type="PackedScene" uid="uid://gurw2sortts4" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_enemy.tscn" id="1_a7tiq"]
+[ext_resource type="Script" uid="uid://cvnj7jwgkj2f3" path="res://Minigames/Planet Raiders folder/Scripts/P.R_scene.gd" id="1_stqa2"]
+
+[node name="PR_scene" type="Node2D" unique_id=1521830615]
+script = ExtResource("1_stqa2")
+
+[node name="PR_enemy" parent="." unique_id=1559501524 instance=ExtResource("1_a7tiq")]
+position = Vector2(213, 324)
+
+[node name="PR_enemy_spawn" type="Timer" parent="." unique_id=711263316]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="PR_enemy_spawn" to="." method="_on_pr_enemy_spawn_timeout"]
