@@ -26,16 +26,18 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uoj4g"]
-radius = 38.118237
+radius = 8.0
 
 [node name="PR_enemy_laser" type="Area2D" unique_id=984215749]
 script = ExtResource("1_ntn7f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1758892541]
+position = Vector2(0, 2)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_mrfeo")
 animation = &"idle"
 autoplay = "idle"
+offset = Vector2(-5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=155063259]
-position = Vector2(5, -15)
 shape = SubResource("CircleShape2D_uoj4g")

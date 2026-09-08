@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b4f62hqp24o8h"]
 
 [ext_resource type="Script" uid="uid://c2d1iil0b6qmd" path="res://Minigames/Planet Raiders folder/Scripts/P.R_player.gd" id="1_o0s2i"]
+[ext_resource type="Texture2D" uid="uid://cgxiy1bvby473" path="res://icon.svg" id="2_1wmkl"]
 
 [node name="PR_player" type="Area2D" unique_id=1883805294]
 script = ExtResource("1_o0s2i")
@@ -8,3 +9,5 @@ script = ExtResource("1_o0s2i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860313317]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=891832654]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1wmkl")

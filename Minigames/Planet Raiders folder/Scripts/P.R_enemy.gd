@@ -23,8 +23,7 @@ func _on_area_entered(area: Area2D) -> void:
 
 
 
-
-func _on_laser_spawn_timer_timeout():
+func _on_enemy_laser_timeout() -> void:
 	var laser = laser_prefab.instantiate()
 	laser.position = position
 	get_parent().add_child(laser)
