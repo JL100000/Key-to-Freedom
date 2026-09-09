@@ -1,13 +1,68 @@
 [gd_scene format=3 uid="uid://b4f62hqp24o8h"]
 
 [ext_resource type="Script" uid="uid://c2d1iil0b6qmd" path="res://Minigames/Planet Raiders folder/Scripts/P.R_player.gd" id="1_o0s2i"]
-[ext_resource type="Texture2D" uid="uid://cgxiy1bvby473" path="res://icon.svg" id="2_1wmkl"]
+[ext_resource type="Texture2D" uid="uid://chynlof1io6fn" path="res://Minigames/Planet Raiders folder/Aesthetics/Spaceship.png" id="2_1wmkl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnoew"]
+atlas = ExtResource("2_1wmkl")
+region = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72xtf"]
+atlas = ExtResource("2_1wmkl")
+region = Rect2(2048, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvmuf"]
+atlas = ExtResource("2_1wmkl")
+region = Rect2(0, 2048, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4iq6"]
+atlas = ExtResource("2_1wmkl")
+region = Rect2(2048, 2048, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22vlv"]
+atlas = ExtResource("2_1wmkl")
+region = Rect2(0, 4096, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obhcl"]
+atlas = ExtResource("2_1wmkl")
+region = Rect2(2048, 4096, 2048, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1tf2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnoew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72xtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvmuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4iq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22vlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obhcl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="PR_player" type="Area2D" unique_id=1883805294]
 script = ExtResource("1_o0s2i")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860313317]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=439073234]
+rotation = 1.5707964
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_f1tf2")
+animation = &"idle"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=891832654]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_1wmkl")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1444686365]
+polygon = PackedVector2Array(34, 2, 27, 8, 24, 10, 20, 10, -18, 29, -28, 29, -28, -27, -18, -27, 21, -8, 24, -8, 27, -7, 34, 0)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

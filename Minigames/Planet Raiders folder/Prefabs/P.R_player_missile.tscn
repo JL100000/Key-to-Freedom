@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://d3ahwcpt281gr"]
+
+[ext_resource type="Texture2D" uid="uid://lp8vxkqfwyph" path="res://Minigames/Planet Raiders folder/Aesthetics/Missile.png" id="1_8muda"]
+[ext_resource type="Script" uid="uid://ch8t1t8p1j32l" path="res://Minigames/Planet Raiders folder/Scripts/P.R_player_missile.gd" id="1_51ofp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51ofp"]
+atlas = ExtResource("1_8muda")
+region = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdkvv"]
+atlas = ExtResource("1_8muda")
+region = Rect2(2048, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwmbp"]
+atlas = ExtResource("1_8muda")
+region = Rect2(4096, 0, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fbx7"]
+atlas = ExtResource("1_8muda")
+region = Rect2(0, 2048, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75qgb"]
+atlas = ExtResource("1_8muda")
+region = Rect2(2048, 2048, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfgcq"]
+atlas = ExtResource("1_8muda")
+region = Rect2(4096, 2048, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5hwe"]
+atlas = ExtResource("1_8muda")
+region = Rect2(0, 4096, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rtg8"]
+atlas = ExtResource("1_8muda")
+region = Rect2(2048, 4096, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qeyn"]
+atlas = ExtResource("1_8muda")
+region = Rect2(4096, 4096, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n386h"]
+atlas = ExtResource("1_8muda")
+region = Rect2(0, 6144, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr3db"]
+atlas = ExtResource("1_8muda")
+region = Rect2(2048, 6144, 2048, 2048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8ij5"]
+atlas = ExtResource("1_8muda")
+region = Rect2(4096, 6144, 2048, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qlmvn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51ofp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdkvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwmbp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fbx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75qgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfgcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5hwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rtg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qeyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n386h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr3db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8ij5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8muda"]
+size = Vector2(28, 19)
+
+[node name="PR_player_missile" type="Area2D" unique_id=460858931]
+script = ExtResource("1_51ofp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1159391773]
+rotation = 1.5707964
+scale = Vector2(0.03, 0.03)
+sprite_frames = SubResource("SpriteFrames_qlmvn")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=507823460]
+position = Vector2(9, 0.5)
+shape = SubResource("RectangleShape2D_8muda")

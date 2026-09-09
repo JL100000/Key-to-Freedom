@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dpake0puj31ql"]
 
 [ext_resource type="Script" uid="uid://cvnj7jwgkj2f3" path="res://Minigames/Planet Raiders folder/Scripts/P.R_scene.gd" id="1_stqa2"]
+[ext_resource type="PackedScene" uid="uid://b4f62hqp24o8h" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_player.tscn" id="2_stqa2"]
+[ext_resource type="PackedScene" uid="uid://d3ahwcpt281gr" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_player_missile.tscn" id="3_e5fa2"]
 
 [node name="PR_scene" type="Node2D" unique_id=1521830615]
 script = ExtResource("1_stqa2")
@@ -8,5 +10,11 @@ script = ExtResource("1_stqa2")
 [node name="PR_enemy_spawn" type="Timer" parent="." unique_id=711263316]
 wait_time = 0.5
 autostart = true
+
+[node name="PR_player" parent="." unique_id=1883805294 instance=ExtResource("2_stqa2")]
+position = Vector2(244, 296)
+
+[node name="PR_player_missile" parent="." unique_id=460858931 instance=ExtResource("3_e5fa2")]
+position = Vector2(152, 296)
 
 [connection signal="timeout" from="PR_enemy_spawn" to="." method="_on_pr_enemy_spawn_timeout"]
