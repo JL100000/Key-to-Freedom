@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cvnj7jwgkj2f3" path="res://Minigames/Planet Raiders folder/Scripts/P.R_scene.gd" id="1_stqa2"]
 [ext_resource type="PackedScene" uid="uid://b4f62hqp24o8h" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_player.tscn" id="2_stqa2"]
-[ext_resource type="PackedScene" uid="uid://d3ahwcpt281gr" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_player_missile.tscn" id="3_e5fa2"]
+[ext_resource type="PackedScene" uid="uid://slka5b1uppg2" path="res://General/Scenes/win_screen_2.tscn" id="3_aa5kr"]
+[ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="4_5dxtm"]
+[ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="5_41nxd"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="6_5dxtm"]
 
 [node name="PR_scene" type="Node2D" unique_id=1521830615]
 script = ExtResource("1_stqa2")
@@ -14,7 +17,32 @@ autostart = true
 [node name="PR_player" parent="." unique_id=1883805294 instance=ExtResource("2_stqa2")]
 position = Vector2(244, 296)
 
-[node name="PR_player_missile" parent="." unique_id=460858931 instance=ExtResource("3_e5fa2")]
-position = Vector2(152, 296)
+[node name="WinScreen_2" parent="." unique_id=1584049398 instance=ExtResource("3_aa5kr")]
+
+[node name="WinScreen_1" parent="." unique_id=521451734 instance=ExtResource("4_5dxtm")]
+
+[node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("5_41nxd")]
+
+[node name="game_ui" type="Control" parent="." unique_id=1352832096]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 40.0
+
+[node name="score_label" type="Label" parent="game_ui" unique_id=918043794]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_right = 48.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("6_5dxtm")
+theme_override_font_sizes/font_size = 32
+text = "SCORE: 0000"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="PR_enemy_spawn" to="." method="_on_pr_enemy_spawn_timeout"]
+[connection signal="player_killed" from="PR_player" to="." method="_on_pr_player_player_killed"]

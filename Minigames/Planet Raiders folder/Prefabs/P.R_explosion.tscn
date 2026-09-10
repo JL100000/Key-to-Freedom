@@ -23,7 +23,6 @@ gravity = Vector3(0, 0, 0)
 color_ramp = SubResource("GradientTexture1D_qf1dw")
 
 [node name="PR_explosion" type="GPUParticles2D" unique_id=108308026]
-emitting = false
 amount = 50
 texture = ExtResource("1_vsct8")
 one_shot = true

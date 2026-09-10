@@ -8,18 +8,19 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("up") and position.y > 20:
+	if Input.is_action_pressed("up") and position.y > 35:
 		position.y -= 5
-	if Input.is_action_pressed("down") and position.y < 625:
+	if Input.is_action_pressed("down") and position.y < 615:
 		position.y += 5
-	if Input.is_action_pressed("right") and position.x < 1131:
+	if Input.is_action_pressed("right") and position.x < 900:
 		position.x += 5
-	if Input.is_action_pressed("left") and position.x > 21:
+	if Input.is_action_pressed("left") and position.x > 30:
 		position.x -= 5
 	if Input.is_action_just_pressed("shoot"):
 		var laser = laser_prefab.instantiate()
 		laser.position = position
 		get_parent().add_child(laser)
+		laser.add_to_group("missiles")
 		#$AudioStreamPlayer.play()
 
 

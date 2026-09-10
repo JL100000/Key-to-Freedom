@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ccx40na87y0d7"]
+
+[ext_resource type="Texture2D" uid="uid://q418ltydp8em" path="res://Minigames/Planet Raiders folder/Aesthetics/PlanetRaiders_Arcade_Machine.png" id="1_vel12"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtdvd"]
+atlas = ExtResource("1_vel12")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrfmf"]
+atlas = ExtResource("1_vel12")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ev7hl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtdvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrfmf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="PR_arcade_machine" type="Area2D" unique_id=1961325126]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=348152261]
+position = Vector2(0, 1.0000048)
+scale = Vector2(0.37812504, 0.38125)
+sprite_frames = SubResource("SpriteFrames_ev7hl")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1791772868]

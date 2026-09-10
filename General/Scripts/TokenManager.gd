@@ -5,6 +5,7 @@ var slime_quest_won: bool = false
 signal tokens_changed(new_amount: int)
 var in_packbro: bool = false
 var in_slime_quest: bool = false
+var planet_raiders_won: bool = false
 func add_tokens(amount: int) -> void:
 	tokens += amount
 	print("Tokens added! Current balance: ", tokens)
