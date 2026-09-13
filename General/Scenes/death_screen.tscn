@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c084undydu31v" path="res://General/Scripts/death_screen.gd" id="1_rwas2"]
 
 [node name="DeathScreen" type="CanvasLayer" unique_id=926226242]
-process_mode = 2
+process_mode = 3
 script = ExtResource("1_rwas2")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2060605206]

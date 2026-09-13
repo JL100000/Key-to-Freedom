@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_xis25"]
 
 [node name="WinScreen_1" type="CanvasLayer" unique_id=1584049398]
-process_mode = 2
+process_mode = 3
 script = ExtResource("1_enhmo")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=608841137]

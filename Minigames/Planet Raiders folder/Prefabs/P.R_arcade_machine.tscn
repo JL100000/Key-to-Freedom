@@ -1,35 +1,77 @@
 [gd_scene format=3 uid="uid://ccx40na87y0d7"]
 
-[ext_resource type="Texture2D" uid="uid://q418ltydp8em" path="res://Minigames/Planet Raiders folder/Aesthetics/PlanetRaiders_Arcade_Machine.png" id="1_vel12"]
+[ext_resource type="Script" uid="uid://cr2k8fh6l05yq" path="res://Minigames/Planet Raiders folder/Scripts/P.R_arcade_machine.gd" id="1_vrfmf"]
+[ext_resource type="Texture2D" uid="uid://bqbjx0ifvt55t" path="res://Minigames/Planet Raiders folder/Aesthetics/PlanetRaiders_Arcade_Machine (1).png" id="2_ev7hl"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_p40lv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jtdvd"]
-atlas = ExtResource("1_vel12")
+[sub_resource type="AtlasTexture" id="AtlasTexture_d01c6"]
+atlas = ExtResource("2_ev7hl")
 region = Rect2(0, 0, 640, 640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vrfmf"]
-atlas = ExtResource("1_vel12")
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy2uh"]
+atlas = ExtResource("2_ev7hl")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y7gj"]
+atlas = ExtResource("2_ev7hl")
 region = Rect2(0, 640, 640, 640)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ev7hl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jtdvd")
+"texture": SubResource("AtlasTexture_d01c6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vrfmf")
+"texture": SubResource("AtlasTexture_sy2uh")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y7gj")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pusc"]
+size = Vector2(115, 177)
+
 [node name="PR_arcade_machine" type="Area2D" unique_id=1961325126]
+script = ExtResource("1_vrfmf")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=348152261]
 position = Vector2(0, 1.0000048)
 scale = Vector2(0.37812504, 0.38125)
 sprite_frames = SubResource("SpriteFrames_ev7hl")
-animation = &"idle"
+animation = &"interact"
+autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1791772868]
+[node name="Label" type="Label" parent="." unique_id=2027726124]
+offset_left = -52.0
+offset_top = -110.0
+offset_right = 52.0
+offset_bottom = -91.0
+theme_override_fonts/font = ExtResource("3_p40lv")
+theme_override_font_sizes/font_size = 15
+text = "Planet Raiders"
+
+[node name="Label2" type="Label" parent="." unique_id=1909722975]
+offset_left = -59.0
+offset_top = 56.0
+offset_right = 59.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_p40lv")
+theme_override_font_sizes/font_size = 15
+text = "Press E to enter"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=29095482]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_0pusc")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

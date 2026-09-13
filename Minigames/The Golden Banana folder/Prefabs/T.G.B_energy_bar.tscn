@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cen7dw6qnco54"]
+
+[ext_resource type="Script" uid="uid://4kss7ob3o7br" path="res://Minigames/The Golden Banana folder/Scripts/T.G.B_energy_bar.gd" id="1_d25um"]
+
+[node name="TGB energy bar" type="Area2D" unique_id=2051350821]
+script = ExtResource("1_d25um")

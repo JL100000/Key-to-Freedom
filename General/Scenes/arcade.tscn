@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cs8m4wxo8rhcj" path="res://Minigames/Pack Bros folder/Aesthetics/Arcade_wall_glow (1).png" id="9_lvvd5"]
 [ext_resource type="PackedScene" uid="uid://dnebn42nonh3f" path="res://Minigames/Slime Quest/Prefabs/S.Q_arcade_machine.tscn" id="11_6bv4j"]
 [ext_resource type="Texture2D" uid="uid://cbwf8olq8k8i7" path="res://General/Aesthetics/OutArcade_walls prototype.png" id="12_wv2cy"]
+[ext_resource type="PackedScene" uid="uid://ccx40na87y0d7" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_arcade_machine.tscn" id="13_1dbqh"]
 [ext_resource type="Texture2D" uid="uid://dp0mhwk2g5kk5" path="res://General/Aesthetics/Doors prototype.png" id="13_h5ggk"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
@@ -275,5 +276,9 @@ offset_bottom = 53.0
 theme_override_fonts/font = ExtResource("2_i82s6")
 theme_override_font_sizes/font_size = 35
 text = "Back"
+
+[node name="PR_arcade_machine" parent="." unique_id=1961325126 instance=ExtResource("13_1dbqh")]
+z_index = -1
+position = Vector2(741, 118)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

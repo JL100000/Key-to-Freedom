@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dwumy5ia18d84"]
+
+[ext_resource type="Script" uid="uid://cjdc6ngog074m" path="res://Minigames/The Golden Banana folder/Scripts/T.G.B_scene.gd" id="1_jy07e"]
+
+[node name="TGB scene" type="Node2D" unique_id=995663203]
+script = ExtResource("1_jy07e")

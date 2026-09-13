@@ -12,8 +12,8 @@ var score = 0
 
 func _ready():
 	_update_ui()
-
-
+	TokenManager.enemies_spawning = true
+	TokenManager.enemies_shooting = true
 
 func _update_ui():
 	$game_ui/score_label.text = "Score: " + str(score)
@@ -44,6 +44,7 @@ func _on_enemy_killed():
 
 
 func _on_pr_enemy_spawn_timeout() -> void:
+	if TokenManager.enemies_spawning == true:
 		var enemy = enemy_prefab.instantiate()
 		var random_y = randi_range(30,610)
 		enemy.position = Vector2(1200,random_y)
@@ -52,7 +53,8 @@ func _on_pr_enemy_spawn_timeout() -> void:
 
 
 func _on_pr_player_player_killed() -> void:
-	await get_tree().create_timer(3).timeout
+	TokenManager.enemies_shooting = false
+	TokenManager.enemies_spawning = false
 	get_tree().call_group("missiles", "queue_free")
 	#get_tree().paused = true
 	if death_screen:
