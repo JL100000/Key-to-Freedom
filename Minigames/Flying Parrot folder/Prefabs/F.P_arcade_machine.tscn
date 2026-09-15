@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dsbkowxs4spha"]
+
+[ext_resource type="Script" uid="uid://bnmf7nq2inyra" path="res://Minigames/Flying Parrot folder/Scripts/F.P_arcade_machine.gd" id="1_fwjp0"]
+[ext_resource type="Texture2D" uid="uid://cyltfuvceibf" path="res://Minigames/Flying Parrot folder/Aesthetics/FlyingParrot Arcade_Machine.png" id="1_pep5x"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_3feh4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeajf"]
+atlas = ExtResource("1_pep5x")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwjp0"]
+atlas = ExtResource("1_pep5x")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3feh4"]
+atlas = ExtResource("1_pep5x")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkh6m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeajf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwjp0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3feh4")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_e0voy"]
+script/source = "extends AnimatedSprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $\".\"
+
+
+
+func _on_pack_bro_area_entered(area: Area2D) -> void:
+	animated_sprite_2d.play(\"interact\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cj7ob"]
+size = Vector2(115, 177)
+
+[node name="FP_arcade_machine" type="Area2D" unique_id=1985875661]
+script = ExtResource("1_fwjp0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=327268734]
+position = Vector2(-1.4305115e-06, -9.536743e-07)
+scale = Vector2(0.37499997, 0.37499997)
+sprite_frames = SubResource("SpriteFrames_tkh6m")
+animation = &"interact"
+autoplay = "idle"
+script = SubResource("GDScript_e0voy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1661896913]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_cj7ob")
+
+[node name="Label" type="Label" parent="." unique_id=1830782919]
+offset_left = -47.0
+offset_top = -111.0
+offset_right = 47.0
+offset_bottom = -92.0
+theme_override_fonts/font = ExtResource("3_3feh4")
+theme_override_font_sizes/font_size = 15
+text = "Flying Parrot"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=700204699]
+offset_left = -59.0
+offset_top = 56.0
+offset_right = 59.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_3feh4")
+theme_override_font_sizes/font_size = 15
+text = "Press E to enter"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

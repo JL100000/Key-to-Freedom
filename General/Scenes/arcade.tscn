@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cbwf8olq8k8i7" path="res://General/Aesthetics/OutArcade_walls prototype.png" id="12_wv2cy"]
 [ext_resource type="PackedScene" uid="uid://ccx40na87y0d7" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_arcade_machine.tscn" id="13_1dbqh"]
 [ext_resource type="Texture2D" uid="uid://dp0mhwk2g5kk5" path="res://General/Aesthetics/Doors prototype.png" id="13_h5ggk"]
+[ext_resource type="PackedScene" uid="uid://dsbkowxs4spha" path="res://Minigames/Flying Parrot folder/Prefabs/F.P_arcade_machine.tscn" id="14_1dbqh"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -280,5 +281,8 @@ text = "Back"
 [node name="PR_arcade_machine" parent="." unique_id=1961325126 instance=ExtResource("13_1dbqh")]
 z_index = -1
 position = Vector2(741, 118)
+
+[node name="FP_arcade_machine" parent="." unique_id=1985875661 instance=ExtResource("14_1dbqh")]
+position = Vector2(564, 119)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

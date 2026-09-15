@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://esc82hj51shg"]
+
+[ext_resource type="Texture2D" uid="uid://dh0qshku2caig" path="res://Minigames/Flying Parrot folder/Aesthetics/FlyingParrot (1).png" id="1_eqgwb"]
+[ext_resource type="Script" uid="uid://bcvxh7hnmt7km" path="res://Minigames/Flying Parrot folder/Scripts/F.P_player.gd" id="1_jo8h0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo8h0"]
+atlas = ExtResource("1_eqgwb")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g3u1"]
+atlas = ExtResource("1_eqgwb")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4g8k"]
+atlas = ExtResource("1_eqgwb")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q22co"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo8h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g3u1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4g8k")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8hvt"]
+radius = 48.0
+height = 112.0
+
+[node name="FP_player" type="CharacterBody2D" unique_id=1355274802]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_jo8h0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1700193490]
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_q22co")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1904581271]
+position = Vector2(0, -9)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_u8hvt")

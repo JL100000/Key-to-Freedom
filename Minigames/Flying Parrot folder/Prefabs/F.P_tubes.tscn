@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bhwftlkavdxbi"]
+
+[ext_resource type="Script" uid="uid://berne1gcilufh" path="res://Minigames/Flying Parrot folder/Scripts/F.P_tubes.gd" id="1_3x8sb"]
+[ext_resource type="Texture2D" uid="uid://duc4jyrl0t62a" path="res://Minigames/Flying Parrot folder/Aesthetics/Screenshot 2026-09-15 131438.png" id="2_n6fo1"]
+[ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="3_sxhgj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3x8sb"]
+size = Vector2(115, 602)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_af0tq"]
+size = Vector2(115, 601.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxhgj"]
+size = Vector2(115, 252)
+
+[node name="Tubes" type="Node2D" unique_id=1529964038]
+script = ExtResource("1_3x8sb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2087367664]
+position = Vector2(-1, -261.99997)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1150752174]
+position = Vector2(-0.9999999, -176)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=2116892027]
+position = Vector2(-1, -90.99998)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=2091035134]
+position = Vector2(-0.9999999, -5)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1547455956]
+position = Vector2(-1.0000005, 80.99999)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=208477343]
+position = Vector2(-1, 166.99998)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=2100455218]
+position = Vector2(-0.9999999, 251.99998)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1110778249]
+position = Vector2(-0.9999999, 593)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=1454623044]
+position = Vector2(-1, 679)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D12" type="Sprite2D" parent="." unique_id=692863295]
+position = Vector2(-1, 764.99994)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D13" type="Sprite2D" parent="." unique_id=2073885966]
+position = Vector2(-0.9999999, 850.99994)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D14" type="Sprite2D" parent="." unique_id=1732842218]
+position = Vector2(-1.0000001, 936.99994)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D15" type="Sprite2D" parent="." unique_id=1483715024]
+position = Vector2(-1.0000001, 1022.99994)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D16" type="Sprite2D" parent="." unique_id=2114541421]
+position = Vector2(-1, 1107)
+scale = Vector2(0.11230468, 0.112)
+texture = ExtResource("2_n6fo1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1427267045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2044399016]
+position = Vector2(-1, -5)
+shape = SubResource("RectangleShape2D_3x8sb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=194778886]
+position = Vector2(-1, 850)
+shape = SubResource("RectangleShape2D_af0tq")
+
+[node name="score" type="Area2D" parent="." unique_id=1722026520]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="score" unique_id=1163143494]
+position = Vector2(-1.5, 423)
+shape = SubResource("RectangleShape2D_sxhgj")
+
+[node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("3_sxhgj")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="score" to="." method="_on_score_body_entered"]
+[connection signal="body_exited" from="score" to="." method="_on_score_body_exited"]

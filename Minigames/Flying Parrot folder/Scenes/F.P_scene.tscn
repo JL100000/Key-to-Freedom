@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cojdl075uu45c"]
+
+[ext_resource type="PackedScene" uid="uid://esc82hj51shg" path="res://Minigames/Flying Parrot folder/Prefabs/F.P_player.tscn" id="1_l6soh"]
+[ext_resource type="Script" uid="uid://c7dvpj32h0eth" path="res://Minigames/Flying Parrot folder/Scripts/F.P_scene.gd" id="1_skpg4"]
+[ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="2_g85an"]
+[ext_resource type="PackedScene" uid="uid://dq0o0qnwrbpc1" path="res://General/Scenes/win_screen.tscn" id="3_skpg4"]
+[ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="4_ilcu1"]
+[ext_resource type="PackedScene" uid="uid://slka5b1uppg2" path="res://General/Scenes/win_screen_2.tscn" id="5_uk8yi"]
+[ext_resource type="PackedScene" uid="uid://bhwftlkavdxbi" path="res://Minigames/Flying Parrot folder/Prefabs/F.P_tubes.tscn" id="7_ilcu1"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="8_uk8yi"]
+[ext_resource type="Texture2D" uid="uid://cw3vlsaus7elv" path="res://Minigames/Flying Parrot folder/Aesthetics/Screenshot 2026-09-15 130108.png" id="9_ugtop"]
+
+[node name="FP_scene" type="Node2D" unique_id=406394378]
+script = ExtResource("1_skpg4")
+
+[node name="FP_player" parent="." unique_id=1355274802 instance=ExtResource("1_l6soh")]
+position = Vector2(124, 367)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1936035930]
+z_index = -1
+position = Vector2(576, 324)
+scale = Vector2(1.2454054, 1.4025974)
+texture = ExtResource("9_ugtop")
+
+[node name="WinScreen_1" parent="." unique_id=1584049398 instance=ExtResource("2_g85an")]
+
+[node name="WinScreen" parent="." unique_id=556587251 instance=ExtResource("3_skpg4")]
+
+[node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("4_ilcu1")]
+
+[node name="WinScreen_2" parent="." unique_id=1356519054 instance=ExtResource("5_uk8yi")]
+
+[node name="Tubes" parent="." unique_id=1529964038 instance=ExtResource("7_ilcu1")]
+position = Vector2(1096, 56)
+
+[node name="Timer" type="Timer" parent="." unique_id=1480242639]
+wait_time = 1.5
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2066018582]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1886801909]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=382026383]
+layout_mode = 0
+offset_left = -556.0
+offset_right = 596.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("8_uk8yi")
+theme_override_font_sizes/font_size = 32
+text = "Score: 0000"
+horizontal_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
