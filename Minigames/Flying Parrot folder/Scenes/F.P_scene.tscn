@@ -59,4 +59,14 @@ theme_override_font_sizes/font_size = 32
 text = "Score: 0000"
 horizontal_alignment = 1
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=682660891]
+
+[node name="Button" type="Button" parent="CanvasLayer2" unique_id=1369006732]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("8_uk8yi")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer2/Button" to="." method="_on_button_pressed"]

@@ -31,3 +31,7 @@ func _on_timer_timeout() -> void:
 	add_child(tubesInstance)
 	$Timer.start()
 	
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://General/Scenes/arcade.tscn")

@@ -59,3 +59,7 @@ func _on_pr_player_player_killed() -> void:
 	#get_tree().paused = true
 	if death_screen:
 		death_screen.show()
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://General/Scenes/arcade.tscn")
