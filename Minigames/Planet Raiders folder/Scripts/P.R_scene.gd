@@ -36,7 +36,7 @@ func _update_ui():
 func _on_enemy_killed():
 	score += 50
 	_update_ui()
-	print('hi')
+
 
 
 

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bly1sc075a4px"]
+
+[ext_resource type="Texture2D" uid="uid://dkngqdltgo5d8" path="res://General/Aesthetics/SimplePrizecounter.png" id="1_5s01f"]
+[ext_resource type="Script" uid="uid://bjbv0f0rq7des" path="res://General/Scripts/prize_counter.gd" id="1_w3y70"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_bvjjl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3y70"]
+atlas = ExtResource("1_5s01f")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvjjl"]
+atlas = ExtResource("1_5s01f")
+region = Rect2(0, 960, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rlyh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3y70")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvjjl")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4v6x"]
+size = Vector2(583.5, 728)
+
+[node name="Prize_counter" type="Area2D" unique_id=1062254956]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_w3y70")
+
+[node name="Prize_counter" type="AnimatedSprite2D" parent="." unique_id=2091100106]
+position = Vector2(312, 232)
+sprite_frames = SubResource("SpriteFrames_7rlyh")
+animation = &"interact"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1415947353]
+position = Vector2(176, 236)
+shape = SubResource("RectangleShape2D_x4v6x")
+
+[node name="Label" type="Label" parent="." unique_id=1349032163]
+offset_left = -154.99998
+offset_top = -234.99998
+offset_right = 454.0
+offset_bottom = -149.99998
+theme_override_fonts/font = ExtResource("3_bvjjl")
+theme_override_font_sizes/font_size = 32
+text = "You have enough tokens to buy the key! 
+Press E to buy the key!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1755403937]
+offset_left = -232.49998
+offset_top = -235.0
+offset_right = 463.5
+offset_bottom = -150.0
+theme_override_fonts/font = ExtResource("3_bvjjl")
+theme_override_font_sizes/font_size = 32
+text = "You don't have enough tokens to buy the key! 
+You need more tokens!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

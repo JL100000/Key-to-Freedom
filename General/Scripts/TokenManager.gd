@@ -10,6 +10,8 @@ var pack_bro_won: bool = false
 var slime_quest_won: bool = false
 var enemies_spawning: bool = true
 var flying_parrot_won: bool = false
+var four_tokens: bool = false
+
 func add_tokens(amount: int) -> void:
 	tokens += amount
 	print("Tokens added! Current balance: ", tokens)
