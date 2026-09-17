@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bxa7iqf06hb7t" path="res://General/Aesthetics/Road-5.png.png" id="19_lns6s"]
 [ext_resource type="Texture2D" uid="uid://xohxuysbv3oi" path="res://General/Aesthetics/Road-6.png.png" id="20_qjdjc"]
 [ext_resource type="Texture2D" uid="uid://de54g0h311kn5" path="res://General/Aesthetics/OuterWalls_Side-1.png.png" id="21_2d1lu"]
+[ext_resource type="PackedScene" uid="uid://bly1sc075a4px" path="res://General/Prefabs/prize_counter.tscn" id="22_5ueso"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -195,15 +196,14 @@ scale = Vector2(0.4732434, 1)
 texture = ExtResource("8_yfyhc")
 
 [node name="Clear_3" type="Sprite2D" parent="Walls" unique_id=314822795]
-z_index = -1
-position = Vector2(-2415.686, 43.137)
-scale = Vector2(0.473, 1)
+position = Vector2(-2421.5686, 43.137295)
+scale = Vector2(0.48611116, 0.99673206)
 texture = ExtResource("8_yfyhc")
 
 [node name="Clear_4" type="Sprite2D" parent="Walls" unique_id=307215734]
-z_index = -1
-position = Vector2(-2923.5293, 43.137)
-scale = Vector2(1.5236928, 1)
+z_index = 2
+position = Vector2(-2923.5293, 43.921467)
+scale = Vector2(1.5236928, 0.9983658)
 texture = ExtResource("8_yfyhc")
 
 [node name="Clear_5" type="Sprite2D" parent="Walls" unique_id=2073630901]
@@ -338,7 +338,7 @@ z_index = -1
 position = Vector2(741, 118)
 
 [node name="FP_arcade_machine" parent="." unique_id=1985875661 instance=ExtResource("14_1dbqh")]
-position = Vector2(564, 119)
+position = Vector2(569, 120)
 
 [node name="roads" type="Sprite2D" parent="." unique_id=783468108]
 z_index = 2
@@ -436,5 +436,22 @@ text = "Section in
 development"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Prize_counter" parent="." unique_id=1062254956 instance=ExtResource("22_5ueso")]
+position = Vector2(970, 341)
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="." unique_id=563062356]
+
+[node name="key_label" type="Label" parent="CanvasLayer4" unique_id=1890430099]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_right = 68.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_i82s6")
+theme_override_font_sizes/font_size = 35
+text = "You have the key!"
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://0nprtemqx03n" path="res://Minigames/Slime Quest/Prefabs/S.Q_spike.tscn" id="7_ryvmy"]
 [ext_resource type="PackedScene" uid="uid://dgmtfp02b4k2f" path="res://Minigames/Slime Quest/Prefabs/S.Q_portal.tscn" id="8_nhumq"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="9_w6o3x"]
+[ext_resource type="Texture2D" uid="uid://ddgbh6jwp7aug" path="res://Minigames/Slime Quest/Aesthetics/New Piskel-1.png.png" id="10_bgl3u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cv8kw"]
 texture = ExtResource("3_wpcq1")
@@ -472,5 +473,11 @@ offset_bottom = 53.0
 theme_override_fonts/font = ExtResource("9_w6o3x")
 theme_override_font_sizes/font_size = 35
 text = "Back"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=237990980]
+z_index = -3
+position = Vector2(507, 510)
+scale = Vector2(8.503906, 5.7246094)
+texture = ExtResource("10_bgl3u")
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
