@@ -1,21 +1,46 @@
 [gd_scene format=3 uid="uid://c1lhqnvmr27yt"]
 
 [ext_resource type="Script" uid="uid://b456apq4f2kbo" path="res://General/Scripts/arcade_player.gd" id="1_cwl6u"]
-[ext_resource type="Texture2D" uid="uid://cgxiy1bvby473" path="res://icon.svg" id="1_qqt26"]
+[ext_resource type="Texture2D" uid="uid://bfu5thovd8bwf" path="res://General/Aesthetics/CharacterShepherd.png" id="2_ei88d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwl6u"]
-size = Vector2(128, 128)
+size = Vector2(150, 206.66666)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyanq"]
+atlas = ExtResource("2_ei88d")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr4dv"]
+atlas = ExtResource("2_ei88d")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ajgdd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyanq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr4dv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Arcade_player" type="Area2D" unique_id=1908138782]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_cwl6u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1254321528]
+position = Vector2(-8.333336, -13.333328)
 shape = SubResource("RectangleShape2D_cwl6u")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1820270215]
-texture = ExtResource("1_qqt26")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=181536592]
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1706800078]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ajgdd")
+autoplay = "default"
