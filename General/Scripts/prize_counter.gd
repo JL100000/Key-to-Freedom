@@ -9,26 +9,11 @@ func _ready() -> void:
 	label.visible = false
 	label_2.visible = false
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and player_is_in_key_range:
 		if TokenManager.tokens == 4:
 			TokenManager.four_tokens = true
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 func _on_area_entered(area: Area2D) -> void:
 	animation.play("interact")

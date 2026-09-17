@@ -11,8 +11,6 @@ func _ready() -> void:
 	token_label.visible = true
 	key_label.visible = false
 	update_token_display()
-	print("--- SCENE DEBUG ---")
-	print("Nodes in tree: ", get_tree().get_node_count())
 	
 func update_token_display() -> void:
 	token_label.text = "Tokens: " + str(TokenManager.tokens)
