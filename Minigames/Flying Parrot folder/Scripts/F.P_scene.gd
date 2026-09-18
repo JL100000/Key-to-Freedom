@@ -11,7 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$CanvasLayer/Control/Label.text = "SCORE: " + str(TokenManager.FP_score)
-	if TokenManager.FP_score == 1000:
+	if TokenManager.FP_score == 100:
 		if TokenManager.flying_parrot_won == true:
 			get_tree().paused = true
 			if win_screen_1:

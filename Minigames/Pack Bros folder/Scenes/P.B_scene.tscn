@@ -3468,7 +3468,6 @@ collision_mask = 3
 player = NodePath("../Player")
 
 [node name="Win_timer" type="Timer" parent="." unique_id=1508878652]
-wait_time = 60.0
 one_shot = true
 
 [node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("7_uq3ki")]

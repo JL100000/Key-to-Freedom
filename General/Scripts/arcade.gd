@@ -19,4 +19,3 @@ func _process(delta: float) -> void:
 	if TokenManager.four_tokens == true:
 		token_label.visible = false
 		key_label.visible = true
-		

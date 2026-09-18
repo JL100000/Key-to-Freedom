@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://0k8d31vv268k" path="res://General/Aesthetics/Arcade_walls_plain.png" id="8_yfyhc"]
 [ext_resource type="Texture2D" uid="uid://cs8m4wxo8rhcj" path="res://Minigames/Pack Bros folder/Aesthetics/Arcade_wall_glow (1).png" id="9_lvvd5"]
 [ext_resource type="PackedScene" uid="uid://dnebn42nonh3f" path="res://Minigames/Slime Quest/Prefabs/S.Q_arcade_machine.tscn" id="11_6bv4j"]
-[ext_resource type="Texture2D" uid="uid://calxlnaaeyxn" path="res://General/Aesthetics/Doors prototype (1).png" id="12_qjdjc"]
 [ext_resource type="Texture2D" uid="uid://cbwf8olq8k8i7" path="res://General/Aesthetics/OutArcade_walls prototype.png" id="12_wv2cy"]
 [ext_resource type="PackedScene" uid="uid://ccx40na87y0d7" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_arcade_machine.tscn" id="13_1dbqh"]
 [ext_resource type="PackedScene" uid="uid://dsbkowxs4spha" path="res://Minigames/Flying Parrot folder/Prefabs/F.P_arcade_machine.tscn" id="14_1dbqh"]
@@ -22,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://xohxuysbv3oi" path="res://General/Aesthetics/Road-6.png.png" id="20_qjdjc"]
 [ext_resource type="Texture2D" uid="uid://de54g0h311kn5" path="res://General/Aesthetics/OuterWalls_Side-1.png.png" id="21_2d1lu"]
 [ext_resource type="PackedScene" uid="uid://bly1sc075a4px" path="res://General/Prefabs/prize_counter.tscn" id="22_5ueso"]
+[ext_resource type="PackedScene" uid="uid://cpr6j5xby7hoq" path="res://General/Prefabs/exit_doors.tscn" id="22_q3ij7"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -75,21 +75,6 @@ _data = {
 &"fade_out": SubResource("Animation_o2jrl")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2d1lu"]
-atlas = ExtResource("12_qjdjc")
-region = Rect2(0, 0, 640, 640)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ldskm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2d1lu")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Arcade" type="Node2D" unique_id=499539473]
 script = ExtResource("1_3h0sf")
 
@@ -133,6 +118,7 @@ libraries/ = SubResource("AnimationLibrary_o2jrl")
 position = Vector2(1095, 119)
 
 [node name="Arcade_player" parent="." unique_id=1908138782 instance=ExtResource("6_nw1ri")]
+z_index = 5
 position = Vector2(576, 324)
 
 [node name="Temp_background" type="Sprite2D" parent="." unique_id=1546600738]
@@ -312,18 +298,6 @@ position = Vector2(613.04346, 0)
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Door" type="AnimatedSprite2D" parent="." unique_id=1869022321]
-z_index = -2
-position = Vector2(190, 91)
-scale = Vector2(0.4, 0.386)
-sprite_frames = SubResource("SpriteFrames_ldskm")
-
-[node name="Door2" type="AnimatedSprite2D" parent="." unique_id=2069973602]
-z_index = -2
-position = Vector2(66, 91)
-scale = Vector2(0.41, 0.386)
-sprite_frames = SubResource("SpriteFrames_ldskm")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1027532605]
 
 [node name="Button" type="Button" parent="CanvasLayer" unique_id=874282753]
@@ -453,5 +427,8 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_i82s6")
 theme_override_font_sizes/font_size = 35
 text = "You have the key!"
+
+[node name="exit doors" parent="." unique_id=1271958756 instance=ExtResource("22_q3ij7")]
+position = Vector2(71.00001, 92.00001)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

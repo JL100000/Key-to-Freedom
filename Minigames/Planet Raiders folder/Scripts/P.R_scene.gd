@@ -17,7 +17,7 @@ func _ready():
 
 func _update_ui():
 	$game_ui/score_label.text = "Score: " + str(score)
-	if score == 1000:
+	if score == 100:
 		if TokenManager.planet_raiders_won == true:
 			await get_tree().create_timer(0.75).timeout
 			get_tree().call_group("missiles", "queue_free")

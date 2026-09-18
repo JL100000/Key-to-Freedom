@@ -14,13 +14,15 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and player_is_in_key_range:
 		if TokenManager.tokens == 4:
 			TokenManager.four_tokens = true
+			TokenManager.have_key = true
 
 func _on_area_entered(area: Area2D) -> void:
 	animation.play("interact")
-	player_is_in_key_range = true
+	
 	if TokenManager.tokens == 4:
 		label.visible = true
 		label_2.visible = false
+		player_is_in_key_range = true
 	elif TokenManager.tokens < 4:
 		label.visible = false
 		label_2.visible = true

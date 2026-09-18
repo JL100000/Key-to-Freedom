@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cpr6j5xby7hoq"]
+
+[ext_resource type="Texture2D" uid="uid://b5f5v418w7ee6" path="res://General/Aesthetics/Doors prototype (2).png" id="1_8wnon"]
+[ext_resource type="Script" uid="uid://d1pdee57dsh62" path="res://General/Scripts/exit_doors.gd" id="1_ia4fc"]
+[ext_resource type="Texture2D" uid="uid://calxlnaaeyxn" path="res://General/Aesthetics/Doors prototype (1).png" id="1_ndrvj"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="4_jhmql"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia4fc"]
+atlas = ExtResource("1_8wnon")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wnon"]
+atlas = ExtResource("1_ndrvj")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhmql"]
+atlas = ExtResource("1_ndrvj")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ia4fc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia4fc")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wnon")
+}],
+"loop": true,
+"name": &"locked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhmql")
+}],
+"loop": true,
+"name": &"unlocked",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpccv"]
+atlas = ExtResource("1_8wnon")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oy6k"]
+atlas = ExtResource("1_8wnon")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmx3m"]
+atlas = ExtResource("1_8wnon")
+region = Rect2(640, 640, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a0h1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpccv")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oy6k")
+}],
+"loop": true,
+"name": &"locked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmx3m")
+}],
+"loop": true,
+"name": &"unlocked",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhmql"]
+size = Vector2(686.54846, 623)
+
+[node name="exit doors" type="Area2D" unique_id=1271958756]
+scale = Vector2(0.382, 0.382)
+script = ExtResource("1_ia4fc")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2033423520]
+position = Vector2(326.3429, 0)
+scale = Vector2(1.1398642, 1)
+sprite_frames = SubResource("SpriteFrames_ia4fc")
+animation = &"locked"
+autoplay = "locked"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=659495522]
+position = Vector2(-15.706808, 0)
+scale = Vector2(1.0823789, 0.99999994)
+sprite_frames = SubResource("SpriteFrames_a0h1y")
+animation = &"locked"
+autoplay = "locked"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1951118348]
+position = Vector2(154.10799, 70.68062)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_jhmql")
+
+[node name="Label" type="Label" parent="." unique_id=1981912676]
+offset_left = -188.48167
+offset_top = 217.2775
+offset_right = 497.38214
+offset_bottom = 258.27753
+theme_override_fonts/font = ExtResource("4_jhmql")
+theme_override_font_sizes/font_size = 50
+text = "Press E to unlock"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
