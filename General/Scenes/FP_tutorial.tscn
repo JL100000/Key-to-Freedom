@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://c1l111045tnxr"]
+
+[ext_resource type="Script" uid="uid://drpmh7s52i8xc" path="res://General/Scripts/fp_tutorial.gd" id="1_gbsgs"]
+[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/1.jpg" id="1_okgx3"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_ev0ba"]
+[ext_resource type="Texture2D" uid="uid://cyltfuvceibf" path="res://Minigames/Flying Parrot folder/Aesthetics/FlyingParrot Arcade_Machine.png" id="4_ev0ba"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgcin"]
+atlas = ExtResource("4_ev0ba")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_unufn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgcin")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FP_tutorial" type="Node2D" unique_id=1916784048]
+script = ExtResource("1_gbsgs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=92696718]
+position = Vector2(575.99994, 324.00003)
+scale = Vector2(1.210084, 1.8000001)
+texture = ExtResource("1_okgx3")
+
+[node name="Button" type="Button" parent="." unique_id=748821716]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("3_ev0ba")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[node name="Label" type="Label" parent="." unique_id=883940758]
+offset_left = 267.0
+offset_top = 48.0
+offset_right = 885.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("3_ev0ba")
+theme_override_font_sizes/font_size = 60
+text = "Flying Parrot Tutorial"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1278150301]
+offset_left = 422.0
+offset_top = 160.0
+offset_right = 731.0
+offset_bottom = 211.0
+theme_override_fonts/font = ExtResource("3_ev0ba")
+theme_override_font_sizes/font_size = 40
+text = "Aim of the game"
+
+[node name="Label3" type="Label" parent="." unique_id=2123404603]
+offset_left = 47.0
+offset_top = 184.0
+offset_right = 1106.0
+offset_bottom = 400.0
+theme_override_fonts/font = ExtResource("3_ev0ba")
+theme_override_font_sizes/font_size = 25
+text = "The aim of the game is to make it through 20 trees, each of which are worth 100 points. 
+There is a gap in the tree that is large enough for the bird to fit through. 
+You can die from flying too low, flying too high, or colliding with a tree.
+If you successfully get through 20 trees, you will receive a token."
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=1508389622]
+offset_left = 492.0
+offset_top = 408.0
+offset_right = 660.0
+offset_bottom = 459.0
+theme_override_fonts/font = ExtResource("3_ev0ba")
+theme_override_font_sizes/font_size = 40
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=1509329733]
+offset_left = 224.0
+offset_top = 472.0
+offset_right = 928.0
+offset_bottom = 539.0
+theme_override_fonts/font = ExtResource("3_ev0ba")
+theme_override_font_sizes/font_size = 25
+text = "Space to jump
+(the game automatically moves you forward at a set pace)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="." unique_id=651188983]
+position = Vector2(1027, 432.00003)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_unufn")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

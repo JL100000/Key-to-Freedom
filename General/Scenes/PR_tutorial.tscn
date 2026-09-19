@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dyhmf8j7i5qdv"]
+
+[ext_resource type="Script" uid="uid://cdb6l6p3dwc7p" path="res://General/Scripts/pr_tutorial.gd" id="1_23w06"]
+[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/1.jpg" id="1_65wqg"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_fkitc"]
+[ext_resource type="Texture2D" uid="uid://bqbjx0ifvt55t" path="res://Minigames/Planet Raiders folder/Aesthetics/PlanetRaiders_Arcade_Machine (1).png" id="4_fkitc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6a7h"]
+atlas = ExtResource("4_fkitc")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bx5o3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6a7h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PR_tutorial" type="Node2D" unique_id=1916784048]
+script = ExtResource("1_23w06")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=92696718]
+position = Vector2(575.99994, 324.00003)
+scale = Vector2(1.210084, 1.8000001)
+texture = ExtResource("1_65wqg")
+
+[node name="Button" type="Button" parent="." unique_id=1101148071]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("3_fkitc")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[node name="Label" type="Label" parent="." unique_id=2070667288]
+offset_left = 247.0
+offset_top = 48.0
+offset_right = 905.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("3_fkitc")
+theme_override_font_sizes/font_size = 60
+text = "Planet Raiders Tutorial"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=2052248710]
+offset_left = 421.0
+offset_top = 160.0
+offset_right = 731.0
+offset_bottom = 211.0
+theme_override_fonts/font = ExtResource("3_fkitc")
+theme_override_font_sizes/font_size = 40
+text = "Aim of the game"
+
+[node name="Label4" type="Label" parent="." unique_id=1593234591]
+offset_left = 492.0
+offset_top = 408.0
+offset_right = 660.0
+offset_bottom = 459.0
+theme_override_fonts/font = ExtResource("3_fkitc")
+theme_override_font_sizes/font_size = 40
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=18075366]
+offset_left = 8.0
+offset_top = 216.0
+offset_right = 1144.0
+offset_bottom = 318.0
+theme_override_fonts/font = ExtResource("3_fkitc")
+theme_override_font_sizes/font_size = 25
+text = "The aim of the game is to shoot down 40 enemy spaceships, each of which are worth 50 points. 
+The enemies have lasers as well, and if those lasers hit you, you die.
+ You receive a token after you shoot down 40 enemy spaceships"
+vertical_alignment = 1
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="." unique_id=1962998317]
+position = Vector2(1027, 432.00003)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_bx5o3")
+
+[node name="Label5" type="Label" parent="." unique_id=1999002505]
+offset_left = 328.0
+offset_top = 472.0
+offset_right = 824.0
+offset_bottom = 539.0
+theme_override_fonts/font = ExtResource("3_fkitc")
+theme_override_font_sizes/font_size = 25
+text = "Space to shoot 
+WASD or the arrow keys move you around"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

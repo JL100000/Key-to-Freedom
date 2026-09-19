@@ -34,6 +34,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4v6x"]
 size = Vector2(583.5, 728)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvjjl"]
+size = Vector2(330, 550.0002)
+
 [node name="Prize_counter" type="Area2D" unique_id=1062254956]
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_w3y70")
@@ -45,7 +48,7 @@ animation = &"interact"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1415947353]
-position = Vector2(176, 236)
+position = Vector2(170, 237.5)
 shape = SubResource("RectangleShape2D_x4v6x")
 
 [node name="Label" type="Label" parent="." unique_id=1349032163]
@@ -72,5 +75,23 @@ You need more tokens!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[node name="Label3" type="Label" parent="." unique_id=770312782]
+offset_left = -77.5
+offset_top = -222.5
+offset_right = 323.5
+offset_bottom = -181.5
+theme_override_fonts/font = ExtResource("3_bvjjl")
+theme_override_font_sizes/font_size = 32
+text = "You have bought the key!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=970846765]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1199742886]
+position = Vector2(297.49973, 237.49994)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_bvjjl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

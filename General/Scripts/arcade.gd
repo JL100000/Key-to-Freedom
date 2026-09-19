@@ -3,6 +3,7 @@ extends Node2D
 @onready var pack_bro_arcade_machine: Area2D = $Pack_Bro
 @onready var slime_quest_arcade_machine: Area2D = $Slime_quest_arcade_machine
 @onready var key_label: Label = $CanvasLayer4/key_label
+@onready var overall_win_screen: CanvasLayer = $OverallWinScreen
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://General/Scenes/main_menu.tscn")
@@ -19,3 +20,6 @@ func _process(delta: float) -> void:
 	if TokenManager.four_tokens == true:
 		token_label.visible = false
 		key_label.visible = true
+	if TokenManager.unlocked_door == true:
+		if overall_win_screen:
+			overall_win_screen.show()

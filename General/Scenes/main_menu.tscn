@@ -3,6 +3,52 @@
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="1_28flt"]
 [ext_resource type="Script" uid="uid://bs0h85middagj" path="res://General/Scripts/main_menu.gd" id="1_48xlc"]
 [ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/1.jpg" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://bskj5wqs2egk1" path="res://General/Aesthetics/Slime_Quest_Arcade_Machine1.png" id="4_ygq0m"]
+[ext_resource type="Texture2D" uid="uid://wvlwis8g7d8" path="res://Minigames/Pack Bros folder/Aesthetics/PakBro Arcade Machine (1).png" id="5_omy60"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3wif"]
+atlas = ExtResource("4_ygq0m")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsf38"]
+atlas = ExtResource("4_ygq0m")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nig36"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3wif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsf38")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aivys"]
+atlas = ExtResource("5_omy60")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emtqd"]
+atlas = ExtResource("5_omy60")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4fc5a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aivys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emtqd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main Menu" type="Node2D" unique_id=263950033]
 script = ExtResource("1_48xlc")
@@ -26,19 +72,31 @@ theme_override_font_sizes/font_size = 60
 text = "Play"
 
 [node name="Tutorial_Button" type="Button" parent="." unique_id=1302347588]
-offset_left = 460.0
+offset_left = 440.0
 offset_top = 392.0
-offset_right = 692.0
+offset_right = 712.0
 offset_bottom = 476.0
 theme_override_fonts/font = ExtResource("1_28flt")
 theme_override_font_sizes/font_size = 60
-text = "Tutorial"
+text = "Tutorials"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=21108459]
 z_index = -1
-position = Vector2(576, 324)
-scale = Vector2(1.210084, 1.7999998)
+position = Vector2(576, 323.5)
+scale = Vector2(1.210084, 1.8027778)
 texture = ExtResource("3_1ehe0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1629599583]
+position = Vector2(256, 408.00003)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_nig36")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1916525732]
+position = Vector2(896, 408)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_4fc5a")
+autoplay = "default"
 
 [connection signal="pressed" from="Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Tutorial_Button" to="." method="_on_tutorial_button_pressed"]

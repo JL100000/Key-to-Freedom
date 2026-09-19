@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://r7badi8cusd5"]
+
+[ext_resource type="Script" uid="uid://xgx2um051c2g" path="res://General/Scripts/overall_win_screen.gd" id="1_7e87d"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="2_5xod1"]
+
+[node name="OverallWinScreen" type="CanvasLayer" unique_id=1584049398]
+process_mode = 3
+script = ExtResource("1_7e87d")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=608841137]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1622117836]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1036368873]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=1995158395]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1200953972]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5xod1")
+theme_override_font_sizes/font_size = 70
+text = "YOU ESCAPED THE ARCADE!!"
+
+[node name="continue_playing" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1791168265]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5xod1")
+theme_override_font_sizes/font_size = 30
+text = "Continue playing"
+
+[node name="Play again" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=787055559]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5xod1")
+theme_override_font_sizes/font_size = 30
+text = "Play again from the start"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/continue_playing" to="." method="_on_continue_playing_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Play again" to="." method="_on_play_again_pressed"]

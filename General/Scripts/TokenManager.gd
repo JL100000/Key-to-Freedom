@@ -12,6 +12,9 @@ var enemies_spawning: bool = true
 var flying_parrot_won: bool = false
 var four_tokens: bool = false
 var have_key: bool = false
+var unlocked_door: bool = false
+
+var play_again: int = 0
 func add_tokens(amount: int) -> void:
 	tokens += amount
 	print("Tokens added! Current balance: ", tokens)
@@ -21,4 +24,5 @@ func spend_tokens(amount: int) -> bool:
 	if tokens >= amount:
 		tokens -= amount
 		return true 
-	return false 
+	return false
+	

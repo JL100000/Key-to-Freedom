@@ -1,5 +1,6 @@
 extends Node2D
 @onready var enemy_prefab = preload("res://Minigames/Planet Raiders folder/Prefabs/P.R_enemy.tscn")
+@onready var explosion_prefab = preload("res://Minigames/Planet Raiders folder/Prefabs/P.R_explosion.tscn")
 # Called when the node enters the scene tree for the first time.
 var score = 0
 @onready var death_screen: CanvasLayer = $DeathScreen
@@ -17,22 +18,26 @@ func _ready():
 
 func _update_ui():
 	$game_ui/score_label.text = "Score: " + str(score)
-	if score == 100:
+	if score == 2000:
 		if TokenManager.planet_raiders_won == true:
-			await get_tree().create_timer(0.75).timeout
 			get_tree().call_group("missiles", "queue_free")
 			get_tree().paused = true
 			if win_screen_1:
 				win_screen_1.show()
 		elif TokenManager.planet_raiders_won == false:
-			await get_tree().create_timer(0.75).timeout
 			get_tree().call_group("missiles", "queue_free")
 			get_tree().paused = true
 			TokenManager.add_tokens(1)
 			TokenManager.planet_raiders_won = true
 			if win_screen_2:
 				win_screen_2.show()
-	
+		for enemy in get_tree().get_nodes_in_group("enemies"):
+			var explosion = explosion_prefab.instantiate()
+			explosion.position = enemy.position
+			get_parent().add_child(explosion)
+			enemy.queue_free()
+			
+
 func _on_enemy_killed():
 	score += 50
 	_update_ui()
@@ -50,13 +55,14 @@ func _on_pr_enemy_spawn_timeout() -> void:
 		enemy.position = Vector2(1200,random_y)
 		enemy.enemy_killed.connect(_on_enemy_killed)
 		add_child(enemy)
+		enemy.add_to_group("enemies")
+		
 
 
 func _on_pr_player_player_killed() -> void:
 	TokenManager.enemies_shooting = false
 	TokenManager.enemies_spawning = false
 	get_tree().call_group("missiles", "queue_free")
-	#get_tree().paused = true
 	if death_screen:
 		death_screen.show()
 

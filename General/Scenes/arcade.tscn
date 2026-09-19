@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://de54g0h311kn5" path="res://General/Aesthetics/OuterWalls_Side-1.png.png" id="21_2d1lu"]
 [ext_resource type="PackedScene" uid="uid://bly1sc075a4px" path="res://General/Prefabs/prize_counter.tscn" id="22_5ueso"]
 [ext_resource type="PackedScene" uid="uid://cpr6j5xby7hoq" path="res://General/Prefabs/exit_doors.tscn" id="22_q3ij7"]
+[ext_resource type="PackedScene" uid="uid://r7badi8cusd5" path="res://General/Scenes/overall_win_screen.tscn" id="23_q3ij7"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -117,7 +118,7 @@ libraries/ = SubResource("AnimationLibrary_o2jrl")
 [node name="Pack_Bro" parent="." unique_id=1921932739 instance=ExtResource("5_nw1ri")]
 position = Vector2(1095, 119)
 
-[node name="Arcade_player" parent="." unique_id=1908138782 instance=ExtResource("6_nw1ri")]
+[node name="player" parent="." unique_id=1908138782 instance=ExtResource("6_nw1ri")]
 z_index = 5
 position = Vector2(576, 324)
 
@@ -430,5 +431,8 @@ text = "You have the key!"
 
 [node name="exit doors" parent="." unique_id=1271958756 instance=ExtResource("22_q3ij7")]
 position = Vector2(71.00001, 92.00001)
+
+[node name="OverallWinScreen" parent="." unique_id=1584049398 instance=ExtResource("23_q3ij7")]
+visible = false
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

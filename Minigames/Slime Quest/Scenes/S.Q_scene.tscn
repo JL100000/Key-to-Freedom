@@ -461,7 +461,7 @@ z_index = -2
 position = Vector2(412, -64)
 
 [node name="portal" parent="." unique_id=769148750 instance=ExtResource("8_nhumq")]
-position = Vector2(680, 608)
+position = Vector2(864, -224)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=747125456]
 
@@ -476,7 +476,7 @@ text = "Back"
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=237990980]
 z_index = -3
-position = Vector2(584, 4704)
+position = Vector2(392, 920)
 scale = Vector2(8.503906, 5.7246094)
 texture = ExtResource("10_bgl3u")
 
