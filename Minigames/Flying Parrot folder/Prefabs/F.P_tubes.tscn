@@ -11,7 +11,7 @@ size = Vector2(115, 602)
 size = Vector2(115, 601.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxhgj"]
-size = Vector2(115, 252)
+size = Vector2(115, 293)
 
 [node name="Tubes" type="Node2D" unique_id=1529964038]
 script = ExtResource("1_3x8sb")
@@ -51,39 +51,39 @@ position = Vector2(-0.9999999, 251.99998)
 scale = Vector2(0.11230468, 0.112)
 texture = ExtResource("2_n6fo1")
 
-[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1110778249]
-position = Vector2(-0.9999999, 593)
-scale = Vector2(0.11230468, 0.112)
-texture = ExtResource("2_n6fo1")
-
 [node name="Sprite2D11" type="Sprite2D" parent="." unique_id=1454623044]
-position = Vector2(-1, 679)
+position = Vector2(-2, 633)
 scale = Vector2(0.11230468, 0.112)
 texture = ExtResource("2_n6fo1")
 
-[node name="Sprite2D12" type="Sprite2D" parent="." unique_id=692863295]
-position = Vector2(-1, 764.99994)
-scale = Vector2(0.11230468, 0.112)
+[node name="Sprite2D12" type="Sprite2D" parent="Sprite2D11" unique_id=692863295]
+position = Vector2(0, 749.9995)
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("2_n6fo1")
 
-[node name="Sprite2D13" type="Sprite2D" parent="." unique_id=2073885966]
-position = Vector2(-0.9999999, 850.99994)
-scale = Vector2(0.11230468, 0.112)
+[node name="Sprite2D13" type="Sprite2D" parent="Sprite2D11" unique_id=2073885966]
+position = Vector2(9.536743e-07, 1517.8564)
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("2_n6fo1")
 
-[node name="Sprite2D14" type="Sprite2D" parent="." unique_id=1732842218]
-position = Vector2(-1.0000001, 936.99994)
-scale = Vector2(0.11230468, 0.112)
+[node name="Sprite2D14" type="Sprite2D" parent="Sprite2D11" unique_id=1732842218]
+position = Vector2(-9.536743e-07, 2285.7139)
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("2_n6fo1")
 
-[node name="Sprite2D15" type="Sprite2D" parent="." unique_id=1483715024]
-position = Vector2(-1.0000001, 1022.99994)
-scale = Vector2(0.11230468, 0.112)
+[node name="Sprite2D15" type="Sprite2D" parent="Sprite2D11" unique_id=1483715024]
+position = Vector2(-9.536743e-07, 3053.5713)
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("2_n6fo1")
 
-[node name="Sprite2D16" type="Sprite2D" parent="." unique_id=2114541421]
-position = Vector2(-1, 1107)
-scale = Vector2(0.11230468, 0.112)
+[node name="Sprite2D16" type="Sprite2D" parent="Sprite2D11" unique_id=2114541421]
+position = Vector2(0, 3803.5713)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("2_n6fo1")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D11" unique_id=1110778249]
+position = Vector2(-9.536743e-07, 4562.5)
+scale = Vector2(1.0000002, 1.0000002)
 texture = ExtResource("2_n6fo1")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1427267045]
@@ -93,13 +93,13 @@ position = Vector2(-1, -5)
 shape = SubResource("RectangleShape2D_3x8sb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=194778886]
-position = Vector2(-1, 850)
+position = Vector2(-1, 891)
 shape = SubResource("RectangleShape2D_af0tq")
 
 [node name="score" type="Area2D" parent="." unique_id=1722026520]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="score" unique_id=1163143494]
-position = Vector2(-1.5, 423)
+position = Vector2(-1.5, 443.5)
 shape = SubResource("RectangleShape2D_sxhgj")
 
 [node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("3_sxhgj")]
