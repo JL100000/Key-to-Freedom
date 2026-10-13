@@ -100,6 +100,7 @@ position = Vector2(31, -1)
 shape = SubResource("RectangleShape2D_kc7gn")
 
 [node name="Enemy_laser" type="Timer" parent="." unique_id=1633680230]
+wait_time = 2.0
 autostart = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

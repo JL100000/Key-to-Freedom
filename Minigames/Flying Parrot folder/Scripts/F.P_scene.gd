@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	var tubesInstance = tubes.instantiate()
 	tubesInstance.position.x = 1280
-	tubesInstance.position.y = randi_range(-230,56)
+	tubesInstance.position.y = randi_range(-250,30)
 	add_child(tubesInstance)
 	$Timer.start()
 	
