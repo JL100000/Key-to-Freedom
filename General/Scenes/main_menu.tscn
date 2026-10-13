@@ -2,8 +2,8 @@
 
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="1_28flt"]
 [ext_resource type="Script" uid="uid://bs0h85middagj" path="res://General/Scripts/main_menu.gd" id="1_48xlc"]
-[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/1.jpg" id="3_1ehe0"]
-[ext_resource type="Texture2D" uid="uid://bskj5wqs2egk1" path="res://General/Aesthetics/Slime_Quest_Arcade_Machine1.png" id="4_ygq0m"]
+[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/Art/1.jpg" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://bskj5wqs2egk1" path="res://General/Aesthetics/Art/Slime_Quest_Arcade_Machine1.png" id="4_ygq0m"]
 [ext_resource type="Texture2D" uid="uid://wvlwis8g7d8" path="res://Minigames/Pack Bros folder/Aesthetics/PakBro Arcade Machine (1).png" id="5_omy60"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j3wif"]
@@ -23,7 +23,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lsf38")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -45,7 +45,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_emtqd")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]

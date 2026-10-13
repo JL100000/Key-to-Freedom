@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fxm1hlr56nkh"
-path="res://.godot/imported/Arcade_Key.png-e13f9d0ef085151e680d065602554bd7.ctex"
+uid="uid://sas1c6wtcoo1"
+path="res://.godot/imported/Road-2.png (2).png-4c02043a447aa2d8ab39092288afe8e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Aesthetics/Arcade_Key.png"
-dest_files=["res://.godot/imported/Arcade_Key.png-e13f9d0ef085151e680d065602554bd7.ctex"]
+source_file="res://General/Aesthetics/Art/Road-2.png (2).png"
+dest_files=["res://.godot/imported/Road-2.png (2).png-4c02043a447aa2d8ab39092288afe8e1.ctex"]
 
 [params]
 

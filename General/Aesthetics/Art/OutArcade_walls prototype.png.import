@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0k8d31vv268k"
-path="res://.godot/imported/Arcade_walls_plain.png-17aed9c1e2ca90d4b88f2414f3fb4a9c.ctex"
+uid="uid://cbwf8olq8k8i7"
+path="res://.godot/imported/OutArcade_walls prototype.png-ce8822e9eebd25b57716fe266850d123.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Aesthetics/Arcade_walls_plain.png"
-dest_files=["res://.godot/imported/Arcade_walls_plain.png-17aed9c1e2ca90d4b88f2414f3fb4a9c.ctex"]
+source_file="res://General/Aesthetics/Art/OutArcade_walls prototype.png"
+dest_files=["res://.godot/imported/OutArcade_walls prototype.png-ce8822e9eebd25b57716fe266850d123.ctex"]
 
 [params]
 

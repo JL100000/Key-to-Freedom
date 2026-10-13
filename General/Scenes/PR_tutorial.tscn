@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyhmf8j7i5qdv"]
 
 [ext_resource type="Script" uid="uid://cdb6l6p3dwc7p" path="res://General/Scripts/pr_tutorial.gd" id="1_23w06"]
-[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/1.jpg" id="1_65wqg"]
+[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/Art/1.jpg" id="1_65wqg"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_fkitc"]
 [ext_resource type="Texture2D" uid="uid://bqbjx0ifvt55t" path="res://Minigames/Planet Raiders folder/Aesthetics/PlanetRaiders_Arcade_Machine (1).png" id="4_fkitc"]
 

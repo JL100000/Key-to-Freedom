@@ -1,6 +1,6 @@
 extends CharacterBody2D
 class_name player
-
+@onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 @export var SPEED: float = 300.0
 
 func _physics_process(delta: float) -> void:
@@ -19,7 +19,12 @@ func _physics_process(delta: float) -> void:
 		
 	
 	move_and_slide()
-	
-	
 	position.y = clamp(position.y, 170, 625)
 	position.x = clamp(position.x, 21, 1131)
+	
+	if velocity.y == 0:
+		animation.play("default")
+	else:
+		animation.play("move")
+	
+		

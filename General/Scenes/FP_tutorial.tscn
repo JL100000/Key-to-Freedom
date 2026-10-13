@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1l111045tnxr"]
 
 [ext_resource type="Script" uid="uid://drpmh7s52i8xc" path="res://General/Scripts/fp_tutorial.gd" id="1_gbsgs"]
-[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/1.jpg" id="1_okgx3"]
+[ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/Art/1.jpg" id="1_okgx3"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_ev0ba"]
 [ext_resource type="Texture2D" uid="uid://cyltfuvceibf" path="res://Minigames/Flying Parrot folder/Aesthetics/FlyingParrot Arcade_Machine.png" id="4_ev0ba"]
 

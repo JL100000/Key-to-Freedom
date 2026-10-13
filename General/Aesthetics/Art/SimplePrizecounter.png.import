@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de54g0h311kn5"
-path="res://.godot/imported/OuterWalls_Side-1.png.png-005f3180a6cebe2ad271636a80cdcb38.ctex"
+uid="uid://dkngqdltgo5d8"
+path="res://.godot/imported/SimplePrizecounter.png-02fe75af857ec7c0a6bd10160df9c8c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Aesthetics/OuterWalls_Side-1.png.png"
-dest_files=["res://.godot/imported/OuterWalls_Side-1.png.png-005f3180a6cebe2ad271636a80cdcb38.ctex"]
+source_file="res://General/Aesthetics/Art/SimplePrizecounter.png"
+dest_files=["res://.godot/imported/SimplePrizecounter.png-02fe75af857ec7c0a6bd10160df9c8c1.ctex"]
 
 [params]
 

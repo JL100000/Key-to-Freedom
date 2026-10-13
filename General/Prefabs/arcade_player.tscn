@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1lhqnvmr27yt"]
 
 [ext_resource type="Script" uid="uid://b456apq4f2kbo" path="res://General/Scripts/arcade_player.gd" id="1_cwl6u"]
-[ext_resource type="Texture2D" uid="uid://bfu5thovd8bwf" path="res://General/Aesthetics/CharacterShepherd.png" id="2_ei88d"]
+[ext_resource type="Texture2D" uid="uid://bfu5thovd8bwf" path="res://General/Aesthetics/Art/CharacterShepherd.png" id="2_ei88d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwl6u"]
 size = Vector2(150, 206.66666)
@@ -14,6 +14,14 @@ region = Rect2(0, 0, 320, 320)
 atlas = ExtResource("2_ei88d")
 region = Rect2(320, 0, 320, 320)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei88d"]
+atlas = ExtResource("2_ei88d")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpqn0"]
+atlas = ExtResource("2_ei88d")
+region = Rect2(320, 320, 320, 320)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajgdd"]
 animations = [{
 "frames": [{
@@ -23,8 +31,19 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vr4dv")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei88d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpqn0")
+}],
+"loop": 1,
+"name": &"move",
 "speed": 5.0
 }]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bskj5wqs2egk1"
-path="res://.godot/imported/Slime_Quest_Arcade_Machine1.png-2b15069bb23c4e57c2128d3ff7627b16.ctex"
+uid="uid://fomdbiptsk4t"
+path="res://.godot/imported/Road-3.png (2).png-24497a4cd4b6cc3d9c94cfdc726368ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Aesthetics/Slime_Quest_Arcade_Machine1.png"
-dest_files=["res://.godot/imported/Slime_Quest_Arcade_Machine1.png-2b15069bb23c4e57c2128d3ff7627b16.ctex"]
+source_file="res://General/Aesthetics/Art/Road-3.png (2).png"
+dest_files=["res://.godot/imported/Road-3.png (2).png-24497a4cd4b6cc3d9c94cfdc726368ba.ctex"]
 
 [params]
 

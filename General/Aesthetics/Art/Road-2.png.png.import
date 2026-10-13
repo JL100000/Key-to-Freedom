@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfu5thovd8bwf"
-path="res://.godot/imported/CharacterShepherd.png-c1ec9d658d7996e56a5af84923b60cb3.ctex"
+uid="uid://cwwlofduumuo"
+path="res://.godot/imported/Road-2.png.png-dab790e1c803467257d251ea5236e0ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Aesthetics/CharacterShepherd.png"
-dest_files=["res://.godot/imported/CharacterShepherd.png-c1ec9d658d7996e56a5af84923b60cb3.ctex"]
+source_file="res://General/Aesthetics/Art/Road-2.png.png"
+dest_files=["res://.godot/imported/Road-2.png.png-dab790e1c803467257d251ea5236e0ae.ctex"]
 
 [params]
 

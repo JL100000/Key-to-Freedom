@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp0mhwk2g5kk5"
-path="res://.godot/imported/Doors prototype.png-908b06d08623c66b7e9dc1071f588b1e.ctex"
+uid="uid://bxa7iqf06hb7t"
+path="res://.godot/imported/Road-5.png.png-4a43df73c1122aac5c2824c1058d2fc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Aesthetics/Doors prototype.png"
-dest_files=["res://.godot/imported/Doors prototype.png-908b06d08623c66b7e9dc1071f588b1e.ctex"]
+source_file="res://General/Aesthetics/Art/Road-5.png.png"
+dest_files=["res://.godot/imported/Road-5.png.png-4a43df73c1122aac5c2824c1058d2fc6.ctex"]
 
 [params]
 

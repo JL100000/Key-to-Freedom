@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://611bg8k7wtmp"
-path="res://.godot/imported/1.jpg-10702fe02ed5df57c0f73fc34b483aef.ctex"
+uid="uid://calxlnaaeyxn"
+path="res://.godot/imported/Doors prototype (1).png-9290603506c07c8d89918650b3cfaaaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Aesthetics/1.jpg"
-dest_files=["res://.godot/imported/1.jpg-10702fe02ed5df57c0f73fc34b483aef.ctex"]
+source_file="res://General/Aesthetics/Art/Doors prototype (1).png"
+dest_files=["res://.godot/imported/Doors prototype (1).png-9290603506c07c8d89918650b3cfaaaf.ctex"]
 
 [params]
 

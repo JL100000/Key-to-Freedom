@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpvfcja8ifgpn"
-path="res://.godot/imported/Arcade_Flooring_Placeholder.png-d98073acabfffe12f3603910bc917a5e.ctex"
+uid="uid://fxm1hlr56nkh"
+path="res://.godot/imported/Arcade_Key.png-f10e307f3dae7da1a8f5e0cc0144ebf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Arcade_Flooring_Placeholder.png"
-dest_files=["res://.godot/imported/Arcade_Flooring_Placeholder.png-d98073acabfffe12f3603910bc917a5e.ctex"]
+source_file="res://General/Aesthetics/Art/Arcade_Key.png"
+dest_files=["res://.godot/imported/Arcade_Key.png-f10e307f3dae7da1a8f5e0cc0144ebf2.ctex"]
 
 [params]
 

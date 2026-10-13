@@ -1,4 +1,5 @@
 extends Area2D
+signal key_delete
 @onready var animation: AnimatedSprite2D = $Prize_counter
 @onready var label: Label = $Label
 @onready var label_2: Label = $Label2
@@ -31,7 +32,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
-		print("hi")
 		animation.play("interact")
 		player_is_in_key_range = true
 		if TokenManager.tokens == 4:

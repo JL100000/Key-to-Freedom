@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbefg0u6oivpb"
-path="res://.godot/imported/Arcade_wall_glow.png-b2e09c92c90c1fdffdc8436e9fdff868.ctex"
+uid="uid://dxbh7nvmcabuv"
+path="res://.godot/imported/Road-4.png.png-61d4112e2aa15fdb091c3bacbb94be3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General/Aesthetics/Arcade_wall_glow.png"
-dest_files=["res://.godot/imported/Arcade_wall_glow.png-b2e09c92c90c1fdffdc8436e9fdff868.ctex"]
+source_file="res://General/Aesthetics/Art/Road-4.png.png"
+dest_files=["res://.godot/imported/Road-4.png.png-61d4112e2aa15fdb091c3bacbb94be3f.ctex"]
 
 [params]
 

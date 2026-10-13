@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://7tacearkht3s"]
+
+[ext_resource type="Script" uid="uid://rh47566fxnq4" path="res://General/Scripts/arcade_key.gd" id="1_8nic4"]
+[ext_resource type="Texture2D" uid="uid://fxm1hlr56nkh" path="res://General/Aesthetics/Art/Arcade_Key.png" id="1_yb5tg"]
+
+[node name="Arcade_Key" type="Sprite2D" unique_id=8827587]
+texture = ExtResource("1_yb5tg")
+script = ExtResource("1_8nic4")

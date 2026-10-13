@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bly1sc075a4px"]
 
-[ext_resource type="Texture2D" uid="uid://dkngqdltgo5d8" path="res://General/Aesthetics/SimplePrizecounter.png" id="1_5s01f"]
+[ext_resource type="Texture2D" uid="uid://dkngqdltgo5d8" path="res://General/Aesthetics/Art/SimplePrizecounter.png" id="1_5s01f"]
 [ext_resource type="Script" uid="uid://bjbv0f0rq7des" path="res://General/Scripts/prize_counter.gd" id="1_w3y70"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_bvjjl"]
 
@@ -18,7 +18,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w3y70")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -26,13 +26,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bvjjl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"interact",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4v6x"]
-size = Vector2(583.5, 728)
+size = Vector2(583.5, 614.9999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvjjl"]
 size = Vector2(330, 550.0002)
@@ -48,7 +48,8 @@ animation = &"interact"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1415947353]
-position = Vector2(170, 237.5)
+position = Vector2(169.99997, 214.99986)
+scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_x4v6x")
 
 [node name="Label" type="Label" parent="." unique_id=1349032163]
