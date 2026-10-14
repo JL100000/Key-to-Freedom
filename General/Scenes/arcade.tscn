@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bly1sc075a4px" path="res://General/Prefabs/prize_counter.tscn" id="22_5ueso"]
 [ext_resource type="PackedScene" uid="uid://cpr6j5xby7hoq" path="res://General/Prefabs/exit_doors.tscn" id="22_q3ij7"]
 [ext_resource type="PackedScene" uid="uid://r7badi8cusd5" path="res://General/Scenes/overall_win_screen.tscn" id="23_q3ij7"]
-[ext_resource type="PackedScene" uid="uid://7tacearkht3s" path="res://General/Prefabs/arcade_key.tscn" id="24_ejll7"]
+[ext_resource type="PackedScene" path="res://General/Prefabs/arcade_key.tscn" id="24_ejll7"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001

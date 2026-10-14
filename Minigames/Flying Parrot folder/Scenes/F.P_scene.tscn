@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cw3vlsaus7elv" path="res://Minigames/Flying Parrot folder/Aesthetics/Screenshot 2026-09-15 130108.png" id="9_ugtop"]
 
 [node name="FP_scene" type="Node2D" unique_id=406394378]
+process_mode = 3
 script = ExtResource("1_skpg4")
 
 [node name="FP_player" parent="." unique_id=1355274802 instance=ExtResource("1_l6soh")]

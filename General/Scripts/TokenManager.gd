@@ -13,7 +13,6 @@ var flying_parrot_won: bool = false
 var four_tokens: bool = false
 var have_key: bool = false
 var unlocked_door: bool = false
-
 var play_again: int = 0
 func add_tokens(amount: int) -> void:
 	tokens += amount

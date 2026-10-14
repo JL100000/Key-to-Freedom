@@ -8,6 +8,7 @@ func _ready() -> void:
 	TokenManager.FP_score = 0
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$CanvasLayer/Control/Label.text = "SCORE: " + str(TokenManager.FP_score)
