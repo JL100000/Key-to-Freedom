@@ -1,38 +1,52 @@
 [gd_scene format=3 uid="uid://1b2h2i3e64l"]
 
 [ext_resource type="Script" uid="uid://dvns26kbc7afy" path="res://Minigames/Pack Bros folder/Scripts/P.B_player.gd" id="1_lanen"]
-[ext_resource type="Texture2D" uid="uid://18rdlj6dqvh8" path="res://Minigames/Pack Bros folder/Aesthetics/Ghost.png" id="2_jjgpd"]
+[ext_resource type="Texture2D" uid="uid://n1g4qbt1w5v7" path="res://Minigames/Pack Bros folder/Aesthetics/PacBro_Ghost_2.png" id="2_ttc6f"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y5hcb"]
-atlas = ExtResource("2_jjgpd")
-region = Rect2(0, 0, 640, 640)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikhi2"]
+atlas = ExtResource("2_ttc6f")
+region = Rect2(0, 320, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2nftw"]
-atlas = ExtResource("2_jjgpd")
-region = Rect2(640, 0, 640, 640)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjesg"]
+atlas = ExtResource("2_ttc6f")
+region = Rect2(320, 320, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_knrd4"]
-atlas = ExtResource("2_jjgpd")
-region = Rect2(0, 640, 640, 640)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tytv4"]
+atlas = ExtResource("2_ttc6f")
+region = Rect2(0, 640, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqisy"]
+atlas = ExtResource("2_ttc6f")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttc6f"]
+atlas = ExtResource("2_ttc6f")
+region = Rect2(320, 0, 320, 320)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hck1p"]
 animations = [{
-"frames": [],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikhi2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjesg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tytv4")
+}],
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y5hcb")
+"texture": SubResource("AtlasTexture_bqisy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2nftw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_knrd4")
+"texture": SubResource("AtlasTexture_ttc6f")
 }],
-"loop": true,
+"loop": 1,
 "name": &"move",
 "speed": 5.0
 }]
@@ -45,11 +59,12 @@ scale = Vector2(0.75, 0.75)
 script = ExtResource("1_lanen")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=564797116]
-position = Vector2(0, 4)
-scale = Vector2(0.06, 0.06)
+position = Vector2(1.3333333, 1.3333334)
+scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_hck1p")
 animation = &"move"
-autoplay = "move"
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1935644021]
+visible = false
 shape = SubResource("CircleShape2D_5wxv7")

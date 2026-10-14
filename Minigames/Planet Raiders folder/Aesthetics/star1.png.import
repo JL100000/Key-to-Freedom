@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dii5k1aklrwjf"
-path="res://.godot/imported/Missile.png-9435fdae72761fd3d302a47a4903f364.ctex"
+uid="uid://dq1nivau05fgh"
+path="res://.godot/imported/star1.png-5fbfa4b43d0620bc3db80b900df453a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/Planet Raiders folder/Missile.png"
-dest_files=["res://.godot/imported/Missile.png-9435fdae72761fd3d302a47a4903f364.ctex"]
+source_file="res://Minigames/Planet Raiders folder/Aesthetics/star1.png"
+dest_files=["res://.godot/imported/star1.png-5fbfa4b43d0620bc3db80b900df453a8.ctex"]
 
 [params]
 

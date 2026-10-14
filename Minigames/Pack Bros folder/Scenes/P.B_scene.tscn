@@ -3457,7 +3457,7 @@ theme_override_font_sizes/font_size = 80
 text = "Minigame 1"
 
 [node name="Player" parent="." unique_id=788515543 instance=ExtResource("5_umymk")]
-position = Vector2(-7, 280)
+position = Vector2(68, 281)
 collision_layer = 2
 collision_mask = 3
 
