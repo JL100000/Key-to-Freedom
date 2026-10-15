@@ -1,6 +1,35 @@
 [gd_scene format=3 uid="uid://do4dcvpa7koup"]
 
 [ext_resource type="Script" uid="uid://cuilainvdrqbv" path="res://Minigames/The Golden Banana folder/Scripts/T.G.B_player.gd" id="1_jgqmw"]
+[ext_resource type="Texture2D" uid="uid://cgxiy1bvby473" path="res://icon.svg" id="2_2wwqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekeg2"]
+atlas = ExtResource("2_2wwqr")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y5r0c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekeg2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvpku"]
+size = Vector2(64, 64)
 
 [node name="TGB player" type="CharacterBody2D" unique_id=119780332]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_jgqmw")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=101072712]
+position = Vector2(-1.1920929e-06, -1.0728836e-06)
+scale = Vector2(0.49999997, 0.5)
+sprite_frames = SubResource("SpriteFrames_y5r0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=415501684]
+shape = SubResource("RectangleShape2D_gvpku")

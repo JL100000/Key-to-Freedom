@@ -28,8 +28,3 @@ func _physics_process(delta: float) -> void:
 	else:
 		sprite.play("default")
  
-	
-
-	
-		
-		

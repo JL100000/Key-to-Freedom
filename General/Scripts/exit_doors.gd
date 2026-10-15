@@ -28,12 +28,6 @@ func _process(delta: float) -> void:
 		label_2.visible = true
 
 
-
-
-
-		
-
-
 func _on_body_entered(body: Node2D) -> void:
 	if TokenManager.have_key == true:
 		label.visible = true

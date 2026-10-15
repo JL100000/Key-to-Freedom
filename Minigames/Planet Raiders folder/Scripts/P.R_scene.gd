@@ -43,11 +43,6 @@ func _on_enemy_killed():
 	_update_ui()
 
 
-
-
-
-
-
 func _on_pr_enemy_spawn_timeout() -> void:
 	if TokenManager.enemies_spawning == true:
 		var enemy = enemy_prefab.instantiate()
