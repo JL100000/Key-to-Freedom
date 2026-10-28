@@ -66,5 +66,4 @@ animation = &"move"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1935644021]
-visible = false
 shape = SubResource("CircleShape2D_5wxv7")

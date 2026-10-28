@@ -13,6 +13,8 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		player_won.emit()
 	
+#Find out how to create a new global variable for slimeQuest2
+#And find out where it is stored
 func _on_player_won():
 	if TokenManager.slime_quest_won == true:
 		get_tree().paused = true

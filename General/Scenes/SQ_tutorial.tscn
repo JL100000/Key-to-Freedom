@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b0xa5l2c0ejes" path="res://General/Scripts/sq_tutorial.gd" id="1_ailc6"]
 [ext_resource type="Texture2D" uid="uid://611bg8k7wtmp" path="res://General/Aesthetics/Art/1.jpg" id="1_oh426"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_ul01u"]
-[ext_resource type="Texture2D" uid="uid://top3pxpi0st0" path="res://Minigames/Slime Quest/Aesthetics/Slime_Quest_Arcade_Machine.png" id="4_ul01u"]
+[ext_resource type="Texture2D" uid="uid://top3pxpi0st0" path="res://Minigames/Slime Quest 2/Asthetics/Slime_Quest_Arcade_Machine.png" id="4_ul01u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ss63a"]
 atlas = ExtResource("4_ul01u")

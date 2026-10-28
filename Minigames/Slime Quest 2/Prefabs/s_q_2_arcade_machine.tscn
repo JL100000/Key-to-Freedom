@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bj3o5osjjcjuj"]
+
+[ext_resource type="Texture2D" uid="uid://cp6n2aapsqdgn" path="res://Minigames/Slime Quest 2/Asthetics/Slime_Quest_2_Arcade_Machine.png" id="1_gfqpx"]
+[ext_resource type="Script" uid="uid://hi84hq1itfiy" path="res://Minigames/Slime Quest 2/Scripts/s_q_2_arcade_machine.gd" id="1_nykes"]
+[ext_resource type="FontFile" uid="uid://rdw3id7s6mr3" path="res://General/Aesthetics/Fonts/capitol_city/capitolcityexpand.ttf" id="2_kpxmo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpxmo"]
+atlas = ExtResource("1_gfqpx")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nykes"]
+atlas = ExtResource("1_gfqpx")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lems0"]
+atlas = ExtResource("1_gfqpx")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ajgdd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpxmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nykes")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lems0")
+}],
+"loop": 1,
+"name": &"interact",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajgdd"]
+size = Vector2(337, 493)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ajgdd"]
+font = ExtResource("2_kpxmo")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_85rvy"]
+font = ExtResource("2_kpxmo")
+font_size = 40
+
+[node name="S_Q_2_arcade_machine" type="Area2D" unique_id=1888314092]
+script = ExtResource("1_nykes")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1927561999]
+sprite_frames = SubResource("SpriteFrames_ajgdd")
+animation = &"interact"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=376752237]
+position = Vector2(-2.5, -1.5)
+shape = SubResource("RectangleShape2D_ajgdd")
+
+[node name="Label" type="Label" parent="." unique_id=1413272067]
+offset_left = -180.0
+offset_top = 153.0
+offset_right = 179.0
+offset_bottom = 227.0
+text = "Press E to enter"
+label_settings = SubResource("LabelSettings_ajgdd")
+
+[node name="Label2" type="Label" parent="." unique_id=996510117]
+offset_left = -150.0
+offset_top = -282.0
+offset_right = 222.0
+offset_bottom = -218.0
+text = "Slime Quest 2"
+label_settings = SubResource("LabelSettings_85rvy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

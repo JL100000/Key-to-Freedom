@@ -24,7 +24,11 @@
 [ext_resource type="PackedScene" uid="uid://cpr6j5xby7hoq" path="res://General/Prefabs/exit_doors.tscn" id="22_q3ij7"]
 [ext_resource type="PackedScene" uid="uid://r7badi8cusd5" path="res://General/Scenes/overall_win_screen.tscn" id="23_q3ij7"]
 [ext_resource type="PackedScene" uid="uid://7tacearkht3s" path="res://General/Prefabs/arcade_key.tscn" id="24_ejll7"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://cr6asev3qrxte" path="res://Minigames/The Golden Banana folder/Prefabs/tgb_arcade_machine.tscn" id="25_8yjhk"]
+=======
+[ext_resource type="PackedScene" uid="uid://bj3o5osjjcjuj" path="res://Minigames/Slime Quest 2/Prefabs/s_q_2_arcade_machine.tscn" id="25_8yjhk"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -441,7 +445,13 @@ visible = false
 position = Vector2(1059, 326)
 scale = Vector2(0.2, 0.2)
 
+<<<<<<< Updated upstream
 [node name="TGB_arcade_machine" parent="." unique_id=1275979280 instance=ExtResource("25_8yjhk")]
 position = Vector2(368, 120)
+=======
+[node name="S_Q_2_arcade_machine" parent="." unique_id=1888314092 instance=ExtResource("25_8yjhk")]
+position = Vector2(388, 115.99999)
+scale = Vector2(0.4, 0.4)
+>>>>>>> Stashed changes
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
