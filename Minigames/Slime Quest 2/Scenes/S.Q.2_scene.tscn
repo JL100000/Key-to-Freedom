@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ch0umjstrtonx"]
 
-[ext_resource type="Script" uid="uid://cj084h3i107i3" path="res://Minigames/Slime Quest 2/Scripts/s.q.2_scene.gd" id="1_2esc7"]
+[ext_resource type="Script" uid="uid://hsdash1mpog1" path="res://Minigames/Slime Quest 2/Scripts/s.q.2_scene.gd" id="1_2esc7"]
 [ext_resource type="PackedScene" uid="uid://bkiqhomg2w1s0" path="res://Minigames/Slime Quest/Prefabs/S.Q_player.tscn" id="1_k6doh"]
 [ext_resource type="PackedScene" uid="uid://0nprtemqx03n" path="res://Minigames/Slime Quest/Prefabs/S.Q_spike.tscn" id="2_j5wlc"]
 [ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="2_vwpao"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://00ouxq0xhfnc" path="res://Minigames/Slime Quest 2/Prefabs/magma_lever.tscn" id="7_x2iuy"]
 [ext_resource type="Texture2D" uid="uid://bmjmtebr0ex30" path="res://Minigames/Slime Quest 2/Asthetics/lava.png" id="10_8j26u"]
 [ext_resource type="PackedScene" uid="uid://djts185dy58ha" path="res://Minigames/Slime Quest 2/Prefabs/s_q_2_portal.tscn" id="11_x6pqp"]
-[ext_resource type="FontFile" uid="uid://rdw3id7s6mr3" path="res://General/Aesthetics/Fonts/capitol_city/capitolcityexpand.ttf" id="14_dx5vs"]
+[ext_resource type="FontFile" uid="uid://b18htet3sht27" path="res://General/Aesthetics/Fonts/capitol_city/capitolcity.ttf" id="14_dx5vs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bciop"]
 texture = ExtResource("4_bciop")
@@ -3265,7 +3265,7 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bciop")
 
-[sub_resource type="Theme" id="Theme_ajgdd"]
+[sub_resource type="Theme" id="Theme_2esc7"]
 default_font = ExtResource("14_dx5vs")
 default_font_size = 30
 
@@ -3285,7 +3285,7 @@ texture = ExtResource("3_j5wlc")
 [node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("3_8j26u")]
 
 [node name="Player" parent="." unique_id=692553899 instance=ExtResource("1_k6doh")]
-position = Vector2(2, -110)
+position = Vector2(-12.999512, -159)
 
 [node name="Spike" parent="." unique_id=406308420 instance=ExtResource("2_j5wlc")]
 position = Vector2(419, 158)
@@ -3389,14 +3389,12 @@ texture = ExtResource("10_8j26u")
 [node name="S_Q_2_portal" parent="." unique_id=1543538917 instance=ExtResource("11_x6pqp")]
 position = Vector2(7328, -1502)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1821488028]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=997384846]
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=1828418445]
-offset_left = -2.0
-offset_top = -1.0
-offset_right = 89.0
-offset_bottom = 51.0
-theme = SubResource("Theme_ajgdd")
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=832772918]
+offset_right = 99.0
+offset_bottom = 35.0
+theme = SubResource("Theme_2esc7")
 text = "Back"
 
 [connection signal="activated1" from="Magma_lever" to="Magma_Blockage" method="_on_magma_lever_activated_1"]
