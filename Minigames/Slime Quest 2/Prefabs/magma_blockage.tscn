@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bkysiabu6enoo"]
+
+[ext_resource type="Script" uid="uid://gfrpfqhdkmfk" path="res://Minigames/Slime Quest 2/Scripts/magma_blockage.gd" id="1_dvq7y"]
+[ext_resource type="Texture2D" uid="uid://bedjlwwnt5vfw" path="res://Minigames/Slime Quest 2/Asthetics/Magma_Blockage.png" id="2_dvq7y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajgdd"]
+size = Vector2(75, 361)
+
+[node name="Magma_Blockage" type="StaticBody2D" unique_id=529412434]
+script = ExtResource("1_dvq7y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1962224312]
+position = Vector2(10, -14)
+scale = Vector2(1, 1.1)
+texture = ExtResource("2_dvq7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=211963865]
+position = Vector2(6.5, -2.5)
+shape = SubResource("RectangleShape2D_ajgdd")

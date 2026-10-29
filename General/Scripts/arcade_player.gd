@@ -19,8 +19,8 @@ func _physics_process(delta: float) -> void:
 		
 	
 	move_and_slide()
-	position.y = clamp(position.y, 170, 625)
-	position.x = clamp(position.x, 21, 1131)
+	#position.y = clamp(position.y, 170, 625)
+	#position.x = clamp(position.x, 21, 1131)
 	
 	if velocity.y == 0:
 		animation.play("default")
