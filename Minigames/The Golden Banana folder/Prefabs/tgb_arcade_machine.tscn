@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cr6asev3qrxte"]
 
-[ext_resource type="Script" path="res://T.G.B_arcade_machine.gd" id="1_20rar"]
+[ext_resource type="Script" uid="uid://srnl5d82pbbc" path="res://T.G.B_arcade_machine.gd" id="1_20rar"]
 [ext_resource type="Texture2D" uid="uid://vceoyt670wqa" path="res://Minigames/The Golden Banana folder/Aesthetics/Golden_Banana_Arcade_Machine.png" id="2_qohsm"]
 [ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_nw6cn"]
 

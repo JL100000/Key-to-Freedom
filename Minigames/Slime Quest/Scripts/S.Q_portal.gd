@@ -15,7 +15,6 @@ func _on_body_entered(body: Node2D) -> void:
 	
 #Find out how to create a new global variable for slimeQuest2
 #And find out where it is stored
-#Also need to create a new repository
 func _on_player_won():
 	if TokenManager.slime_quest_won == true:
 		get_tree().paused = true

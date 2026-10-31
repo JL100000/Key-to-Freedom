@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	if is_player_inside == true and Input.is_action_just_pressed("interact"):
 		get_tree().change_scene_to_file("res://Minigames/Slime Quest 2/Scenes/S.Q.2_scene.tscn")
 
-#Need to change all body entered code to player only
+
 func _on_body_entered(body: Node2D) -> void:
 	is_player_inside = true
 	animation.play("interact")
