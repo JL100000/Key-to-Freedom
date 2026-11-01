@@ -22,13 +22,13 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_player_won() -> void:
-	if TokenManager.slime_quest_won == true:
+	if TokenManager.slime_quest_2_won == true:
 		get_tree().paused = true
 		if win_screen_1:
 			win_screen_1.show()
-	elif TokenManager.slime_quest_won == false:
+	elif TokenManager.slime_quest_2_won == false:
 		get_tree().paused = true
 		TokenManager.add_tokens(1)
-		TokenManager.slime_quest_won = true
+		TokenManager.slime_quest_2_won = true
 		if win_screen_2:
 			win_screen_2.show()

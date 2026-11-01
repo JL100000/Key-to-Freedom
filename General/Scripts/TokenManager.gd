@@ -14,6 +14,8 @@ var four_tokens: bool = false
 var have_key: bool = false
 var unlocked_door: bool = false
 var play_again: int = 0
+var slime_quest_2_won: bool = false
+var the_golden_banana_won: bool = false
 func add_tokens(amount: int) -> void:
 	tokens += amount
 	print("Tokens added! Current balance: ", tokens)
