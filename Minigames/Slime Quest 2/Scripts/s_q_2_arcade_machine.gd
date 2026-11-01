@@ -15,16 +15,17 @@ func _process(delta: float) -> void:
 
 #Need to change all body entered code to player only
 func _on_body_entered(body: Node2D) -> void:
-	is_player_inside = true
-	animation.play("interact")
-	label.visible = true
-	label_2.visible = true
-	TokenManager.in_slime_quest = true
-	if area_entered and TokenManager.in_packbro:
-		is_player_inside = false
-		animation.play("idle")
-		label.visible = false
-		label_2.visible = false
+	if body is arcade_player:
+		is_player_inside = true
+		animation.play("interact")
+		label.visible = true
+		label_2.visible = true
+		TokenManager.in_slime_quest = true
+	#if area_entered and TokenManager.in_packbro:
+		#is_player_inside = false
+		#animation.play("idle")
+		#label.visible = false
+		#label_2.visible = false
 
 
 func _on_body_exited(body: Node2D) -> void:

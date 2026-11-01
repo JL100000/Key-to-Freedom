@@ -14,10 +14,11 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	is_player_inside = true
-	animation.play("interact")
-	label.visible = true
-	label_2.visible = true
+	if body is arcade_player:
+		is_player_inside = true
+		animation.play("interact")
+		label.visible = true
+		label_2.visible = true
 
 func _on_body_exited(body: Node2D) -> void:
 	is_player_inside = false

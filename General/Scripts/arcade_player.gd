@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name player
+class_name arcade_player
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 @export var SPEED: float = 300.0
 
