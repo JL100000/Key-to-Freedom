@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://djts185dy58ha"]
+
+[ext_resource type="Texture2D" uid="uid://dwjfnmmwpb43b" path="res://Minigames/Slime Quest/Aesthetics/kenney_new-platformer-pack-1.1/Vector/Tiles/door_open_top.svg" id="1_cw170"]
+[ext_resource type="Script" uid="uid://dbf0i6hpmvnhy" path="res://Minigames/Slime Quest 2/Scripts/s_q_2_portal.gd" id="1_i41v4"]
+[ext_resource type="Texture2D" uid="uid://pte5idqwueod" path="res://Minigames/Slime Quest/Aesthetics/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/door_open.png" id="2_i41v4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajgdd"]
+size = Vector2(84, 119)
+
+[node name="S_Q_2_portal" type="Area2D" unique_id=1543538917]
+script = ExtResource("1_i41v4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=578003983]
+texture = ExtResource("1_cw170")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=816978389]
+position = Vector2(0, 62)
+texture = ExtResource("2_i41v4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860560707]
+position = Vector2(-1, 29.5)
+shape = SubResource("RectangleShape2D_ajgdd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

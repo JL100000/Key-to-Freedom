@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3m3fissk1cf1"
+path="res://.godot/imported/sfx_jump-high.ogg-982f317ba37b7eb2fa9f41493911a622.oggvorbisstr"
+
+[deps]
+
+source_file="res://Minigames/Slime Quest 2/Asthetics/kenney_new-platformer-pack-1.1/Sounds/sfx_jump-high.ogg"
+dest_files=["res://.godot/imported/sfx_jump-high.ogg-982f317ba37b7eb2fa9f41493911a622.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

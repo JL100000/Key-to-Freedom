@@ -7,23 +7,28 @@
 [ext_resource type="PackedScene" uid="uid://c1lhqnvmr27yt" path="res://General/Prefabs/arcade_player.tscn" id="6_nw1ri"]
 [ext_resource type="Texture2D" uid="uid://dpvfcja8ifgpn" path="res://General/Aesthetics/Art/Arcade_Flooring_Placeholder.png" id="6_wv2cy"]
 [ext_resource type="Texture2D" uid="uid://dbefg0u6oivpb" path="res://General/Aesthetics/Art/Arcade_wall_glow.png" id="7_r7i0d"]
+[ext_resource type="Texture2D" uid="uid://why0dic64ex3" path="res://General/Aesthetics/Art/Lava_Walls_Plain.png" id="8_gk3dc"]
 [ext_resource type="Texture2D" uid="uid://0k8d31vv268k" path="res://General/Aesthetics/Art/Arcade_walls_plain.png" id="8_yfyhc"]
 [ext_resource type="Texture2D" uid="uid://cs8m4wxo8rhcj" path="res://Minigames/Pack Bros folder/Aesthetics/Arcade_wall_glow (1).png" id="9_lvvd5"]
+[ext_resource type="Texture2D" uid="uid://f2cih71outap" path="res://General/Aesthetics/Art/Lava_Wall_Glow.png" id="9_ujebq"]
+[ext_resource type="Texture2D" uid="uid://vbrhicafkwjh" path="res://General/Aesthetics/Art/Jungle_Walls_Plain.png" id="10_8yjhk"]
 [ext_resource type="PackedScene" uid="uid://dnebn42nonh3f" path="res://Minigames/Slime Quest/Prefabs/S.Q_arcade_machine.tscn" id="11_6bv4j"]
 [ext_resource type="Texture2D" uid="uid://cbwf8olq8k8i7" path="res://General/Aesthetics/Art/OutArcade_walls prototype.png" id="12_wv2cy"]
 [ext_resource type="PackedScene" uid="uid://ccx40na87y0d7" path="res://Minigames/Planet Raiders folder/Prefabs/P.R_arcade_machine.tscn" id="13_1dbqh"]
+[ext_resource type="Texture2D" uid="uid://hxxbommpn8yp" path="res://General/Aesthetics/Art/Jungle_Walls_Glow.png" id="13_35l5y"]
 [ext_resource type="PackedScene" uid="uid://dsbkowxs4spha" path="res://Minigames/Flying Parrot folder/Prefabs/F.P_arcade_machine.tscn" id="14_1dbqh"]
 [ext_resource type="Texture2D" uid="uid://bmitsgop1cbt1" path="res://General/Aesthetics/Art/Road.png" id="15_ldskm"]
 [ext_resource type="Texture2D" uid="uid://sas1c6wtcoo1" path="res://General/Aesthetics/Art/Road-2.png (2).png" id="16_lj6ev"]
 [ext_resource type="Texture2D" uid="uid://fomdbiptsk4t" path="res://General/Aesthetics/Art/Road-3.png (2).png" id="17_lj6ev"]
 [ext_resource type="Texture2D" uid="uid://dxbh7nvmcabuv" path="res://General/Aesthetics/Art/Road-4.png.png" id="18_yxb8m"]
-[ext_resource type="Texture2D" uid="uid://bxa7iqf06hb7t" path="res://General/Aesthetics/Art/Road-5.png.png" id="19_lns6s"]
 [ext_resource type="Texture2D" uid="uid://xohxuysbv3oi" path="res://General/Aesthetics/Art/Road-6.png.png" id="20_qjdjc"]
 [ext_resource type="Texture2D" uid="uid://de54g0h311kn5" path="res://General/Aesthetics/Art/OuterWalls_Side-1.png.png" id="21_2d1lu"]
 [ext_resource type="PackedScene" uid="uid://bly1sc075a4px" path="res://General/Prefabs/prize_counter.tscn" id="22_5ueso"]
 [ext_resource type="PackedScene" uid="uid://cpr6j5xby7hoq" path="res://General/Prefabs/exit_doors.tscn" id="22_q3ij7"]
 [ext_resource type="PackedScene" uid="uid://r7badi8cusd5" path="res://General/Scenes/overall_win_screen.tscn" id="23_q3ij7"]
-[ext_resource type="PackedScene" path="res://General/Prefabs/arcade_key.tscn" id="24_ejll7"]
+[ext_resource type="PackedScene" uid="uid://7tacearkht3s" path="res://General/Prefabs/arcade_key.tscn" id="24_ejll7"]
+[ext_resource type="PackedScene" uid="uid://bj3o5osjjcjuj" path="res://Minigames/Slime Quest 2/Prefabs/s_q_2_arcade_machine.tscn" id="25_8yjhk"]
+[ext_resource type="PackedScene" uid="uid://csa34g3tybdov" path="res://General/Prefabs/arcade_blockade.tscn" id="28_ujebq"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -117,11 +122,12 @@ script = ExtResource("3_i82s6")
 libraries/ = SubResource("AnimationLibrary_o2jrl")
 
 [node name="Pack_Bro" parent="." unique_id=1921932739 instance=ExtResource("5_nw1ri")]
-position = Vector2(1095, 119)
+z_index = 1
+position = Vector2(450, 119)
 
 [node name="player" parent="." unique_id=1908138782 instance=ExtResource("6_nw1ri")]
 z_index = 5
-position = Vector2(576, 324)
+position = Vector2(497, 410)
 
 [node name="Temp_background" type="Sprite2D" parent="." unique_id=1546600738]
 z_index = -1
@@ -135,22 +141,56 @@ position = Vector2(857, 305)
 scale = Vector2(1.234, 0.59541327)
 texture = ExtResource("6_wv2cy")
 
+[node name="ArcadeFlooringPlaceholder" type="Sprite2D" parent="." unique_id=613968854]
+position = Vector2(2021.06, 305)
+scale = Vector2(1.2091876, 0.595)
+texture = ExtResource("6_wv2cy")
+
+[node name="ArcadeFlooringPlaceholder2" type="Sprite2D" parent="." unique_id=697212508]
+position = Vector2(2022.5599, 566)
+scale = Vector2(1.1951252, 0.595)
+texture = ExtResource("6_wv2cy")
+
 [node name="Temp_background5" type="Sprite2D" parent="." unique_id=46809428]
-z_index = -1
+z_index = -2
 position = Vector2(857, 562)
 scale = Vector2(1.234, 0.59541327)
 texture = ExtResource("6_wv2cy")
 
 [node name="Temp_background6" type="Sprite2D" parent="." unique_id=418733883]
 z_index = -1
-position = Vector2(1454, 559)
+position = Vector2(1448, 566)
 scale = Vector2(1.234, 0.59541327)
+texture = ExtResource("6_wv2cy")
+
+[node name="Temp_background8" type="Sprite2D" parent="." unique_id=1940098015]
+z_index = -2
+position = Vector2(1438, 45)
+scale = Vector2(1.234, 0.59541327)
+texture = ExtResource("6_wv2cy")
+
+[node name="Temp_background10" type="Sprite2D" parent="." unique_id=57340140]
+z_index = -2
+position = Vector2(1437.9999, -214.99998)
+scale = Vector2(1.234, 0.59541327)
+texture = ExtResource("6_wv2cy")
+
+[node name="Temp_background11" type="Sprite2D" parent="." unique_id=578323466]
+z_index = -2
+position = Vector2(2015.0599, -214.99998)
+scale = Vector2(1.2248126, 0.59541327)
+texture = ExtResource("6_wv2cy")
+
+[node name="Temp_background9" type="Sprite2D" parent="." unique_id=1630874535]
+z_index = -2
+position = Vector2(2013.5599, 45)
+scale = Vector2(1.2201251, 0.59541327)
 texture = ExtResource("6_wv2cy")
 
 [node name="Temp_background7" type="Sprite2D" parent="." unique_id=1204264255]
 z_index = -1
-position = Vector2(1454, 304)
-scale = Vector2(1.234, 0.59541327)
+position = Vector2(1443, 305)
+scale = Vector2(1.2607498, 0.59541327)
 texture = ExtResource("6_wv2cy")
 
 [node name="Temp_background3" type="Sprite2D" parent="." unique_id=612404504]
@@ -159,142 +199,201 @@ position = Vector2(284, 562)
 scale = Vector2(1.234, 0.59541327)
 texture = ExtResource("6_wv2cy")
 
-[node name="Walls" type="Sprite2D" parent="." unique_id=524781663]
+[node name="Arcade_walls" type="Sprite2D" parent="." unique_id=524781663]
 z_index = -2
 position = Vector2(1095, 92)
 scale = Vector2(0.255, 0.255)
 texture = ExtResource("7_r7i0d")
 
-[node name="Clear" type="Sprite2D" parent="Walls" unique_id=98738461]
+[node name="LavaWallsPlain" type="Sprite2D" parent="Arcade_walls" unique_id=1994676866]
+position = Vector2(2464.706, -2052.9412)
+scale = Vector2(6.574754, 1.5257351)
+texture = ExtResource("8_gk3dc")
+
+[node name="LavaWallsPlain2" type="Sprite2D" parent="Arcade_walls" unique_id=1290050673]
+position = Vector2(486.27466, -2054.9019)
+scale = Vector2(1.5563725, 1.5257351)
+texture = ExtResource("8_gk3dc")
+
+[node name="LavaWallsPlain3" type="Sprite2D" parent="Arcade_walls" unique_id=2068396529]
+position = Vector2(4474.5093, -2054.9023)
+scale = Vector2(1.789217, 1.5257351)
+texture = ExtResource("8_gk3dc")
+
+[node name="LavaWallGlow" type="Sprite2D" parent="Arcade_walls" unique_id=606422981]
+z_index = -2
+position = Vector2(1056.8628, -2098.0393)
+scale = Vector2(2.0036767, 1.5318624)
+texture = ExtResource("9_ujebq")
+
+[node name="LavaWallGlow2" type="Sprite2D" parent="Arcade_walls" unique_id=499087688]
+z_index = -2
+position = Vector2(3890.1963, -2098.0393)
+scale = Vector2(1.9607844, 1.5257351)
+texture = ExtResource("9_ujebq")
+
+[node name="Clear" type="Sprite2D" parent="Arcade_walls" unique_id=98738461]
 z_index = -1
-position = Vector2(-333.62744, 43.13726)
-scale = Vector2(0.4732434, 1)
+position = Vector2(-460.78415, 43.13726)
+scale = Vector2(0.886438, 1)
 texture = ExtResource("8_yfyhc")
 
-[node name="Clear_1" type="Sprite2D" parent="Walls" unique_id=1030910789]
+[node name="Clear_1" type="Sprite2D" parent="Arcade_walls" unique_id=1030910789]
 z_index = -1
 position = Vector2(-1027.4509, 43.13726)
 scale = Vector2(0.4732434, 1)
 texture = ExtResource("8_yfyhc")
 
-[node name="Clear_2" type="Sprite2D" parent="Walls" unique_id=1657777064]
+[node name="Clear_2" type="Sprite2D" parent="Arcade_walls" unique_id=1657777064]
 z_index = -1
-position = Vector2(-1721.5686, 43.137238)
-scale = Vector2(0.4732434, 1)
+position = Vector2(-1501.9609, 47.058838)
+scale = Vector2(1.3970592, 1)
 texture = ExtResource("8_yfyhc")
 
-[node name="Clear_3" type="Sprite2D" parent="Walls" unique_id=314822795]
+[node name="Clear_3" type="Sprite2D" parent="Arcade_walls" unique_id=314822795]
 position = Vector2(-2421.5686, 43.137295)
 scale = Vector2(0.48611116, 0.99673206)
 texture = ExtResource("8_yfyhc")
 
-[node name="Clear_4" type="Sprite2D" parent="Walls" unique_id=307215734]
+[node name="Clear_4" type="Sprite2D" parent="Arcade_walls" unique_id=307215734]
 z_index = 2
-position = Vector2(-2923.5293, 43.921467)
-scale = Vector2(1.5236928, 0.9983658)
+position = Vector2(-3067.647, 47.058823)
+scale = Vector2(1.137663, 0.9983658)
 texture = ExtResource("8_yfyhc")
 
-[node name="Clear_5" type="Sprite2D" parent="Walls" unique_id=2073630901]
+[node name="Clear_5" type="Sprite2D" parent="Arcade_walls" unique_id=550035155]
 z_index = 2
-position = Vector2(1533.3334, 47.058815)
-scale = Vector2(4.844771, 1)
+position = Vector2(-2015.6864, 47.058823)
+scale = Vector2(1.137663, 0.9983658)
 texture = ExtResource("8_yfyhc")
 
-[node name="Glow_1" type="Sprite2D" parent="Walls" unique_id=1720398480]
+[node name="Clear_6" type="Sprite2D" parent="Arcade_walls" unique_id=570603962]
+z_index = 2
+position = Vector2(11.764641, 39.215683)
+scale = Vector2(1.137663, 0.9983658)
+texture = ExtResource("8_yfyhc")
+
+[node name="Glow_1" type="Sprite2D" parent="Arcade_walls" unique_id=1720398480]
 z_index = 1
-position = Vector2(-674.51, -1.99)
+position = Vector2(-898.0392, -3.9215832)
 scale = Vector2(0.45955878, 0.46913305)
 texture = ExtResource("9_lvvd5")
 
-[node name="Glow_2" type="Sprite2D" parent="Walls" unique_id=2051169834]
+[node name="Glow_2" type="Sprite2D" parent="Arcade_walls" unique_id=2051169834]
 z_index = 1
-position = Vector2(-1368.627, -1.99)
+position = Vector2(-2552.9414, 3.9215539)
 scale = Vector2(0.45955878, 0.46913305)
 texture = ExtResource("9_lvvd5")
 
-[node name="Glow_3" type="Sprite2D" parent="Walls" unique_id=739780921]
-z_index = 1
-position = Vector2(-2062.745, -1.99)
-scale = Vector2(0.45955878, 0.46913305)
-texture = ExtResource("9_lvvd5")
+[node name="JungleWallsPlain" type="Sprite2D" parent="Arcade_walls" unique_id=1389641553]
+position = Vector2(525.49005, 47.058826)
+scale = Vector2(1.5, 1.521)
+texture = ExtResource("10_8yjhk")
+
+[node name="JungleWallsPlain2" type="Sprite2D" parent="Arcade_walls" unique_id=1624252649]
+position = Vector2(1463.0392, 47.058826)
+scale = Vector2(2.3765314, 1.521)
+texture = ExtResource("10_8yjhk")
+
+[node name="JungleWallsPlain3" type="Sprite2D" parent="Arcade_walls" unique_id=1663301464]
+position = Vector2(3937.2544, 39.215687)
+scale = Vector2(4.8897057, 1.521)
+texture = ExtResource("10_8yjhk")
+
+[node name="JungleWallsGlow" type="Sprite2D" parent="Arcade_walls" unique_id=1617493966]
+position = Vector2(1015.686, 0)
+scale = Vector2(1.5, 1.521)
+texture = ExtResource("13_35l5y")
 
 [node name="Slime_quest_arcade_machine" parent="." unique_id=1671749115 instance=ExtResource("11_6bv4j")]
 z_index = -1
-position = Vector2(922, 119)
+position = Vector2(1360, -416)
 
-[node name="walls" type="Sprite2D" parent="." unique_id=1841879213]
+[node name="Outer_walls" type="Sprite2D" parent="." unique_id=1841879213]
 z_index = 3
 position = Vector2(62.09999, 760)
 scale = Vector2(0.4971875, 0.469)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D2" type="Sprite2D" parent="walls" unique_id=77414658]
+[node name="Sprite2D2" type="Sprite2D" parent="Outer_walls" unique_id=77414658]
 z_index = 3
 position = Vector2(308.69565, 0)
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D8" type="Sprite2D" parent="walls" unique_id=1457356733]
+[node name="Sprite2D8" type="Sprite2D" parent="Outer_walls" unique_id=1457356733]
 z_index = 3
 position = Vector2(2189.7825, 0)
 scale = Vector2(1.0074728, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D9" type="Sprite2D" parent="walls" unique_id=1047555249]
+[node name="Sprite2D9" type="Sprite2D" parent="Outer_walls" unique_id=1047555249]
 z_index = 3
 position = Vector2(2497.826, 0)
 scale = Vector2(1.0074728, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D10" type="Sprite2D" parent="walls" unique_id=967496105]
+[node name="Sprite2D10" type="Sprite2D" parent="Outer_walls" unique_id=967496105]
 z_index = 3
 position = Vector2(2808.6958, 0)
 scale = Vector2(1.0074728, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D11" type="Sprite2D" parent="walls" unique_id=1179883693]
+[node name="Sprite2D11" type="Sprite2D" parent="Outer_walls" unique_id=1179883693]
 z_index = 3
 position = Vector2(3119.5652, 0)
 scale = Vector2(1.0074728, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D12" type="Sprite2D" parent="walls" unique_id=900270382]
+[node name="Sprite2D12" type="Sprite2D" parent="Outer_walls" unique_id=900270382]
 z_index = 3
 position = Vector2(3430.4348, 0)
 scale = Vector2(1.0074728, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D13" type="Sprite2D" parent="walls" unique_id=430287048]
+[node name="Sprite2D14" type="Sprite2D" parent="Outer_walls" unique_id=1034996154]
+z_index = 3
+position = Vector2(4060.641, 0)
+scale = Vector2(1.0074728, 0.99999994)
+texture = ExtResource("12_wv2cy")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Outer_walls" unique_id=1875106591]
+z_index = 3
+position = Vector2(4374.4063, 0)
+scale = Vector2(1.0074728, 0.99999994)
+texture = ExtResource("12_wv2cy")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Outer_walls" unique_id=430287048]
 z_index = 3
 position = Vector2(3744.565, 0)
 scale = Vector2(1.0360051, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D7" type="Sprite2D" parent="walls" unique_id=871578532]
+[node name="Sprite2D7" type="Sprite2D" parent="Outer_walls" unique_id=871578532]
 z_index = 3
 position = Vector2(1867.1738, 0)
 scale = Vector2(1.108016, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D6" type="Sprite2D" parent="walls" unique_id=805194469]
+[node name="Sprite2D6" type="Sprite2D" parent="Outer_walls" unique_id=805194469]
 z_index = 3
 position = Vector2(1541.0869, 0)
 scale = Vector2(1.0264944, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D5" type="Sprite2D" parent="walls" unique_id=1116048766]
+[node name="Sprite2D5" type="Sprite2D" parent="Outer_walls" unique_id=1116048766]
 z_index = 3
 position = Vector2(1225.2173, 0)
 scale = Vector2(1.0230978, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D4" type="Sprite2D" parent="walls" unique_id=76435663]
+[node name="Sprite2D4" type="Sprite2D" parent="Outer_walls" unique_id=76435663]
 z_index = 3
 position = Vector2(921.73914, 0)
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("12_wv2cy")
 
-[node name="Sprite2D3" type="Sprite2D" parent="walls" unique_id=494254537]
+[node name="Sprite2D3" type="Sprite2D" parent="Outer_walls" unique_id=494254537]
 z_index = 3
 position = Vector2(613.04346, 0)
 scale = Vector2(1, 0.99999994)
@@ -311,10 +410,10 @@ text = "Back"
 
 [node name="PR_arcade_machine" parent="." unique_id=1961325126 instance=ExtResource("13_1dbqh")]
 z_index = -1
-position = Vector2(741, 118)
+position = Vector2(864, 115)
 
 [node name="FP_arcade_machine" parent="." unique_id=1985875661 instance=ExtResource("14_1dbqh")]
-position = Vector2(569, 120)
+position = Vector2(1353, 119)
 
 [node name="roads" type="Sprite2D" parent="." unique_id=783468108]
 z_index = 2
@@ -353,14 +452,6 @@ texture = ExtResource("17_lj6ev")
 position = Vector2(2047.2726, -929.0908)
 texture = ExtResource("18_yxb8m")
 
-[node name="Sprite2D5" type="Sprite2D" parent="roads" unique_id=893201399]
-position = Vector2(3070.9092, -929.0908)
-texture = ExtResource("19_lns6s")
-
-[node name="Sprite2D6" type="Sprite2D" parent="roads" unique_id=1537844570]
-position = Vector2(4090.9097, -929.0906)
-texture = ExtResource("19_lns6s")
-
 [node name="Sprite2D8" type="Sprite2D" parent="roads" unique_id=1925475665]
 position = Vector2(0, 1023.63635)
 texture = ExtResource("20_qjdjc")
@@ -385,14 +476,62 @@ texture = ExtResource("21_2d1lu")
 
 [node name="Sprite2D15" type="Sprite2D" parent="." unique_id=1431358568]
 z_index = 3
-position = Vector2(1162, 338.99997)
+position = Vector2(2302.9998, 565.99994)
 scale = Vector2(0.146, 0.146)
+texture = ExtResource("21_2d1lu")
+
+[node name="Sprite2D18" type="Sprite2D" parent="." unique_id=1408512081]
+z_index = 3
+position = Vector2(2304, -91.99999)
+scale = Vector2(0.146, 0.146)
+texture = ExtResource("21_2d1lu")
+
+[node name="Sprite2D20" type="Sprite2D" parent="." unique_id=511825989]
+z_index = 3
+position = Vector2(1161, -64)
+scale = Vector2(0.146, 0.146)
+texture = ExtResource("21_2d1lu")
+
+[node name="Sprite2D19" type="Sprite2D" parent="." unique_id=1355061606]
+z_index = 3
+position = Vector2(2305, -300)
+scale = Vector2(0.146, 0.146)
+texture = ExtResource("21_2d1lu")
+
+[node name="Sprite2D23" type="Sprite2D" parent="." unique_id=1716752000]
+z_index = 3
+position = Vector2(2305, -395.99997)
+scale = Vector2(0.146, 0.146)
+texture = ExtResource("21_2d1lu")
+
+[node name="Sprite2D21" type="Sprite2D" parent="." unique_id=296303489]
+z_index = 3
+position = Vector2(1160.9999, -218.24799)
+scale = Vector2(0.146, 0.15014844)
+texture = ExtResource("21_2d1lu")
+
+[node name="Sprite2D24" type="Sprite2D" parent="." unique_id=1332942232]
+z_index = 3
+position = Vector2(1161, -387)
+scale = Vector2(0.146, 0.15014844)
+texture = ExtResource("21_2d1lu")
+
+[node name="Sprite2D17" type="Sprite2D" parent="." unique_id=785700720]
+z_index = 3
+position = Vector2(2303, 339.876)
+scale = Vector2(0.146, 0.1746836)
+texture = ExtResource("21_2d1lu")
+
+[node name="Sprite2D22" type="Sprite2D" parent="." unique_id=1472428264]
+z_index = 3
+position = Vector2(2303, 138.00002)
+scale = Vector2(0.146, 0.1746836)
 texture = ExtResource("21_2d1lu")
 
 [node name="Sprite2D16" type="Sprite2D" parent="." unique_id=268645259]
 z_index = 3
-position = Vector2(1162, 149.24799)
-scale = Vector2(0.146, 0.15014844)
+position = Vector2(1161, 169.124)
+scale = Vector2(0.146, 0.17468357)
 texture = ExtResource("21_2d1lu")
 
 [node name="Sprite2D13" type="Sprite2D" parent="." unique_id=656403014]
@@ -401,20 +540,9 @@ position = Vector2(-8, 137.248)
 scale = Vector2(0.146, 0.14038281)
 texture = ExtResource("21_2d1lu")
 
-[node name="Label" type="Label" parent="." unique_id=1811439224]
-offset_left = 1224.0
-offset_top = 273.0
-offset_right = 1664.0
-offset_bottom = 474.0
-theme_override_fonts/font = ExtResource("2_i82s6")
-theme_override_font_sizes/font_size = 70
-text = "Section in 
-development"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Prize_counter" parent="." unique_id=1062254956 instance=ExtResource("22_5ueso")]
-position = Vector2(970, 341)
+z_index = 1
+position = Vector2(280.00006, 344)
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="." unique_id=563062356]
 
@@ -439,5 +567,59 @@ visible = false
 [node name="Arcade_Key" parent="." unique_id=1464497022 instance=ExtResource("24_ejll7")]
 position = Vector2(1059, 326)
 scale = Vector2(0.2, 0.2)
+
+[node name="Arcade_blockade2" parent="." unique_id=2037231682 instance=ExtResource("28_ujebq")]
+z_index = 2
+position = Vector2(1, 648)
+scale = Vector2(2.7, 1)
+
+[node name="S_Q_2_arcade_machine" parent="." unique_id=1888314092 instance=ExtResource("25_8yjhk")]
+position = Vector2(2088, -419)
+scale = Vector2(0.4, 0.4)
+
+[node name="Arcade_blockade" parent="." unique_id=805418004 instance=ExtResource("28_ujebq")]
+visible = false
+z_index = 2
+position = Vector2(-0.99999976, 39)
+scale = Vector2(1.83, 3.5)
+
+[node name="Arcade_blockade9" parent="." unique_id=279595214 instance=ExtResource("28_ujebq")]
+z_index = 2
+position = Vector2(1894, 36)
+scale = Vector2(0.5, 4)
+
+[node name="Arcade_blockade5" parent="." unique_id=1984609484 instance=ExtResource("28_ujebq")]
+z_index = 2
+position = Vector2(1153, -411)
+scale = Vector2(1.35, 1)
+
+[node name="Arcade_blockade3" parent="." unique_id=207706851 instance=ExtResource("28_ujebq")]
+z_index = 2
+position = Vector2(-48, 844)
+rotation = 4.712389
+
+[node name="Arcade_blockade7" parent="." unique_id=251476102 instance=ExtResource("28_ujebq")]
+z_index = 2
+position = Vector2(1147, 857)
+rotation = 4.712389
+scale = Vector2(0.5, 1)
+
+[node name="Arcade_blockade8" parent="." unique_id=1651902332 instance=ExtResource("28_ujebq")]
+z_index = 2
+position = Vector2(1150, 257)
+rotation = 4.712389
+scale = Vector2(0.5, 1)
+
+[node name="Arcade_blockade6" parent="." unique_id=1984736924 instance=ExtResource("28_ujebq")]
+z_index = 2
+position = Vector2(1132, 2)
+rotation = 4.712389
+scale = Vector2(0.65, 1)
+
+[node name="Arcade_blockade4" parent="." unique_id=1781725799 instance=ExtResource("28_ujebq")]
+z_index = 2
+position = Vector2(2319, 844)
+rotation = 4.712389
+scale = Vector2(1.6, 1)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

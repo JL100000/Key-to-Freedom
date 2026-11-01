@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnh2nmywwj1qm"
+path="res://.godot/imported/sfx_select.ogg-40debdcff6e8b5c0ce57cc695d164154.oggvorbisstr"
+
+[deps]
+
+source_file="res://Minigames/Slime Quest 2/Asthetics/kenney_new-platformer-pack-1.1/Sounds/sfx_select.ogg"
+dest_files=["res://.godot/imported/sfx_select.ogg-40debdcff6e8b5c0ce57cc695d164154.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
