@@ -1,37 +1,60 @@
 [gd_scene format=3 uid="uid://do4dcvpa7koup"]
 
 [ext_resource type="Script" uid="uid://cuilainvdrqbv" path="res://Minigames/The Golden Banana folder/Scripts/T.G.B_player.gd" id="1_jgqmw"]
-[ext_resource type="Texture2D" uid="uid://cgxiy1bvby473" path="res://icon.svg" id="2_2wwqr"]
+[ext_resource type="Texture2D" uid="uid://cpj2u8qiqyfw" path="res://Minigames/The Golden Banana folder/Aesthetics/Monkey_2_Idle.png" id="2_2wwqr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ekeg2"]
 atlas = ExtResource("2_2wwqr")
-region = Rect2(0, 0, 128, 128)
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5r0c"]
+atlas = ExtResource("2_2wwqr")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvpku"]
+atlas = ExtResource("2_2wwqr")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myc00"]
+atlas = ExtResource("2_2wwqr")
+region = Rect2(640, 640, 640, 640)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y5r0c"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ekeg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5r0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvpku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myc00")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvpku"]
-size = Vector2(64, 64)
+size = Vector2(36, 48)
 
 [node name="TGB player" type="CharacterBody2D" unique_id=119780332]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_jgqmw")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=101072712]
 position = Vector2(-1.1920929e-06, -1.0728836e-06)
-scale = Vector2(0.49999997, 0.5)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_y5r0c")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=415501684]
+position = Vector2(-8, -2)
 shape = SubResource("RectangleShape2D_gvpku")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1269852931]
