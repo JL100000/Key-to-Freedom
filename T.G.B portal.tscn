@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://sj4lq631mw7t"]
+
+[ext_resource type="Texture2D" uid="uid://dwjfnmmwpb43b" path="res://Minigames/Slime Quest/Aesthetics/kenney_new-platformer-pack-1.1/Vector/Tiles/door_open_top.svg" id="1_7bbe2"]
+[ext_resource type="Script" uid="uid://cllen077eunso" path="res://Minigames/The Golden Banana folder/Scripts/T.G.B_portal.gd" id="1_67c4t"]
+[ext_resource type="Texture2D" uid="uid://clauunqlgi5wr" path="res://Minigames/Slime Quest/Aesthetics/kenney_new-platformer-pack-1.1/Vector/Tiles/door_open.svg" id="2_67c4t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6fw"]
+size = Vector2(64, 128)
+
+[node name="TBG_portal" type="Area2D" unique_id=1539894702]
+script = ExtResource("1_67c4t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=463244231]
+texture = ExtResource("1_7bbe2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=914593074]
+position = Vector2(0, 64)
+texture = ExtResource("2_67c4t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1753854131]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_ow6fw")

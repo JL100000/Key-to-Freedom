@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://7tacearkht3s" path="res://General/Prefabs/arcade_key.tscn" id="24_ejll7"]
 [ext_resource type="PackedScene" uid="uid://bj3o5osjjcjuj" path="res://Minigames/Slime Quest 2/Prefabs/s_q_2_arcade_machine.tscn" id="25_8yjhk"]
 [ext_resource type="PackedScene" uid="uid://csa34g3tybdov" path="res://General/Prefabs/arcade_blockade.tscn" id="28_ujebq"]
+[ext_resource type="PackedScene" uid="uid://cr6asev3qrxte" path="res://Minigames/The Golden Banana folder/Prefabs/tgb_arcade_machine.tscn" id="30_35l5y"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -621,5 +622,8 @@ z_index = 2
 position = Vector2(2319, 844)
 rotation = 4.712389
 scale = Vector2(1.6, 1)
+
+[node name="TGB_arcade_machine" parent="." unique_id=721265282 instance=ExtResource("30_35l5y")]
+position = Vector2(2134, 117)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
