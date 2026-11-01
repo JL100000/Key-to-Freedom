@@ -453,6 +453,14 @@ texture = ExtResource("17_lj6ev")
 position = Vector2(2047.2726, -929.0908)
 texture = ExtResource("18_yxb8m")
 
+[node name="Sprite2D5" type="Sprite2D" parent="roads" unique_id=1706899182]
+position = Vector2(2749.0908, -1918.1818)
+texture = ExtResource("18_yxb8m")
+
+[node name="Sprite2D6" type="Sprite2D" parent="roads" unique_id=595296349]
+position = Vector2(3752.727, -1923.6364)
+texture = ExtResource("18_yxb8m")
+
 [node name="Sprite2D8" type="Sprite2D" parent="roads" unique_id=1925475665]
 position = Vector2(0, 1023.63635)
 texture = ExtResource("20_qjdjc")
