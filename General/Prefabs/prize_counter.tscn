@@ -53,10 +53,10 @@ scale = Vector2(0.99999946, 0.99999946)
 shape = SubResource("RectangleShape2D_x4v6x")
 
 [node name="Label" type="Label" parent="." unique_id=1349032163]
-offset_left = -154.99998
-offset_top = -234.99998
+offset_left = -155.0
+offset_top = -400.0
 offset_right = 454.0
-offset_bottom = -149.99998
+offset_bottom = -315.0
 theme_override_fonts/font = ExtResource("3_bvjjl")
 theme_override_font_sizes/font_size = 32
 text = "You have enough tokens to buy the key! 
@@ -65,10 +65,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=1755403937]
-offset_left = -232.49998
-offset_top = -235.0
+offset_left = -232.5
+offset_top = -400.0
 offset_right = 463.5
-offset_bottom = -150.0
+offset_bottom = -315.0
 theme_override_fonts/font = ExtResource("3_bvjjl")
 theme_override_font_sizes/font_size = 32
 text = "You don't have enough tokens to buy the key! 
@@ -78,9 +78,9 @@ vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=770312782]
 offset_left = -77.5
-offset_top = -222.5
+offset_top = -400.0
 offset_right = 323.5
-offset_bottom = -181.5
+offset_bottom = -359.0
 theme_override_fonts/font = ExtResource("3_bvjjl")
 theme_override_font_sizes/font_size = 32
 text = "You have bought the key!"
