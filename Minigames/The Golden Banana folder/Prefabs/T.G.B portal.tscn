@@ -8,6 +8,7 @@
 size = Vector2(64, 128)
 
 [node name="TBG_portal" type="Area2D" unique_id=1539894702]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_67c4t")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=463244231]
@@ -20,3 +21,6 @@ texture = ExtResource("2_67c4t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1753854131]
 position = Vector2(0, 32)
 shape = SubResource("RectangleShape2D_ow6fw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="player_won" from="." to="." method="_on_player_won"]

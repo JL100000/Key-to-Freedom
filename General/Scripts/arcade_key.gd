@@ -8,6 +8,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if TokenManager.tokens == 4 and TokenManager.have_key == true:
+	if TokenManager.tokens == 6 and TokenManager.have_key == true:
 		queue_free()
 		#works but too early
