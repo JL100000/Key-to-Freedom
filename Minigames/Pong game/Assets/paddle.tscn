@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dmj1i7dkreox1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ow6fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nqii"]
+size = Vector2(20, 50)
+
+[node name="Paddle" type="Area2D" unique_id=2040007929]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1731463699]
+scale = Vector2(20, 100)
+mesh = SubResource("QuadMesh_ow6fw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1869507187]
+scale = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_7nqii")

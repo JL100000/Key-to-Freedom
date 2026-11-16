@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cq8k5eqaf1dtj"]
+
+[ext_resource type="Script" uid="uid://bi42esyag6jqp" path="res://Minigames/Pong game/Scripts/pong_game.gd" id="1_o1q40"]
+
+[node name="Pong_Game" type="Node2D" unique_id=125005207]
+script = ExtResource("1_o1q40")
