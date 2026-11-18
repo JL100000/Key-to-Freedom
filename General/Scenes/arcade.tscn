@@ -434,6 +434,24 @@ rotation = -1.5707964
 scale = Vector2(1.1747237, 1)
 texture = ExtResource("15_ldskm")
 
+[node name="Sprite2D13" type="Sprite2D" parent="roads" unique_id=889431995]
+position = Vector2(5320, -892.2909)
+rotation = 3.1415927
+scale = Vector2(1.1747237, 1.0062501)
+texture = ExtResource("15_ldskm")
+
+[node name="Sprite2D17" type="Sprite2D" parent="roads" unique_id=461375199]
+position = Vector2(5320.0005, -1866.8965)
+rotation = 3.1415927
+scale = Vector2(1.1747237, 0.9758767)
+texture = ExtResource("15_ldskm")
+
+[node name="Sprite2D14" type="Sprite2D" parent="roads" unique_id=1700649576]
+position = Vector2(5319.9995, 118.18184)
+rotation = 3.1415927
+scale = Vector2(1.1747237, 1)
+texture = ExtResource("15_ldskm")
+
 [node name="Sprite2D10" type="Sprite2D" parent="roads" unique_id=1646461851]
 position = Vector2(3236.3638, 1738.1818)
 rotation = -1.5707964
@@ -461,8 +479,25 @@ texture = ExtResource("18_yxb8m")
 position = Vector2(3752.727, -1923.6364)
 texture = ExtResource("18_yxb8m")
 
+[node name="Sprite2D11" type="Sprite2D" parent="roads" unique_id=2141614195]
+position = Vector2(4737.636, -1921.8182)
+scale = Vector2(0.7929688, 1)
+texture = ExtResource("18_yxb8m")
+
+[node name="Sprite2D15" type="Sprite2D" parent="roads" unique_id=932336894]
+position = Vector2(5321.818, 1138.1819)
+rotation = -3.1415925
+scale = Vector2(1.1747237, 1)
+texture = ExtResource("15_ldskm")
+
 [node name="Sprite2D8" type="Sprite2D" parent="roads" unique_id=1925475665]
 position = Vector2(0, 1023.63635)
+texture = ExtResource("20_qjdjc")
+
+[node name="Sprite2D16" type="Sprite2D" parent="roads" unique_id=464546607]
+position = Vector2(4494.545, 1771.428)
+rotation = 4.712389
+scale = Vector2(1.3136275, 1.2684098)
 texture = ExtResource("20_qjdjc")
 
 [node name="Sprite2D11" type="Sprite2D" parent="." unique_id=533625909]
