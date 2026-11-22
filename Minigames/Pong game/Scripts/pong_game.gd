@@ -1,8 +1,0 @@
-extends Node2D
-var game_area_size = Vector2(1152, 648)
-
-# Called when the node enters the scene tree for the first time.
-func _draw() -> void:
-	var line_start = Vector2(game_area_size.x/2.0, 0)
-	var line_end = Vector2(game_area_size.x/2.0, game_area_size.y)
-	draw_dashed_line(line_start, line_end, Color.WHITE, 8.0, 12.0, false)
