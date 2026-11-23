@@ -1,11 +1,18 @@
+
 extends CharacterBody2D
 @onready var death_screen: CanvasLayer = $"../DeathScreen"
 @onready var win_screen_2: CanvasLayer = $"../WinScreen_2"
 @onready var win_screen_1: CanvasLayer = $"../WinScreen_1"
 @onready var animation : AnimatedSprite2D = $AnimatedSprite2D
+var Checkpoint_Manager
 var facing_directon = 1
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+
+func _ready() -> void:
+	if Gamedate.has_checkpoint:
+		global_position = Gamedate.checkpoint
+
 
 
 func _physics_process(delta: float) -> void:
@@ -58,3 +65,5 @@ func respawn():
 	get_tree().paused = true
 	if death_screen:
 		death_screen.show()
+
+	
