@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cq8k5eqaf1dtj"]
+
+[ext_resource type="Script" uid="uid://bi42esyag6jqp" path="res://Minigames/Pong game/Scripts/pong_game.gd" id="1_o1q40"]
+[ext_resource type="PackedScene" uid="uid://dmj1i7dkreox1" path="res://Minigames/Pong game/Assets/paddle.tscn" id="2_r15kg"]
+
+[node name="pong_game" type="Node2D" unique_id=1494256591]
+script = ExtResource("1_o1q40")
+
+[node name="paddle" parent="." unique_id=1458879069 instance=ExtResource("2_r15kg")]
+position = Vector2(86, 285)

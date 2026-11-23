@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dmj1i7dkreox1"]
+
+[ext_resource type="Script" uid="uid://dfsoel2fru60v" path="res://Minigames/Pong game/Scripts/paddle.gd" id="1_0dst2"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ow6fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6fw"]
+size = Vector2(20, 100)
+
+[node name="paddle" type="Area2D" unique_id=1458879069]
+script = ExtResource("1_0dst2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=960225337]
+scale = Vector2(20, 100)
+mesh = SubResource("QuadMesh_ow6fw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=427156056]
+shape = SubResource("RectangleShape2D_ow6fw")
