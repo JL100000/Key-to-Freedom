@@ -30,6 +30,12 @@
 [ext_resource type="PackedScene" uid="uid://bj3o5osjjcjuj" path="res://Minigames/Slime Quest 2/Prefabs/s_q_2_arcade_machine.tscn" id="25_8yjhk"]
 [ext_resource type="PackedScene" uid="uid://csa34g3tybdov" path="res://General/Prefabs/arcade_blockade.tscn" id="28_ujebq"]
 [ext_resource type="PackedScene" uid="uid://cr6asev3qrxte" path="res://Minigames/The Golden Banana folder/Prefabs/tgb_arcade_machine.tscn" id="30_35l5y"]
+[ext_resource type="Texture2D" uid="uid://dr46ojsihhts3" path="res://General/Aesthetics/Art/Crumpled_Paper.png" id="31_8ums2"]
+[ext_resource type="Texture2D" uid="uid://bd0o1wqknloui" path="res://General/Aesthetics/Art/Garbage_can.png" id="32_lfeb5"]
+[ext_resource type="PackedScene" uid="uid://dly4kurld5prh" path="res://General/Prefabs/closed_cardboard_barrier.tscn" id="33_pkehf"]
+[ext_resource type="PackedScene" uid="uid://dhbnhdu23j15m" path="res://General/Prefabs/open_cardboard_barrier.tscn" id="34_56wwc"]
+[ext_resource type="Texture2D" uid="uid://kibtlfrqqw4p" path="res://General/Aesthetics/Art/Golden_bear.png" id="35_8re0n"]
+[ext_resource type="Texture2D" uid="uid://ssmvuhfbwt2t" path="res://General/Aesthetics/Art/Radiant_Bunny.png" id="36_5dlam"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -128,7 +134,7 @@ position = Vector2(450, 119)
 
 [node name="player" parent="." unique_id=1908138782 instance=ExtResource("6_nw1ri")]
 z_index = 5
-position = Vector2(1003, 384)
+position = Vector2(973, 411)
 
 [node name="Temp_background" type="Sprite2D" parent="." unique_id=1546600738]
 z_index = -1
@@ -668,5 +674,260 @@ scale = Vector2(1.6, 1)
 
 [node name="TGB_arcade_machine" parent="." unique_id=721265282 instance=ExtResource("30_35l5y")]
 position = Vector2(2134, 117)
+
+[node name="CrumpledPaper" type="Sprite2D" parent="." unique_id=577918071]
+position = Vector2(396, 178.00002)
+rotation = -0.3577925
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper2" type="Sprite2D" parent="CrumpledPaper" unique_id=1709214601]
+position = Vector2(-1783.749, -640.22626)
+rotation = 0.56548667
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper7" type="Sprite2D" parent="CrumpledPaper" unique_id=1804726375]
+position = Vector2(-1405.783, 1075.8132)
+rotation = -0.62831855
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper8" type="Sprite2D" parent="CrumpledPaper" unique_id=58747773]
+position = Vector2(2527.6436, 3133.6458)
+rotation = 0.9250245
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper10" type="Sprite2D" parent="CrumpledPaper" unique_id=703624498]
+z_index = 1
+position = Vector2(1218.1487, 1539.0703)
+rotation = 6.2831855
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper11" type="Sprite2D" parent="CrumpledPaper" unique_id=511742756]
+z_index = 1
+position = Vector2(7685.205, 5072.656)
+rotation = 5.592035
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper12" type="Sprite2D" parent="CrumpledPaper" unique_id=1600151177]
+z_index = 1
+position = Vector2(7816.2554, 5036.244)
+rotation = 4.712389
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper14" type="Sprite2D" parent="CrumpledPaper" unique_id=559578027]
+z_index = 1
+position = Vector2(8056.9834, 5249.024)
+rotation = 1.6336281
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper15" type="Sprite2D" parent="CrumpledPaper" unique_id=1479389876]
+z_index = 1
+position = Vector2(7405.7466, 4749.3105)
+rotation = 0.9424778
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper17" type="Sprite2D" parent="CrumpledPaper" unique_id=1981175475]
+z_index = 1
+position = Vector2(7434.222, 5144.296)
+rotation = 0.9424778
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper16" type="Sprite2D" parent="CrumpledPaper" unique_id=1936880836]
+z_index = 1
+position = Vector2(7732.5923, 4460.483)
+rotation = 0.9424778
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper13" type="Sprite2D" parent="CrumpledPaper" unique_id=1566185480]
+z_index = 1
+position = Vector2(7801.719, 5132.2324)
+rotation = 7.10349
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper3" type="Sprite2D" parent="CrumpledPaper" unique_id=782941121]
+z_index = 1
+position = Vector2(-329.5863, -117.88933)
+rotation = 0.56548667
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper4" type="Sprite2D" parent="CrumpledPaper" unique_id=300216296]
+z_index = 1
+position = Vector2(-196.70114, -73.54374)
+rotation = -0.12566371
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper6" type="Sprite2D" parent="CrumpledPaper" unique_id=11981124]
+z_index = 1
+position = Vector2(-276.7362, -530.5112)
+rotation = 1.0681415
+texture = ExtResource("31_8ums2")
+
+[node name="CrumpledPaper5" type="Sprite2D" parent="CrumpledPaper" unique_id=1107275662]
+z_index = 1
+position = Vector2(-239.54657, -201.6618)
+rotation = -0.12566371
+texture = ExtResource("31_8ums2")
+
+[node name="GarbageCan" type="Sprite2D" parent="." unique_id=766154859]
+position = Vector2(337.00003, 148)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("32_lfeb5")
+
+[node name="GarbageCan2" type="Sprite2D" parent="." unique_id=1894391784]
+position = Vector2(2173, 556.0001)
+rotation = 2.3247786
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("32_lfeb5")
+
+[node name="Closed_Cardboard_Barrier" parent="." unique_id=1757145416 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1130.0001, 273)
+rotation = -0.18325958
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier2" parent="." unique_id=873249926 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1133.0001, 381)
+rotation = 0.0052359877
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier4" parent="." unique_id=464538253 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1560.0001, 152)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier7" parent="." unique_id=492981049 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1569.0001, 111)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier10" parent="." unique_id=1569127237 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(2118, -374)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier12" parent="." unique_id=1388678817 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(2100, -406)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier14" parent="." unique_id=1082190913 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1373, -122)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier16" parent="." unique_id=1614936416 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(2205.0002, -35.00006)
+rotation = 4.363323
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier15" parent="." unique_id=1257881200 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(43, 565)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier21" parent="." unique_id=111625641 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(999, 168)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier18" parent="." unique_id=628530372 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(574, 343)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier19" parent="." unique_id=693578407 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(536, 362)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier20" parent="." unique_id=296343464 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(556, 315)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier11" parent="." unique_id=1156420281 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1992.0002, -385.00003)
+rotation = 0.31764993
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier13" parent="." unique_id=1006070256 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(2016.0001, -398.99997)
+rotation = 0.31764993
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier17" parent="." unique_id=524522478 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1514.0001, -339.00003)
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier8" parent="." unique_id=997321340 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1700, 169)
+rotation = -0.4886922
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier9" parent="." unique_id=1539046437 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1756.0001, 130.00003)
+rotation = 0.33684856
+scale = Vector2(0.3, 0.3)
+
+[node name="Closed_Cardboard_Barrier5" parent="." unique_id=704383871 instance=ExtResource("33_pkehf")]
+z_index = 3
+position = Vector2(1879, 200.00002)
+rotation = -2.4905849
+scale = Vector2(0.3, 0.3)
+
+[node name="open_cardboard_barrier" parent="." unique_id=1370438639 instance=ExtResource("34_56wwc")]
+z_index = 3
+position = Vector2(1181, 347)
+rotation = 0.38048178
+scale = Vector2(0.25, 0.25)
+
+[node name="open_cardboard_barrier7" parent="." unique_id=939727364 instance=ExtResource("34_56wwc")]
+z_index = 3
+position = Vector2(688, 404)
+scale = Vector2(0.25, 0.25)
+
+[node name="open_cardboard_barrier2" parent="." unique_id=892863668 instance=ExtResource("34_56wwc")]
+z_index = 3
+position = Vector2(1679, 162)
+scale = Vector2(0.25, 0.25)
+
+[node name="open_cardboard_barrier6" parent="." unique_id=1107279291 instance=ExtResource("34_56wwc")]
+z_index = 3
+position = Vector2(2092, -349)
+scale = Vector2(0.25, 0.25)
+
+[node name="open_cardboard_barrier5" parent="." unique_id=674095577 instance=ExtResource("34_56wwc")]
+z_index = 3
+position = Vector2(1228, -375)
+scale = Vector2(0.25, 0.25)
+
+[node name="open_cardboard_barrier4" parent="." unique_id=245285260 instance=ExtResource("34_56wwc")]
+z_index = 3
+position = Vector2(1540, 572)
+scale = Vector2(0.25, 0.25)
+
+[node name="open_cardboard_barrier3" parent="." unique_id=1752932730 instance=ExtResource("34_56wwc")]
+z_index = 3
+position = Vector2(1811, 177)
+rotation = 3.1415927
+scale = Vector2(0.25, 0.25)
+
+[node name="GoldenBear" type="Sprite2D" parent="." unique_id=959142033]
+position = Vector2(1211, -360)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("35_8re0n")
+
+[node name="RadiantBunny" type="Sprite2D" parent="." unique_id=793684860]
+position = Vector2(73, 583.99994)
+rotation = -1.2217305
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("36_5dlam")
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

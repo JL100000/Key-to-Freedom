@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dhbnhdu23j15m"]
+
+[ext_resource type="Texture2D" uid="uid://bgp7wrd1qfkmc" path="res://General/Aesthetics/Art/Cardboardbox_open.png" id="1_54e2h"]
+[ext_resource type="Script" uid="uid://g0g5yidhgr2y" path="res://General/Scripts/open_cardboard_barrier.gd" id="1_gqh6n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85rvy"]
+size = Vector2(202.10153, 186.49391)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqh6n"]
+atlas = ExtResource("1_54e2h")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq2k3"]
+atlas = ExtResource("1_54e2h")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ajgdd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqh6n")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq2k3")
+}],
+"loop": 1,
+"name": &"interact",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajgdd"]
+size = Vector2(352, 323)
+
+[node name="open_cardboard_barrier" type="StaticBody2D" unique_id=1370438639]
+script = ExtResource("1_gqh6n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=7932178]
+position = Vector2(-73, 48.500008)
+rotation = 0.8255408
+shape = SubResource("RectangleShape2D_85rvy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1140834702]
+position = Vector2(-84, 36)
+sprite_frames = SubResource("SpriteFrames_ajgdd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1287891951]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=971216543]
+position = Vector2(-67, 33.5)
+shape = SubResource("RectangleShape2D_ajgdd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

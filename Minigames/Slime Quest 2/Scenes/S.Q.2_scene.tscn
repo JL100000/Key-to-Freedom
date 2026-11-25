@@ -3404,10 +3404,10 @@ text = "Back"
 position = Vector2(2372, 758)
 
 [node name="checkpoint2" parent="." unique_id=230312435 instance=ExtResource("15_ydahf")]
-position = Vector2(4438, -112)
+position = Vector2(4392, -142)
 
 [node name="checkpoint3" parent="." unique_id=432757959 instance=ExtResource("15_ydahf")]
-position = Vector2(5799, 813)
+position = Vector2(5744, 752)
 
 [connection signal="activated1" from="Magma_lever" to="Magma_Blockage" method="_on_magma_lever_activated_1"]
 [connection signal="activated1" from="Magma_lever2" to="Magma_Blockage2" method="_on_magma_lever_2_activated_1"]

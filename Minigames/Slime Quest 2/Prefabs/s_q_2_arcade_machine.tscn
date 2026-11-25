@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajgdd"]
-size = Vector2(337, 493)
+size = Vector2(292, 415)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ajgdd"]
 font = ExtResource("2_kpxmo")
@@ -58,7 +58,7 @@ animation = &"interact"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=376752237]
-position = Vector2(-2.5, -1.5)
+position = Vector2(-6, -40.5)
 shape = SubResource("RectangleShape2D_ajgdd")
 
 [node name="Label" type="Label" parent="." unique_id=1413272067]
