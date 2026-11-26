@@ -1,33 +1,33 @@
 [gd_scene format=3 uid="uid://esc82hj51shg"]
 
-[ext_resource type="Texture2D" uid="uid://dh0qshku2caig" path="res://Minigames/Flying Parrot folder/Aesthetics/FlyingParrot (1).png" id="1_eqgwb"]
 [ext_resource type="Script" uid="uid://bcvxh7hnmt7km" path="res://Minigames/Flying Parrot folder/Scripts/F.P_player.gd" id="1_jo8h0"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jo8h0"]
-atlas = ExtResource("1_eqgwb")
-region = Rect2(0, 0, 320, 320)
+[ext_resource type="Texture2D" uid="uid://c2u8eeq2r5ptj" path="res://Minigames/Flying Parrot folder/Aesthetics/Flying_Parrot_2 (1).png" id="2_jo8h0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2g3u1"]
-atlas = ExtResource("1_eqgwb")
-region = Rect2(320, 0, 320, 320)
+atlas = ExtResource("2_jo8h0")
+region = Rect2(0, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4g8k"]
-atlas = ExtResource("1_eqgwb")
+atlas = ExtResource("2_jo8h0")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q22co"]
+atlas = ExtResource("2_jo8h0")
 region = Rect2(0, 320, 320, 320)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q22co"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jo8h0")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_2g3u1")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f4g8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q22co")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }]
