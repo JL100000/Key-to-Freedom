@@ -9,8 +9,8 @@ var ai_target_ypos = 324.0
 var velocity= 0.0
 var accleration = 50.0
 
-const MAX_HUMAN_VELOCITY = 12.0
-const MAX_VELOCITY = 8.0
+const MAX_HUMAN_VELOCITY = 14.0
+const MAX_VELOCITY = 6.0
 
 func _physics_process(delta: float) -> void:
 	if !active: return
