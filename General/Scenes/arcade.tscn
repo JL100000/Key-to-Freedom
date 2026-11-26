@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://dhbnhdu23j15m" path="res://General/Prefabs/open_cardboard_barrier.tscn" id="34_56wwc"]
 [ext_resource type="Texture2D" uid="uid://kibtlfrqqw4p" path="res://General/Aesthetics/Art/Golden_bear.png" id="35_8re0n"]
 [ext_resource type="Texture2D" uid="uid://ssmvuhfbwt2t" path="res://General/Aesthetics/Art/Radiant_Bunny.png" id="36_5dlam"]
+[ext_resource type="PackedScene" uid="uid://dnmsg01tlcun8" path="res://Minigames/Pong game/Assets/p_garcademachine.tscn" id="37_lj7mc"]
 
 [sub_resource type="Animation" id="Animation_3h0sf"]
 length = 0.001
@@ -929,5 +930,8 @@ position = Vector2(73, 583.99994)
 rotation = -1.2217305
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("36_5dlam")
+
+[node name="PGarcademachine" parent="." unique_id=1705844859 instance=ExtResource("37_lj7mc")]
+position = Vector2(1744, -205)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

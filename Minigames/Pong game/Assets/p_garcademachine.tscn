@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dnmsg01tlcun8"]
+
+[ext_resource type="Script" uid="uid://6jagt07tj7th" path="res://Minigames/Pong game/Scripts/p_garcademachine.gd" id="1_dm662"]
+[ext_resource type="Texture2D" uid="uid://cgxiy1bvby473" path="res://icon.svg" id="2_c43hb"]
+[ext_resource type="FontFile" uid="uid://boo3bnse7kbut" path="res://General/Aesthetics/Fonts/capitol_city/capitolcitysemistraight.ttf" id="3_c43hb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ruy4y"]
+atlas = ExtResource("2_c43hb")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ow6fw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ruy4y")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6fw"]
+size = Vector2(128, 128)
+
+[node name="PGarcademachine" type="Area2D" unique_id=1705844859]
+script = ExtResource("1_dm662")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1742182530]
+sprite_frames = SubResource("SpriteFrames_ow6fw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1050610518]
+shape = SubResource("RectangleShape2D_ow6fw")
+
+[node name="Label" type="Label" parent="." unique_id=1567405570]
+offset_left = -52.0
+offset_top = -110.0
+offset_right = 52.0
+offset_bottom = -91.0
+theme_override_fonts/font = ExtResource("3_c43hb")
+theme_override_font_sizes/font_size = 15
+text = "Pong Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=772036326]
+offset_left = -59.0
+offset_top = 56.0
+offset_right = 59.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_c43hb")
+theme_override_font_sizes/font_size = 15
+text = "Press E to enter"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

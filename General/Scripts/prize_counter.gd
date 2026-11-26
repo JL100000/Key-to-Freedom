@@ -15,7 +15,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("interact") and player_is_in_key_range:
-		if TokenManager.tokens == 6:
+		if TokenManager.tokens >= 6:
 			label.visible = false
 			label_2.visible = false
 			label_3.visible = true
@@ -26,7 +26,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		animation.play("interact")
 		player_is_in_key_range = true
-		if TokenManager.tokens == 6:
+		if TokenManager.tokens >= 6:
 			if TokenManager.have_key == true:
 				label.visible = false
 				label_2.visible = false
@@ -36,7 +36,7 @@ func _on_body_entered(body: Node2D) -> void:
 				label_2.visible = false
 				label_3.visible = false
 
-		elif TokenManager.tokens < 4:
+		elif TokenManager.tokens < 6:
 			label.visible = false
 			label_2.visible = true
 			label_3.visible = false

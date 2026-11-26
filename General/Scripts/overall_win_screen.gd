@@ -36,5 +36,8 @@ func _on_play_again_pressed() -> void:
 	TokenManager.enemies_spawning = true
 	TokenManager.flying_parrot_won = false
 	TokenManager.play_again = 0
+	TokenManager.slime_quest_2_won= false
+	TokenManager.the_golden_banana_won= false
+	TokenManager.pong_game_won= false
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://General/Scenes/main_menu.tscn")

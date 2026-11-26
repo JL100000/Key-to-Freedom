@@ -1,5 +1,5 @@
 extends Node
-var tokens: int = 0
+var tokens: int = 7
 var FP_score : int = 0
 signal tokens_changed(new_amount: int)
 var in_packbro: bool = false

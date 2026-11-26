@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b4t6eq6hqfc7m" path="res://Minigames/Pong game/Assets/detector.tscn" id="5_fnidi"]
 [ext_resource type="PackedScene" uid="uid://slka5b1uppg2" path="res://General/Scenes/win_screen_2.tscn" id="7_0ldaa"]
 [ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="8_htpsm"]
-[ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="9_htpsm"]
+[ext_resource type="PackedScene" uid="uid://d1yokmeyoxgtc" path="res://General/Scenes/lose_screen.tscn" id="9_htpsm"]
 
 [node name="pong_game" type="Node2D" unique_id=1494256591]
 script = ExtResource("1_o1q40")
@@ -51,4 +51,4 @@ one_shot = true
 width = 4.0
 default_color = Color(1, 0, 0, 0)
 
-[node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("9_htpsm")]
+[node name="LoseScreen" parent="." unique_id=926226242 instance=ExtResource("9_htpsm")]

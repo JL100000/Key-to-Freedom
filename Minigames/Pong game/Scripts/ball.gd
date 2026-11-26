@@ -1,12 +1,17 @@
 extends CharacterBody2D
 class_name Ball
+
 signal bounced
-var debug_mode = false
+
 @export var speed_increase_per_bounce = 20
-const START_SPEED = 500
+
+var debug_mode = false
 var speed = START_SPEED
 var move_dir = Vector2(-1,0)
 var active = false
+
+const START_SPEED = 500
+
 @onready var cshape = $CollisionShape2D
 func _physics_process(delta: float) -> void:
 	if !active: return
