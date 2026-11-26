@@ -8,10 +8,17 @@ var is_player_inside: bool = false
 func _ready() -> void:
 	label.visible = false
 	label_2.visible = false
+
+
+
+
+
 func _process(delta: float) -> void:
 	if is_player_inside == true and Input.is_action_just_pressed("interact"):
 		get_tree().change_scene_to_file("res://Minigames/Slime Quest/Scenes/S.Q_scene.tscn")
-
+		#The two lines below ensure that previous checkpoints from other affected games are not carried into this one
+		Gamedate.has_checkpoint = false
+		Gamedate.checkpoint = Vector2.ZERO
 
 
 

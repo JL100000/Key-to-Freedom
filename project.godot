@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 TokenManager="*uid://wolj6auot4p6"
+Gamedate="*uid://bi6dskkeqs373"
+Boxtracker="*uid://ck1e24tmh20d3"
 
 [display]
 

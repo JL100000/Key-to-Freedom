@@ -1,5 +1,5 @@
-extends CharacterBody2D
 class_name Player
+extends CharacterBody2D
 @onready var death_screen: CanvasLayer = $"../DeathScreen"
 @onready var win_screen_2: CanvasLayer = $"../WinScreen_2"
 @onready var win_screen_1: CanvasLayer = $"../WinScreen_1"
@@ -15,6 +15,11 @@ var start_position = Vector2(559,492)
 var can_move: bool = true
 const SPEED = 450.0
 const JUMP_VELOCITY = -450.0
+
+func _ready() -> void:
+	if Gamedate.has_checkpoint:
+		global_position = Gamedate.checkpoint
+	
 
 
 func _physics_process(delta: float) -> void:
