@@ -25,6 +25,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_body_exited(body: Node2D) -> void:
 	is_player_inside = false
-	animation.play("idle")
+	animation.play("default")
 	label.visible = false
 	label_2.visible = false
