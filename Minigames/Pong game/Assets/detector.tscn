@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b4t6eq6hqfc7m"]
+
+[ext_resource type="Script" uid="uid://bv5ljgow5wd8x" path="res://Minigames/Pong game/Scripts/detector.gd" id="1_88men"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6fw"]
+size = Vector2(20, 648)
+
+[node name="detector" type="Area2D" unique_id=179003471]
+script = ExtResource("1_88men")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2047195031]
+shape = SubResource("RectangleShape2D_ow6fw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

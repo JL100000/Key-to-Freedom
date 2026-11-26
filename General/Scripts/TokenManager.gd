@@ -1,5 +1,5 @@
 extends Node
-var tokens: int = 6
+var tokens: int = 0
 var FP_score : int = 0
 signal tokens_changed(new_amount: int)
 var in_packbro: bool = false
@@ -16,6 +16,7 @@ var unlocked_door: bool = false
 var play_again: int = 0
 var slime_quest_2_won: bool = false
 var the_golden_banana_won: bool = false
+var pong_game_won: bool = false
 func add_tokens(amount: int) -> void:
 	tokens += amount
 	print("Tokens added! Current balance: ", tokens)

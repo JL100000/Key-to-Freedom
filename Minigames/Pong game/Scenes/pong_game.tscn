@@ -1,10 +1,54 @@
 [gd_scene format=3 uid="uid://cq8k5eqaf1dtj"]
 
 [ext_resource type="Script" uid="uid://bi42esyag6jqp" path="res://Minigames/Pong game/Scripts/pong_game.gd" id="1_o1q40"]
+[ext_resource type="PackedScene" uid="uid://c7m3eq6hcug6x" path="res://Minigames/Pong game/hud.tscn" id="2_jr1xh"]
 [ext_resource type="PackedScene" uid="uid://dmj1i7dkreox1" path="res://Minigames/Pong game/Assets/paddle.tscn" id="2_r15kg"]
+[ext_resource type="PackedScene" uid="uid://6mc0hj3hinn7" path="res://Minigames/Pong game/Assets/ball.tscn" id="3_letsn"]
+[ext_resource type="PackedScene" uid="uid://d1hdvsewy1eub" path="res://Minigames/Pong game/Assets/walls.tscn" id="4_qmtu1"]
+[ext_resource type="PackedScene" uid="uid://b4t6eq6hqfc7m" path="res://Minigames/Pong game/Assets/detector.tscn" id="5_fnidi"]
+[ext_resource type="PackedScene" uid="uid://slka5b1uppg2" path="res://General/Scenes/win_screen_2.tscn" id="7_0ldaa"]
+[ext_resource type="PackedScene" uid="uid://c80mpi261xeid" path="res://General/Scenes/win_screen_1.tscn" id="8_htpsm"]
+[ext_resource type="PackedScene" uid="uid://cxcn4jjjn7nne" path="res://General/Scenes/death_screen.tscn" id="9_htpsm"]
 
 [node name="pong_game" type="Node2D" unique_id=1494256591]
 script = ExtResource("1_o1q40")
 
-[node name="paddle" parent="." unique_id=1458879069 instance=ExtResource("2_r15kg")]
-position = Vector2(86, 285)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1487377243]
+
+[node name="HUD" parent="CanvasLayer" unique_id=1549370644 instance=ExtResource("2_jr1xh")]
+
+[node name="paddle_one" parent="." unique_id=1458879069 instance=ExtResource("2_r15kg")]
+position = Vector2(50, 324)
+
+[node name="paddle_two" parent="." unique_id=2124493334 instance=ExtResource("2_r15kg")]
+position = Vector2(1102, 324)
+is_ai = true
+
+[node name="ball" parent="." unique_id=473240203 instance=ExtResource("3_letsn")]
+position = Vector2(576, 324)
+
+[node name="wallup" parent="." unique_id=840249089 instance=ExtResource("4_qmtu1")]
+position = Vector2(576, -10)
+
+[node name="walldown" parent="." unique_id=868293501 instance=ExtResource("4_qmtu1")]
+position = Vector2(576, 658)
+
+[node name="detectorleft" parent="." unique_id=179003471 instance=ExtResource("5_fnidi")]
+position = Vector2(-10, 324)
+is_left = true
+
+[node name="detectorright" parent="." unique_id=1217460658 instance=ExtResource("5_fnidi")]
+position = Vector2(1162, 324)
+
+[node name="startdelay" type="Timer" parent="." unique_id=1162400279]
+one_shot = true
+
+[node name="WinScreen_2" parent="." unique_id=1584049398 instance=ExtResource("7_0ldaa")]
+
+[node name="WinScreen_1" parent="." unique_id=246405653 instance=ExtResource("8_htpsm")]
+
+[node name="ballmovementLine2D" type="Line2D" parent="." unique_id=164530302]
+width = 4.0
+default_color = Color(1, 0, 0, 0)
+
+[node name="DeathScreen" parent="." unique_id=926226242 instance=ExtResource("9_htpsm")]

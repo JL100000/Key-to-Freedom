@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c7m3eq6hcug6x"]
+
+[ext_resource type="Script" uid="uid://cnmuq45gm4hl6" path="res://Minigames/Pong game/Scripts/hud.gd" id="1_ewivc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ow6fw"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_eb5wq"]
+font_size = 100
+
+[node name="HUD" type="Control" unique_id=1549370644]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ewivc")
+
+[node name="leftscore" type="Label" parent="." unique_id=562725228]
+layout_mode = 0
+offset_left = 150.0
+offset_right = 450.0
+offset_bottom = 150.0
+text = "0"
+label_settings = SubResource("LabelSettings_ow6fw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="rightscore" type="Label" parent="." unique_id=1192314542]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -450.0
+offset_right = -150.0
+offset_bottom = 150.0
+grow_horizontal = 0
+text = "0"
+label_settings = SubResource("LabelSettings_eb5wq")
+horizontal_alignment = 1
+vertical_alignment = 1
